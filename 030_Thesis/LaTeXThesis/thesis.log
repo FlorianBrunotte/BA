@@ -1,0 +1,933 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.29)  27 OCT 2020 10:22
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-06-18>
+(c:/texlive/2020/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(c:/texlive/2020/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+\@input{preamble.aux}
+\openout2 = `preamble.aux'.
+
+(./preamble.tex (c:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/06/10 3.45 The Babel package
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/06/10 3.45 Babel common definitions
+\babel@savecnt=\count176
+\U@D=\dimen135
+\l@babelnohyphens=\language86
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count177
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2018/12/08 v2.11 German support for babel (pre-1996 orthograph
+y)
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2018/12/08 v2.11 German support for babel (pre-1996 orthograp
+hy)
+Package babel Info: Making " an active character on input line 135.
+)))
+(c:/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(c:/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./hyphenations.tex)
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+)
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
+)
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+))
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+\MT@toks=\toks19
+\MT@count=\count178
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen136
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count179
+
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip49
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+))
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+)
+(c:/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(c:/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/05/30 v1.12 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen139
+\captionmargin@=\dimen140
+\captionwidth=\dimen141
+\caption@tempdima=\dimen142
+\caption@indent=\dimen143
+\caption@parindent=\dimen144
+\caption@hangindent=\dimen145
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count180
+\c@continuedfloat=\count181
+)
+\c@KVtest=\count182
+\sf@farskip=\skip50
+\sf@captopadj=\dimen146
+\sf@capskip=\skip51
+\sf@nearskip=\skip52
+\c@subfigure=\count183
+\c@subfigure@save=\count184
+\c@lofdepth=\count185
+\c@subtable=\count186
+\c@subtable@save=\count187
+\c@lotdepth=\count188
+\sf@top=\skip53
+\sf@bottom=\skip54
+)
+(c:/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen147
+\WF@size=\dimen148
+\c@WF@wrappedlines=\count189
+\WF@box=\box45
+\WF@everypar=\toks20
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count190
+\lst@gtempboxa=\box46
+\lst@token=\toks21
+\lst@length=\count191
+\lst@currlwidth=\dimen149
+\lst@column=\count192
+\lst@pos=\count193
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count194
+\lst@lineno=\count195
+\lst@maxwidth=\dimen152
+
+(c:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count196
+\lst@skipnumbers=\count197
+\lst@framebox=\box47
+)
+(c:/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(c:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count198
+\float@exts=\toks22
+\float@box=\box48
+\@float@everytoks=\toks23
+\@floatcapt=\box49
+)
+\@float@every@listing=\toks24
+\c@listing=\count199
+
+(c:/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count266
+\Gm@cntv=\count267
+\c@Gm@tempcnt=\count268
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks25
+)
+(c:/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
+)
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 59.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 60.
+
+\c@definition=\count269
+\c@satz=\count270
+\c@theorem=\count271
+(c:/texlive/2020/texmf-dist/tex/latex/bibtopic/bibtopic.sty
+Package: bibtopic 2006/09/08 v1.1a Sectioned Bibliographies
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@btauxfile=\count272
+\bt@infilea=\read3
+\bt@infileb=\read4
+\bt@outfile=\write3
+\bt@tempboxa=\box50
+) (./hsmalogo.sty)
+(c:/texlive/2020/texmf-dist/tex/latex/epigraph/epigraph.sty
+Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
+
+(c:/texlive/2020/texmf-dist/tex/latex/nextpage/nextpage.sty
+Package: nextpage 2009/09/03 v1.1a additional page commands
+)
+\beforeepigraphskip=\skip64
+\afterepigraphskip=\skip65
+\epigraphwidth=\skip66
+\epigraphrule=\skip67
+) (./blindtext.sty
+Package: blindtext 2005/10/20 V1.5 blindtext-Package
+
+(c:/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count273
+\c@Blindtext=\count274
+\blind@countxx=\count275
+\blindtext@numBlindtext=\count276
+\blind@countyy=\count277
+\c@blindlist=\count278
+\c@blindlistlevel=\count279
+\c@blindlist@level=\count280
+\blind@listitem=\count281
+\c@listcount=\count282
+\c@blind@levelcount=\count283
+)
+(c:/texlive/2020/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks26
+\SOUL@lasttoken=\toks27
+\SOUL@cmds=\toks28
+\SOUL@buffer=\toks29
+\SOUL@token=\toks30
+\SOUL@spaceskip=\skip68
+\SOUL@ttwidth=\dimen161
+\SOUL@uldp=\dimen162
+\SOUL@ulht=\dimen163
+))
+(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count284
+\l__pdf_internal_box=\box51
+)
+(./thesis.aux (./vorspann.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 23
+.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+\big@size=\dimen164
+LaTeX Info: Redefining \microtypecontext on input line 23.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 23.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+(c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen165
+\scratchbox=\box52
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen166
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks32
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count291
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(102.42992pt, 404.02904pt, 91.04892pt)
+* v-part:(T,H,B)=(87.63449pt, 625.96062pt, 131.45174pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=404.02904pt
+* \textheight=625.96062pt
+* \oddsidemargin=30.15993pt
+* \evensidemargin=30.15993pt
+* \topmargin=-21.6355pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout2 = `vorspann.aux'.
+
+(./vorspann.tex
+<hsmalogosw.pdf, id=1, 700.6175pt x 181.67876pt>
+File: hsmalogosw.pdf Graphic file (type pdf)
+<use hsmalogosw.pdf>
+Package pdftex.def Info: hsmalogosw.pdf  used on input line 3.
+(pdftex.def)             Requested size: 142.26378pt x 36.88954pt.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 2
+0.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 20.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 20.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 20.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 20.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+20.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 27.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 27.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 27.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 27.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 27.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 27.
+ [1
+
+
+
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./hsmalogosw.pd
+f>] [1
+
+]) [1
+
+
+]
+(./thesis.toc)
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+ [1
+
+]
+Kapitel 1.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 94.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 94.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 94.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 94.
+[2
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 9
+5.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 13
+8.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 138.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [3]
+Kapitel 2.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 138.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 138.
+
+LaTeX Warning: Citation `tug' on page 4 undefined on input line 152.
+
+
+LaTeX Warning: Citation `dante' on page 4 undefined on input line 153.
+
+
+LaTeX Warning: Citation `texlive' on page 4 undefined on input line 155.
+
+
+LaTeX Warning: Citation `ctan' on page 4 undefined on input line 176.
+
+
+LaTeX Warning: Citation `emacs' on page 4 undefined on input line 179.
+
+
+LaTeX Warning: Citation `auctex' on page 4 undefined on input line 179.
+
+
+LaTeX Warning: Citation `texmaker' on page 4 undefined on input line 180.
+
+
+LaTeX Warning: Citation `libreoffice' on page 4 undefined on input line 184.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 18
+8.
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Warning: Citation `pdf' on page 4 undefined on input line 190.
+
+
+LaTeX Warning: Citation `postscript' on page 4 undefined on input line 190.
+
+[4
+
+]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 245.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 245.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 245.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 245.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 245.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 245.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.64998pt on input line 245.
+ [5]
+
+! LaTeX Error: File `templateprozess' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 ...hics[width=.9\textwidth]{templateprozess}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6]
+Kapitel 3.
+[7
+
+]
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 37
+3.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.44997pt on input line 388.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 388.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 10.44997pt on input line 388.
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 4
+00.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+) [8] [9] [10]
+Kapitel 4.
+[11
+
+]
+<gnu.png, id=60, 702.625pt x 686.565pt>
+File: gnu.png Graphic file (type png)
+<use gnu.png>
+Package pdftex.def Info: gnu.png  used on input line 556.
+(pdftex.def)             Requested size: 113.81102pt x 111.20406pt.
+
+
+LaTeX Warning: Citation `gnulogo' on page 12 undefined on input line 557.
+
+
+LaTeX Warning: Citation `fal' on page 12 undefined on input line 557.
+
+
+LaTeX Warning: Citation `gnulogo' on page 12 undefined on input line 557.
+
+
+LaTeX Warning: Citation `fal' on page 12 undefined on input line 557.
+
+
+LaTeX Warning: Citation `kopka' on page 12 undefined on input line 573.
+
+
+! LaTeX Error: File `zeichnung' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.586 ...degraphics[width=.6\textwidth]{zeichnung}
+                                                   % pdflatex ohne Endung
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `libreoffice' on page 12 undefined on input line 590.
+
+[12 <./gnu.png>]
+
+! LaTeX Error: File `zeichnung' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.614 ...egraphics[width=.3\textwidth]{zeichnung}}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (6.34958pt too wide) in paragraph at lines 614--614
+[]\T1/ppl/m/n/9 (-20) (a)
+ []
+
+
+Overfull \hbox (13.20313pt too wide) in paragraph at lines 614--614
+|\T1/ppl/m/n/9 (-20) Vek-
+ []
+
+
+Overfull \hbox (8.43724pt too wide) in paragraph at lines 614--614
+\T1/ppl/m/n/9 (-20) tor| 
+ []
+
+<zeichnungjpg.jpg, id=65, 597.23125pt x 421.575pt>
+File: zeichnungjpg.jpg Graphic file (type jpg)
+<use zeichnungjpg.jpg>
+Package pdftex.def Info: zeichnungjpg.jpg  used on input line 616.
+(pdftex.def)             Requested size: 121.20993pt x 85.55501pt.
+<zeichnungpng.png, id=66, 597.23125pt x 421.575pt>
+File: zeichnungpng.png Graphic file (type png)
+<use zeichnungpng.png>
+Package pdftex.def Info: zeichnungpng.png  used on input line 618.
+(pdftex.def)             Requested size: 121.20993pt x 85.55501pt.
+<zeichnungdraft.jpg, id=68, 2055.68pt x 1541.76pt>
+File: zeichnungdraft.jpg Graphic file (type jpg)
+<use zeichnungdraft.jpg>
+Package pdftex.def Info: zeichnungdraft.jpg  used on input line 634.
+(pdftex.def)             Requested size: 161.60915pt x 121.20251pt.
+[13 <./zeichnungjpg.jpg> <./zeichnungpng.png> <./zeichnungdraft.jpg>]
+
+LaTeX Warning: Citation `kopka' on page 14 undefined on input line 661.
+
+
+LaTeX Warning: Citation `tikz' on page 14 undefined on input line 663.
+
+<automata.pdf, id=73, 453.79137pt x 89.83162pt>
+File: automata.pdf Graphic file (type pdf)
+<use automata.pdf>
+Package pdftex.def Info: automata.pdf  used on input line 669.
+(pdftex.def)             Requested size: 363.62366pt x 71.98326pt.
+
+LaTeX Warning: Citation `tikzautomata' on page 14 undefined on input line 670.
+
+
+LaTeX Warning: Citation `tikzautomata' on page 14 undefined on input line 670.
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 698.
+(c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 729.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.40245pt on input line 730.
+ [14 <./automata.pdf>] (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.
+sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(c:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) (./gcd.cpp)
+
+LaTeX Warning: Citation `listings' on page 15 undefined on input line 761.
+
+
+LaTeX Warning: Citation `minted' on page 15 undefined on input line 761.
+
+
+LaTeX Warning: Citation `pygments' on page 15 undefined on input line 761.
+
+[15] [16]
+Kapitel 5.
+[17
+
+]
+
+LaTeX Warning: Citation `gockel' on page 18 undefined on input line 824.
+
+
+LaTeX Warning: Citation `rechenberg' on page 18 undefined on input line 824.
+
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+871.
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+
+LaTeX Warning: Citation `manna70' on page 18 undefined on input line 873.
+
+
+LaTeX Warning: Citation `kopka' on page 18 undefined on input line 881.
+
+[18] [19]
+
+LaTeX Warning: Citation `acm' on page 20 undefined on input line 956.
+
+
+LaTeX Warning: Citation `ieee' on page 20 undefined on input line 956.
+
+
+LaTeX Warning: Citation `wikipedia' on page 20 undefined on input line 964.
+
+
+LaTeX Warning: Citation `wikiciting' on page 20 undefined on input line 969.
+
+
+LaTeX Warning: Citation `libsvm' on page 20 undefined on input line 974.
+
+
+LaTeX Warning: Citation `bibtexing' on page 20 undefined on input line 980.
+
+
+LaTeX Warning: Citation `kopka' on page 20 undefined on input line 980.
+
+
+LaTeX Warning: Citation `bibtexing' on page 20 undefined on input line 982.
+
+
+LaTeX Warning: Citation `kopka' on page 20 undefined on input line 982.
+
+
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 983.
+
+
+LaTeX Warning: Citation `acm' on page 20 undefined on input line 989.
+
+[20] [21]
+Kapitel 6.
+[22
+
+]
+\openout3 = `btaux.aux'.
+
+\openout3 = `thesis1.aux'.
+
+ (./thesis1.bbl)
+\openout3 = `btaux.aux'.
+
+\openout3 = `thesis2.aux'.
+
+ (./thesis2.bbl)
+
+Package bibtopic Warning: Please (re)run BibTeX on the file(s):
+(bibtopic)                thesis1
+(bibtopic)                thesis2
+(bibtopic)                and after that rerun LaTeX.
+
+[23] (./thesis.aux (./vorspann.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 10044 strings out of 480471
+ 147837 string characters out of 5903300
+ 629126 words of memory out of 5000000
+ 25581 multiletter control sequences out of 15000+600000
+ 633374 words of font info for 333 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 52i,18n,60p,328b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fp
+lmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb><c:/
+texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/tex
+mf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2020/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/
+ucrro8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:
+/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2020/t
+exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2020/texmf-dist/font
+s/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/pal
+atino/uplr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (26 pages, 771245 bytes).
+PDF statistics:
+ 188 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 63519 words of extra memory for PDF output out of 74296 (max. 10000000)
+
