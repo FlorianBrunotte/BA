@@ -42,20 +42,32 @@ Schreiben und Zitieren von Literatur.
 
 \tableofcontents %Inhaltsverzeichnis wird erstellt
 
-\chapter{Einführung} \label{chap:einf}
+\chapter{Einführung - Wie erstellt man eine Django-Applikation?} \label{chap:einf}
 
-Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren.
+Es ist vorzuziehen, dass...
+
+Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren. Mit Pip install django kann man dann django installieren
 
 Dann einfach das Tutorial machen von Django Documentation.
 
 Django entstand in einem Nachrichtenumfeld
 
+Man startet ein neues Django Project mit django-admin startproject name, dabei sollte der Name nicht wie django oder test heißen, das könnte zu Problemen führen
+cd ./anforderungenundtesten um in den richtigen Ordner zu kommen, der die manage.py Datei enthält
+
+über python manage.py runserver kann der Developerserver aufgerufen werden und man sieht, dass die Installation geklappt hat. Man kann hierbei auch die IP Adresse so ändern, dass alle Geräte im gleichen Netzwerk Zugriff haben.
+
+Man erhält verschiedene Dateien beim Start eines Projects, die Funktionen der einzelnen Dateien sind in der Tabelle 111 dargestellt. 
+
+
+
+%So geht ein Zitat oben rechts
 \epigraphhead[70]{\epigraph{Documentation is like sex: 
 when it is good, it is very, very good; and when it is bad, 
 it is better than nothing.}{\textit{Dick Brandon}}}
 
 
-
+%So geht eine Aufzählung mit Punkten
 Die Ziele des Templates sind wie folgt:
 \begin{itemize}
 \item Beispiele der typischen Verwendung von \LaTeX\ und dessen Erweiterungen 
@@ -66,22 +78,13 @@ Die Ziele des Templates sind wie folgt:
 \item Die Einhaltung der Formalien an der Hochschule~Mannheim in der
   Fakultät Informationstechnik vereinfachen.
 \end{itemize}
-Gegebenenfalls wird auf häufig gemachte Fehler hingewiesen und diese damit 
-hoffentlich vermieden. 
-Diese Fehler werden wenn möglich \falsch{durchgestrichen} angezeigt. 
+
+%so kann man Sachen durchstreichen
+\falsch{durchgestrichen} angezeigt. 
 Zum Beispiel sollte man den abschließenden Absatz in der Einleitung 
 nicht wie folgt schreiben.
 
-\falsch{Im ersten Kapitel, in dem wir gerade sind, ist die Einleitung, 
-  die wir gerade beenden. 
-  Im folgenden Kapitel beschreiben wir was man eigentlich
-  braucht, wenn man das tut worum es in dem Dokument eigentlich geht.
-  Nach den Anforderungen werden dann Grundlagen gelegt, welche das
-  sind kann man im Kapitel nachlesen. 
-  Das dann folgende Kapitel hat den Titel \textit{Layout}.
-  Dann kommt noch ein Kapitel bis es dann zu Ende ist.
-}
-
+%so geht referenzieren, also mit der Tilde vorne ist wiochtig sonst gibt es komische Seitenumbrüche
 Nehmen Sie Kapitel 1 nicht mit dazu. Schreiben Sie Inhalte und keine
 Leerphrasen. Verwenden Sie nicht das "`nächste"' oder "`folgende"' Kapitel
 sondern immer als Zahl das wievielte Kapitel. 
