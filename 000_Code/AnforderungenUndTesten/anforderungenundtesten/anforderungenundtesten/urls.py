@@ -14,8 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+#das ist nur eine Liste in Python lol --> Darum ist sie erweiterbar mit +=
 urlpatterns = [
+    path('aut/', include('aut.urls')), #wenn hier nichts steht landet die Seite bei http://127.0.0.1:8000/ --> könnte man als Hauptseite machen
     path('admin/', admin.site.urls),
 ]
+#Add URL maps to redirect the base URL to our application
+#immer auf die App umlenken lassen auch wenn http://127.0.0.1:8000 aufgerufen wird
+
+from django.views.generic import RedirectView
+urlpatterns += [
+    path('', RedirectView.as_view(url='aut/', permanent=True)),
+]
+
+# Use static() to add url mapping to serve static files during development (only)
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

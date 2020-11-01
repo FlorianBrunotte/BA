@@ -43,9 +43,17 @@ Schreiben und Zitieren von Literatur.
 \tableofcontents %Inhaltsverzeichnis wird erstellt
 
 \chapter{Einführung - Wie erstellt man eine Django-Applikation?} \label{chap:einf}
+%So geht ein Zitat oben rechts
+%das sollte auch hier stehen bleiben sonst sieht es nicht gut aus und der Text überlappt
+\epigraphhead[70]{\epigraph{Documentation is like sex: 
+when it is good, it is very, very good; and when it is bad, 
+it is better than nothing.}{\textit{Dick Brandon}}}
+
 
 Es ist vorzuziehen, dass...
 
+
+%Quellen sind hier das Django und das Mozilla Tutorial
 Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren. Mit Pip install django kann man dann django installieren
 
 Dann einfach das Tutorial machen von Django Documentation.
@@ -58,13 +66,39 @@ cd ./anforderungenundtesten um in den richtigen Ordner zu kommen, der die manage
 über python manage.py runserver kann der Developerserver aufgerufen werden und man sieht, dass die Installation geklappt hat. Man kann hierbei auch die IP Adresse so ändern, dass alle Geräte im gleichen Netzwerk Zugriff haben.
 
 Man erhält verschiedene Dateien beim Start eines Projects, die Funktionen der einzelnen Dateien sind in der Tabelle 111 dargestellt. 
+%Tabelle mit den dateien und den Funktionen
+
+
+Es gibt dabei einen Unterschied zwischen einem Projekt und einer App in Django, so kann ein Projekt mehrere Apps enthalten und eine App kann in verschiedenen Projekten enthalten sein. Man sollte auf die Wiederverwendbarkeit achten.
+
+Hierbei kam der Begriff Boiler Code auf, der Codeabschnitte beschreibt, die wenige Änderungen haben und an vielen Stellen auftauchen können. Beispiele sind in den Listings 1 und 2 dargestellt. Man sieht in dem 1. Lisitng ein Shebang für die Programmiersprache Python, damit wird dem Compiler klar das es sich hier um Python Code handelt. Im 2. Lisiting sieht man die Basis von einem HTML Dokument. Mit diesem Template können viele verschiedene Websites generiert werden, aber diese Tags sind notwendig. %Quelle Wikipedia --> Verbesserungswürdig
+
+Die App muss unter den installierten Apps angemeldet werden
+
+
+Danach sollten die URLs definiert werden und zusammengeführt werden. Es gibt eine url Datei für das Projekt und eine für die App. Von dem Projekt kann man auch die Grundseite umleiten lassen auf die Seite der App. Die verschiedenen Routen der Seiten sind in der Abbildung 1 dargestellt. 
+
+Es müssen auch die Befehle makemigrations und migrate angewandt werden, da sie sämtliche Änderungen an den Datenbanken und den Modellen ausführen. 
+
+Zuletzt wird mit runserver der Development Server erstellt und zum Laufen gebracht unter der Adresse 00000 kann man dann lokal die App testen oder man kann auch für alle Geräte im gleichen Netz die App verfügbar machen. Das ist nützlich, um die Webseiten auf mobilen Geräten oder generell Geräten mit verschiedenen Displaygrößen zu testen.
+
+Die Datenbank, in diesem Fall Postgres muss auch eingerichtet werden, dazu gibt es in settings.py die Einstellungen zu Databases. Diese müssen verändert werden, damit das Django-Projekt mit einer Postgres Datenbank funktioniert. 
+
+Danach können die Modelle definiert werden. ORM von Python ist hierbei wichtig. Die Modelle werden aus den Tabellen, die wiederrum aus den ER-Modellen hergeleitet werden, erstellt.
+
+Die ER-Modelle sind in der Abbildung 1 dargestellt....weiter erklären. Die Modelle sind in Abbildung 1 dargestellt... auch weiter erklären.
+
+Nachdem man die Modelle geschrieben hat muss man das Modul noch für den Admin zur Bearbeitung freischalten bzw. registrieren. Der Admin oder Superuser muss auch erstellt werden.
+
+Modelle in Django verfolgen die DRY Regel, also man sollte sich nicht wiederholen.
+
+Nachdem die Modelle erstellt/geschrieben wurden, kann man mit makemigrations und migrate die Tabellen/Relationen in die Datenbank einspielen. Mit makemigrations werden die migrations erstellt als Datei um noch mal drüber zu gucken. Dabei konnte ich auch den Fehler mit dem Default DateTimeField ausbessern. Da die Migrationen nacheinander gemacht werden. Jetzt kann man bereits über den Admin die Daten einpflegen. Dazu ist zu sagen, dass das bis jetzt nur der Admin kann und die Admin Seite zwar Funktional ist, aber im Sinne von UI/Aussehen noch verbessert werden kann.
+
+Das UI wird aber später kommen, da man erstmal einen Prototyp haben möchte der die Grundlegenden Funktionen einer  Datenbank hat: Daten eintragen, löschen, ändern und anzeigen.
 
 
 
-%So geht ein Zitat oben rechts
-\epigraphhead[70]{\epigraph{Documentation is like sex: 
-when it is good, it is very, very good; and when it is bad, 
-it is better than nothing.}{\textit{Dick Brandon}}}
+
 
 
 %So geht eine Aufzählung mit Punkten

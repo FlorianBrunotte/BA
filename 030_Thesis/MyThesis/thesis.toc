@@ -1,5 +1,5 @@
 \babel@toc {german}{}
-\contentsline {chapter}{\numberline {1}Einführung}{2}%
+\contentsline {chapter}{\numberline {1}Einführung - Wie erstellt man eine Django-Applikation?}{2}%
 \contentsline {chapter}{\numberline {2}\LaTeX -Umgebung}{5}%
 \contentsline {section}{\numberline {2.1}Was braucht man?}{5}%
 \contentsline {section}{\numberline {2.2}Wie ist das Template aufgebaut?}{6}%

@@ -1,0 +1,3 @@
+Das Tutorial wurde weitergemacht
+Postgres wurde eingebunden und die erste Idee für ein Modell wurde gemacht
+an Latex wurde auch weitergeschrieben

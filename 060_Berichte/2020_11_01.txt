@@ -1,0 +1,7 @@
+Das Tutorial wurde weitergemacht
+an Latex wurde auch weitergeschrieben
+Das Modell wurde eingebaut, also eine erste Idee die noch nicht final ist
+Es gab ein Problem mit dem DateTimeField, man muss wirklich ein Datum als Default angeben oder DEfault einfach rausnehmen
+Die Migrationen laufen nacheinander, also selbst wenn man einen Fehler gemacht hat wird trotzdem erst diese ausgeführt (Init)
+Danach kommt dann erst die Änderung (2. Änderung)
+die migrationen bauen aufeinander auf, das heißt spätere Änderungen kommen nur als Alter Field rein, da create Table schon im Init passiert ist
