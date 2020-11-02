@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.29)  31 OCT 2020 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.29)  2 NOV 2020 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,73 +509,73 @@ f>] [1
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 74.
+(Font)              scaled to size 10.42007pt on input line 69.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 74.
+(Font)              scaled to size 7.91925pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 74.
+(Font)              scaled to size 10.42007pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 74.
+(Font)              scaled to size 7.91925pt on input line 69.
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 9
-8.
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 10
-5.
-
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 94
+.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 105.
+(Font)              scaled to size 8.54997pt on input line 94.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [3] [4]
+ [3]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
+11.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [4] [5]
 Kapitel 2.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 132.
+(Font)              scaled to size 25.92514pt on input line 145.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 132.
+(Font)              scaled to size 21.61124pt on input line 145.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 132.
+(Font)              scaled to size 15.0049pt on input line 145.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 132.
+(Font)              scaled to size 25.92514pt on input line 145.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 132.
+(Font)              scaled to size 21.61124pt on input line 145.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 132.
+(Font)              scaled to size 15.0049pt on input line 145.
 
-LaTeX Warning: Citation `tug' on page 5 undefined on input line 146.
-
-
-LaTeX Warning: Citation `dante' on page 5 undefined on input line 147.
+LaTeX Warning: Citation `tug' on page 6 undefined on input line 159.
 
 
-LaTeX Warning: Citation `texlive' on page 5 undefined on input line 149.
+LaTeX Warning: Citation `dante' on page 6 undefined on input line 160.
 
 
-LaTeX Warning: Citation `ctan' on page 5 undefined on input line 170.
+LaTeX Warning: Citation `texlive' on page 6 undefined on input line 162.
 
 
-LaTeX Warning: Citation `emacs' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `ctan' on page 6 undefined on input line 183.
 
 
-LaTeX Warning: Citation `auctex' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `emacs' on page 6 undefined on input line 186.
 
 
-LaTeX Warning: Citation `texmaker' on page 5 undefined on input line 174.
+LaTeX Warning: Citation `auctex' on page 6 undefined on input line 186.
 
 
-LaTeX Warning: Citation `libreoffice' on page 5 undefined on input line 178.
+LaTeX Warning: Citation `texmaker' on page 6 undefined on input line 187.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 18
-2.
+
+LaTeX Warning: Citation `libreoffice' on page 6 undefined on input line 191.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 19
+5.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -585,40 +585,40 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Warning: Citation `pdf' on page 5 undefined on input line 184.
+LaTeX Warning: Citation `pdf' on page 6 undefined on input line 197.
 
 
-LaTeX Warning: Citation `postscript' on page 5 undefined on input line 184.
+LaTeX Warning: Citation `postscript' on page 6 undefined on input line 197.
 
-[5
+[6
 
 ]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 239.
+(Font)              scaled to size 9.37807pt on input line 252.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 239.
+(Font)              scaled to size 7.29405pt on input line 252.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 239.
+(Font)              scaled to size 5.21004pt on input line 252.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 239.
+(Font)              scaled to size 9.37807pt on input line 252.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 239.
+(Font)              scaled to size 7.29405pt on input line 252.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 239.
+(Font)              scaled to size 5.21004pt on input line 252.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 239.
- [6]
+(Font)              scaled to size 6.64998pt on input line 252.
+ [7]
 
-LaTeX Warning: Reference `fig:templateprozess' on page 7 undefined on input lin
-e 264.
+LaTeX Warning: Reference `fig:templateprozess' on page 8 undefined on input lin
+e 277.
 
-[7]
+[8]
 Kapitel 3.
-[8
+[9
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 36
-2.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 37
+5.
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -626,95 +626,95 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 377.
+(Font)              scaled to size 10.44997pt on input line 390.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 377.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 390.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.44997pt on input line 377.
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 3
-89.
+(Font)              scaled to size 10.44997pt on input line 390.
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 4
+02.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
-) [9] [10] [11]
+) [10] [11] [12]
 Kapitel 4.
-[12
+[13
 
 ]
-<gnu.png, id=63, 702.625pt x 686.565pt>
+<gnu.png, id=66, 702.625pt x 686.565pt>
 File: gnu.png Graphic file (type png)
 <use gnu.png>
-Package pdftex.def Info: gnu.png  used on input line 545.
+Package pdftex.def Info: gnu.png  used on input line 558.
 (pdftex.def)             Requested size: 113.81102pt x 111.20406pt.
 
 
-LaTeX Warning: Citation `gnulogo' on page 13 undefined on input line 546.
+LaTeX Warning: Citation `gnulogo' on page 14 undefined on input line 559.
 
 
-LaTeX Warning: Citation `fal' on page 13 undefined on input line 546.
+LaTeX Warning: Citation `fal' on page 14 undefined on input line 559.
 
 
-LaTeX Warning: Citation `gnulogo' on page 13 undefined on input line 546.
+LaTeX Warning: Citation `gnulogo' on page 14 undefined on input line 559.
 
 
-LaTeX Warning: Citation `fal' on page 13 undefined on input line 546.
+LaTeX Warning: Citation `fal' on page 14 undefined on input line 559.
 
 
-LaTeX Warning: Citation `kopka' on page 13 undefined on input line 562.
+LaTeX Warning: Citation `kopka' on page 14 undefined on input line 575.
 
 
-LaTeX Warning: Reference `fig:tk' on page 13 undefined on input line 571.
+LaTeX Warning: Reference `fig:tk' on page 14 undefined on input line 584.
 
 
-LaTeX Warning: Citation `libreoffice' on page 13 undefined on input line 575.
+LaTeX Warning: Citation `libreoffice' on page 14 undefined on input line 588.
 
 
-LaTeX Warning: Reference `fig:tk2' on page 13 undefined on input line 582.
+LaTeX Warning: Reference `fig:tk2' on page 14 undefined on input line 595.
 
 
-LaTeX Warning: Reference `fig:vektor' on page 13 undefined on input line 583.
+LaTeX Warning: Reference `fig:vektor' on page 14 undefined on input line 596.
 
 
-LaTeX Warning: Reference `fig:jpg' on page 13 undefined on input line 585.
+LaTeX Warning: Reference `fig:jpg' on page 14 undefined on input line 598.
 
 
-LaTeX Warning: Reference `fig:png' on page 13 undefined on input line 585.
+LaTeX Warning: Reference `fig:png' on page 14 undefined on input line 598.
 
-[13 <./gnu.png>]
-<zeichnungdraft.jpg, id=68, 2055.68pt x 1541.76pt>
+[14 <./gnu.png>]
+<zeichnungdraft.jpg, id=71, 2055.68pt x 1541.76pt>
 File: zeichnungdraft.jpg Graphic file (type jpg)
 <use zeichnungdraft.jpg>
-Package pdftex.def Info: zeichnungdraft.jpg  used on input line 608.
+Package pdftex.def Info: zeichnungdraft.jpg  used on input line 621.
 (pdftex.def)             Requested size: 161.60915pt x 121.20251pt.
 
 
-LaTeX Warning: Citation `kopka' on page 14 undefined on input line 635.
+LaTeX Warning: Citation `kopka' on page 15 undefined on input line 648.
 
 
-LaTeX Warning: Citation `tikz' on page 14 undefined on input line 637.
+LaTeX Warning: Citation `tikz' on page 15 undefined on input line 650.
 
-<automata.pdf, id=69, 453.79137pt x 89.83162pt>
+<automata.pdf, id=72, 453.79137pt x 89.83162pt>
 File: automata.pdf Graphic file (type pdf)
 <use automata.pdf>
-Package pdftex.def Info: automata.pdf  used on input line 643.
+Package pdftex.def Info: automata.pdf  used on input line 656.
 (pdftex.def)             Requested size: 363.62366pt x 71.98326pt.
 
-LaTeX Warning: Citation `tikzautomata' on page 14 undefined on input line 644.
+LaTeX Warning: Citation `tikzautomata' on page 15 undefined on input line 657.
 
 
-LaTeX Warning: Citation `tikzautomata' on page 14 undefined on input line 644.
+LaTeX Warning: Citation `tikzautomata' on page 15 undefined on input line 657.
 
-[14 <./zeichnungdraft.jpg>]
+[15 <./zeichnungdraft.jpg>]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 672.
- [15 <./automata.pdf>]
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 685.
+ [16 <./automata.pdf>]
 (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 703.
+(Font)              scaled to size 10.40245pt on input line 716.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 704.
+(Font)              scaled to size 10.40245pt on input line 717.
 
 (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -726,106 +726,106 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) (./gcd.cpp)
 
-LaTeX Warning: Citation `listings' on page 16 undefined on input line 735.
+LaTeX Warning: Citation `listings' on page 17 undefined on input line 748.
 
 
-LaTeX Warning: Citation `minted' on page 16 undefined on input line 735.
+LaTeX Warning: Citation `minted' on page 17 undefined on input line 748.
 
 
-LaTeX Warning: Citation `pygments' on page 16 undefined on input line 735.
+LaTeX Warning: Citation `pygments' on page 17 undefined on input line 748.
 
-[16]
+[17]
 Kapitel 5.
-[17
+[18
 
 ]
 
-LaTeX Warning: Citation `gockel' on page 18 undefined on input line 798.
+LaTeX Warning: Citation `gockel' on page 19 undefined on input line 811.
 
 
-LaTeX Warning: Citation `rechenberg' on page 18 undefined on input line 798.
+LaTeX Warning: Citation `rechenberg' on page 19 undefined on input line 811.
 
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-845.
+858.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
-LaTeX Warning: Citation `manna70' on page 18 undefined on input line 847.
+LaTeX Warning: Citation `manna70' on page 19 undefined on input line 860.
 
 
-LaTeX Warning: Citation `kopka' on page 18 undefined on input line 855.
+LaTeX Warning: Citation `kopka' on page 19 undefined on input line 868.
 
-[18] [19]
+[19] [20]
 
-LaTeX Warning: Citation `acm' on page 20 undefined on input line 930.
-
-
-LaTeX Warning: Citation `ieee' on page 20 undefined on input line 930.
+LaTeX Warning: Citation `acm' on page 21 undefined on input line 943.
 
 
-LaTeX Warning: Citation `wikipedia' on page 20 undefined on input line 938.
+LaTeX Warning: Citation `ieee' on page 21 undefined on input line 943.
 
 
-LaTeX Warning: Citation `wikiciting' on page 20 undefined on input line 943.
+LaTeX Warning: Citation `wikipedia' on page 21 undefined on input line 951.
 
 
-LaTeX Warning: Citation `libsvm' on page 20 undefined on input line 948.
+LaTeX Warning: Citation `wikiciting' on page 21 undefined on input line 956.
 
 
-LaTeX Warning: Citation `bibtexing' on page 20 undefined on input line 954.
+LaTeX Warning: Citation `libsvm' on page 21 undefined on input line 961.
 
 
-LaTeX Warning: Citation `kopka' on page 20 undefined on input line 954.
+LaTeX Warning: Citation `bibtexing' on page 21 undefined on input line 967.
 
 
-LaTeX Warning: Citation `bibtexing' on page 20 undefined on input line 956.
+LaTeX Warning: Citation `kopka' on page 21 undefined on input line 967.
 
 
-LaTeX Warning: Citation `kopka' on page 20 undefined on input line 956.
+LaTeX Warning: Citation `bibtexing' on page 21 undefined on input line 969.
 
 
-LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 21 undefined on input line 969.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `kopka' on page 0 undefined on input line 957.
+LaTeX Warning: Citation `bibtexing' on page 0 undefined on input line 970.
 
 
-LaTeX Warning: Citation `acm' on page 20 undefined on input line 963.
+LaTeX Warning: Citation `kopka' on page 0 undefined on input line 970.
 
-[20] [21]
+
+LaTeX Warning: Citation `acm' on page 21 undefined on input line 976.
+
+[21] [22]
 Kapitel 6.
-[22
+[23
 
 ]
 \openout3 = `btaux.aux'.
@@ -844,19 +844,22 @@ Package bibtopic Warning: Please (re)run BibTeX on the file(s):
 (bibtopic)                thesis2
 (bibtopic)                and after that rerun LaTeX.
 
-[23] (./thesis.aux (./vorspann.aux))
+[24] (./thesis.aux (./vorspann.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 9961 strings out of 480471
- 146595 string characters out of 5903300
+ 9964 strings out of 480471
+ 146619 string characters out of 5903300
  623693 words of memory out of 5000000
  25517 multiletter control sequences out of 15000+600000
- 630701 words of font info for 321 fonts, out of 8000000 for 9000
+ 630860 words of font info for 323 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 52i,18n,60p,570b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,18n,60p,734b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1
@@ -874,10 +877,10 @@ s/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/pal
 atino/uplr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/202
 0/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (26 pages, 738558 bytes).
+Output written on thesis.pdf (27 pages, 740517 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 187 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  60949 words of extra memory for PDF output out of 61914 (max. 10000000)
 

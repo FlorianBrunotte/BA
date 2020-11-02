@@ -1,19 +1,19 @@
 \babel@toc {german}{}
 \contentsline {chapter}{\numberline {1}Einführung - Wie erstellt man eine Django-Applikation?}{2}%
-\contentsline {chapter}{\numberline {2}\LaTeX -Umgebung}{5}%
-\contentsline {section}{\numberline {2.1}Was braucht man?}{5}%
-\contentsline {section}{\numberline {2.2}Wie ist das Template aufgebaut?}{6}%
-\contentsline {chapter}{\numberline {3}Seitenlayout und Sprache}{8}%
-\contentsline {section}{\numberline {3.1}Papier und Abstände}{8}%
-\contentsline {section}{\numberline {3.2}Seitenmarkierungen}{9}%
-\contentsline {section}{\numberline {3.3}Schriften}{9}%
-\contentsline {section}{\numberline {3.4}Sprache}{10}%
-\contentsline {chapter}{\numberline {4}Bilder und Listings}{12}%
-\contentsline {section}{\numberline {4.1}Fließobjekte}{12}%
-\contentsline {section}{\numberline {4.2}Bilder}{13}%
-\contentsline {section}{\numberline {4.3}Listings}{15}%
-\contentsline {chapter}{\numberline {5}Hinweise}{17}%
-\contentsline {section}{\numberline {5.1}Schreibstil}{17}%
-\contentsline {section}{\numberline {5.2}Mathematik}{18}%
-\contentsline {section}{\numberline {5.3}Literatur}{20}%
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{22}%
+\contentsline {chapter}{\numberline {2}\LaTeX -Umgebung}{6}%
+\contentsline {section}{\numberline {2.1}Was braucht man?}{6}%
+\contentsline {section}{\numberline {2.2}Wie ist das Template aufgebaut?}{7}%
+\contentsline {chapter}{\numberline {3}Seitenlayout und Sprache}{9}%
+\contentsline {section}{\numberline {3.1}Papier und Abstände}{9}%
+\contentsline {section}{\numberline {3.2}Seitenmarkierungen}{10}%
+\contentsline {section}{\numberline {3.3}Schriften}{10}%
+\contentsline {section}{\numberline {3.4}Sprache}{11}%
+\contentsline {chapter}{\numberline {4}Bilder und Listings}{13}%
+\contentsline {section}{\numberline {4.1}Fließobjekte}{13}%
+\contentsline {section}{\numberline {4.2}Bilder}{14}%
+\contentsline {section}{\numberline {4.3}Listings}{16}%
+\contentsline {chapter}{\numberline {5}Hinweise}{18}%
+\contentsline {section}{\numberline {5.1}Schreibstil}{18}%
+\contentsline {section}{\numberline {5.2}Mathematik}{19}%
+\contentsline {section}{\numberline {5.3}Literatur}{21}%
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{23}%

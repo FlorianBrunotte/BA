@@ -1,0 +1,13 @@
+Es wurden verschiedene Quellen gesucht
+Zuerst geht es darum die Anforderungen so präzise wie mäglich zu definieren. später werden sie sich sowieso ändern
+Die anfänglichen Anforderungen sollten auch schon in Latex
+Erste Ideen für das UI wurden gezeichnet
+Dadurch wurde die Idee der Testruns klarer
+
+1) Morgen sollten erstmal die Unterlagen aus SOE wiederholt werden zu den UML Diagrammen
+2) Danach sollten noch die Diagramme gezeichnet werden, die bis jetzt fehlen: z.B. Activity
+3) Auch das ER-Modell sollte überarbeitet werden oder wenigstens nochmal darüber nachdenken
+4) Sobald die Sachen fertig sind Rückmeldung an Herr Hastenteufel --> Link zum Ordner
+
+Wenn die Ideen dann erstmal klar sind, könnte es am Wochenende Sinn machen, die in Visual Paradigm schön zu machen
+Dazu dann auch in den Kurs von VP gucken
