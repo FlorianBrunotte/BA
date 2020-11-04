@@ -1,0 +1,9 @@
+Das ER-Modell wurde nochmal richtig überarbeitet und auch erklärt und auch schon für SQL vorbereitet, also transformiert
+
+1) Morgen sollten erstmal die Unterlagen aus SOE wiederholt werden zu den UML Diagrammen
+2) Danach sollten noch die Diagramme gezeichnet werden, die bis jetzt fehlen: z.B. Activity --> Draw.io
+3) Erste Ideen für das UI können ja auch schonmal in Draw.io gemacht werden
+4) Sobald die Sachen fertig sind Rückmeldung an Herr Hastenteufel --> Link zum Ordner
+
+Wenn die Ideen dann erstmal klar sind, könnte es am Wochenende Sinn machen, die in Visual Paradigm (UML)/ERDPLUS (für ER Modelle) schön zu machen
+Dazu dann auch in den Kurs von VP gucken

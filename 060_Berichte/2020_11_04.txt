@@ -1,0 +1,6 @@
+Die UML Diagramme Use Case und Activity wurden erstellt. 
+Die UI Skizzen werden ja sowieso im ersten Prototyp umgesetzt in HTML, dann kann man das sofort zeigen und testen.
+E-Mail an Herrn Hastenteufel mit der Frage ob er mal drüber gucken kann.
+
+1) Latex überarbeiten
+2) Powerpoint Vorlage machen
