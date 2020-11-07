@@ -1,0 +1,1 @@
+Das Model wurde nach dem neuen ER-Modell angepasst, aber es gibt noch einen Fehler darin, der behoben werden muss

@@ -1,3 +1,110 @@
-%%% produced automatically by bibtopic.sty v1.1
-%%% produced automatically by bibtopic.sty v1.1
-\csname bt@warn@outdated\endcsname{thesis2}
+\begin{thebibliography}{10}
+
+\bibitem{acm}
+{ACM, Digital Library}.
+\newblock \url{https://dl.acm.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{auctex}
+{AUCTeX}.
+\newblock \url{https://www.gnu.org/software/auctex/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{tikzautomata}
+{TeXample.net, Automata and Petri nets examples}.
+\newblock \url{http://www.texample.net/tikz/examples/automata-and-petri-nets/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{ctan}
+{CTAN}: the {C}omprehensive {T}e{X} {A}rchive {N}etwork.
+\newblock \url{https://ctan.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{dante}
+dante: {D}eutschsprachige {A}nwendervereinigung {T}e{X} e.{V}.
+\newblock \url{http://www.dante.de/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{dia}
+Dia.
+\newblock \url{https://wiki.gnome.org/Apps/Dia}.
+\newblock [letzter Zugriff: 7. Aug. 2014].
+
+\bibitem{emacs}
+Emacs.
+\newblock \url{https://www.gnu.org/software/emacs/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{gnulogo}
+{The GNU Logo.png}.
+\newblock \url{http://en.wikipedia.org/wiki/File:The_GNU_logo.png}.
+\newblock [letzter Zugriff: 9. Jan. 2018], Optimager~commonswiki, 21:48, 20
+  October 2005, unter Free Art Licence.
+
+\bibitem{ieee}
+{IEEE Xplore, Digital Library}.
+\newblock \url{http://ieeexplore.ieee.org/Xplore/dynhome.jsp}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{listings}
+{Listings}.
+\newblock \url{https://ctan.org/pkg/listings}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{minted}
+{Minted}.
+\newblock \url{https://ctan.org/pkg/minted}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{libreoffice}
+Libreoffice.
+\newblock \url{https://www.libreoffice.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2014].
+
+\bibitem{fal}
+{Free Art Licence}.
+\newblock \url{http://artlibre.org/licence/lal/en}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{miktex}
+{MiKTeX}: Typesetting beautiful documents.
+\newblock \url{https://miktex.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{pygments}
+{Pygments}.
+\newblock \url{http://pygments.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{texlive}
+{TeX Live}: Comprehensive {T}e{X} system with binaries for most flavors of
+  {U}nix, including {GNU}/{L}inux, and also {W}indows.
+\newblock \url{http://www.tug.org/texlive/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{texmaker}
+Texmaker.
+\newblock \url{http://www.xm1math.net/texmaker/}.
+\newblock [letzter Zugriff: 9. Jan. 2014].
+
+\bibitem{tikz}
+{TikZ}.
+\newblock \url{https://sourceforge.net/projects/pgf/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{tug}
+{TUG}: {T}ex {U}ser {G}roup.
+\newblock \url{http://www.tug.org/}.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{wikiciting}
+Wikipedia.
+\newblock Citing wikipedia, the free encyclopedia.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\bibitem{wikipedia}
+Wikipedia.
+\newblock Wikipedia.
+\newblock [letzter Zugriff: 9. Jan. 2018].
+
+\end{thebibliography}

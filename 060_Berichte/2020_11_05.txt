@@ -1,0 +1,3 @@
+Latex wurde überarbeitet und zur Powerpoint Vorlage wurden ein paar Gedanken gemacht
+Der Vortrag braucht aber auch das Look und Feel der Software, darum sollte man noch ein bisschen warten damit
+Morgen kann man erstmal daran arbeiten ein lauffähiges Programm zu haben, also die Tutorials weiter durcharbeiten

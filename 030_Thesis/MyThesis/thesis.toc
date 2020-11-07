@@ -1,20 +1,7 @@
 \babel@toc {german}{}
-\contentsline {chapter}{\numberline {1}Einführung - Wie erstellt man eine Django-Applikation?}{2}%
-\contentsline {chapter}{\numberline {2}Einführung - Welche Anforderungen hat das Projekt?}{6}%
-\contentsline {chapter}{\numberline {3}\LaTeX -Umgebung}{7}%
-\contentsline {section}{\numberline {3.1}Was braucht man?}{7}%
-\contentsline {section}{\numberline {3.2}Wie ist das Template aufgebaut?}{8}%
-\contentsline {chapter}{\numberline {4}Seitenlayout und Sprache}{10}%
-\contentsline {section}{\numberline {4.1}Papier und Abstände}{10}%
-\contentsline {section}{\numberline {4.2}Seitenmarkierungen}{11}%
-\contentsline {section}{\numberline {4.3}Schriften}{11}%
-\contentsline {section}{\numberline {4.4}Sprache}{12}%
-\contentsline {chapter}{\numberline {5}Bilder und Listings}{14}%
-\contentsline {section}{\numberline {5.1}Fließobjekte}{14}%
-\contentsline {section}{\numberline {5.2}Bilder}{15}%
-\contentsline {section}{\numberline {5.3}Listings}{17}%
-\contentsline {chapter}{\numberline {6}Hinweise}{19}%
-\contentsline {section}{\numberline {6.1}Schreibstil}{19}%
-\contentsline {section}{\numberline {6.2}Mathematik}{20}%
-\contentsline {section}{\numberline {6.3}Literatur}{22}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{24}%
+\contentsline {chapter}{\numberline {1}Motivation - Warum wurde diese Software geschrieben?}{2}%
+\contentsline {chapter}{\numberline {2}Anforderungsanalyse - Welche Anforderungen hat das Projekt?}{3}%
+\contentsline {chapter}{\numberline {3}Implementierung - Wie erstellt man eine Django-Applikation?}{4}%
+\contentsline {chapter}{\numberline {4}\LaTeX -Sachen}{7}%
+\contentsline {section}{\numberline {4.1}Latex Sachen als Section}{7}%
+\contentsline {chapter}{\numberline {5}Zusammenfassung und Ausblick}{14}%
