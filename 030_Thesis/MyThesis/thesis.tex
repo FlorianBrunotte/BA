@@ -110,7 +110,10 @@ Modelle in Django verfolgen die DRY Regel, also man sollte sich nicht wiederhole
 
 Nachdem die Modelle erstellt/geschrieben wurden, kann man mit makemigrations und migrate die Tabellen/Relationen in die Datenbank einspielen. Mit makemigrations werden die migrations erstellt als Datei um noch mal drüber zu gucken. Dabei konnte ich auch den Fehler mit dem Default DateTimeField ausbessern. Da die Migrationen nacheinander gemacht werden. Jetzt kann man bereits über den Admin die Daten einpflegen. Dazu ist zu sagen, dass das bis jetzt nur der Admin kann und die Admin Seite zwar Funktional ist, aber im Sinne von UI/Aussehen noch verbessert werden kann.
 
+Der Admin muss zuerst angelegt werden über create superuser.
+Und die Modelle müssen noch angemeldet werden, damit der Admin diese bearbeiten kann. Dann kann man über die Admin Seite bereits Daten einfügen, ändern und löschen. Im nächsten Schritt wird die Admin Seite aber angepasst, damit sie besser aussieht und auch neue Funktionalitäten hat.
 
+Darunter fällt auch das JOIN von verschiedenen Tabellen, wie die einzelnen Tabellen miteinander verbunden wurde, kann man in den Abbildungen 1 sehen.
 
 
 Das UI wird aber später kommen, da man erstmal einen Prototyp haben möchte der die Grundlegenden Funktionen einer  Datenbank hat: Daten eintragen, löschen, ändern und anzeigen.

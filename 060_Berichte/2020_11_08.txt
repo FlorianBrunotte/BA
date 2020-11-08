@@ -1,0 +1,5 @@
+Das Tutorial wurde weitergemacht
+Es wurden Beispieldaten als admin eingepflegt
+Es war ziemlich schwierig und hat eine Menge zeit gekostet, aber der JOIN von 2 Tabellen hat nun endlich geklappt
+Man kann nun zum Beispiel vom Student den entsprechenden Projektnamen anzeigen lassen
+dazu wurde eine Funktion in model.py geschrieben

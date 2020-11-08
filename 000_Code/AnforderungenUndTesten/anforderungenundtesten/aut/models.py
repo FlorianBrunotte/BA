@@ -2,6 +2,7 @@ from django.db import models
 import datetime
 # Create your models here.
 import uuid  # Für den Primary Key
+from django.db.models import F
 
 
 class Professor(models.Model):
@@ -50,8 +51,9 @@ class Requirement(models.Model):
 
     ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.RequirementID
+    #Man darf keine Schlüssel hier angeben
+    #def __str__(self):
+    #    return self.RequirementID
 
 class TestCase(models.Model):
     TestCaseID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der TestCases')
@@ -62,8 +64,8 @@ class TestCase(models.Model):
 
     ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.TestCaseID
+    #def __str__(self):
+    #    return self.TestCaseID
 
 class TestRun(models.Model):
     TestRunID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der TestRuns')
@@ -83,8 +85,8 @@ class TestRun(models.Model):
     ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True)
     TestCaseID_FK = models.ForeignKey('TestCase', on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.TestRunID
+    #def __str__(self):
+    #    return self.TestRunID
 
 
 class Student(models.Model):
@@ -93,14 +95,39 @@ class Student(models.Model):
     Passwort = models.CharField(max_length=128, null=True)
 
     Gruppennummer_FK = models.ForeignKey('Projekt', on_delete=models.SET_NULL, null=True)
-
     def __str__(self):
         return self.Name
+
+    def display_project(self):
+        return (Projekt.objects.get(student__Gruppennummer_FK=self.Gruppennummer_FK)) #'9782a5ca-f7b6-4d52-9797-75790dd90c1e'
+
+    #der Foreign Key zum Projekt ist noch hardgecoded
+    #Hier im Model kann man nicht ein bestimmtes Attribut referenzieren
+    #aber vielleicht geht das ja in der View oder so, da muss man dann erstamal einen Studenten auswählen und der hat ja dann eine Verbindung zu einem Projekt
+    #durch die Gruppennummer, dann muss man diese Gruppennummer nur da reintun
+
+#Projekt.objects.get(Name='t_Packstation')
+#geschummelt
+    #return Student.objects.get(Gruppennummer_FK__Name='t_Packstation')
+   # Pizza.objects.all().prefetch_related('toppings'
+
+   #select name from projekt, student where projekt.ProjektID = student.Gruppennummer_FK
+
+  #  Book.objects.select_related('author__hometown').get(id=4)
+
+       #Venue.objects.all().select_related('Room')
+
+        #return Student.objects.select_related('Gruppennummer_FK').filter(Gruppennummer_FK__Name='t_Packsation')
+
+    #ainFile.objects.values_list('file_suffix', flat=True).get(file_id='e3e978a3-0375-4bb9-85a2-5175e2ec097d')
+    #Entry.objects.filter(blog__name='Beatles Blog')
+
+    display_project.short_description = 'ProjektName'
 
 class Requirement_TestCase(models.Model):
 
     RequirementID_FK = models.ForeignKey('Requirement', on_delete=models.SET_NULL, null=True)
     TestCaseID_FK = models.ForeignKey('TestCase', on_delete=models.SET_NULL, null=True)
 
-    def __str__(self):
-        return self.RequirementID_FK
+    #def __str__(self):
+    #    return self.RequirementID_FK

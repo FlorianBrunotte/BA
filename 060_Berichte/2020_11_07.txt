@@ -1,0 +1,2 @@
+Das Model ist jetzt fertig integriert in Django
+Als nächstes muss man das Model mit Beipsieldaten befüllen über die Admin Seite
