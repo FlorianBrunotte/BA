@@ -3,7 +3,7 @@ import datetime
 # Create your models here.
 import uuid  # Für den Primary Key
 from django.db.models import F
-
+from django.urls import reverse
 
 class Professor(models.Model):
     Professorennummer = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Zum Anmelden')
@@ -15,13 +15,13 @@ class Professor(models.Model):
 
 
 class Projekt(models.Model):
-    ProjektID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der Projekte')
+    ProjektID = models.CharField(primary_key=True, max_length=128, help_text='Identifikation der Projekte')
     Name = models.CharField(max_length=128, null=True)
 
     Professorennummer_FK = models.ForeignKey('Professor', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.Name
+        return self.Name #Vorher Name
 
 class Element(models.Model):
     ElementID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der Elements')
@@ -37,7 +37,7 @@ class Element(models.Model):
         return self.Name
 
 class Requirement(models.Model):
-    RequirementID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der Requirements')
+    RequirementID = models.IntegerField(primary_key=True, help_text='Identifikation der Requirements')
     KATEGORIEN = (
         ('1', 'Kategorie 1'),
         ('2', 'Kategorie 2'),
@@ -54,6 +54,11 @@ class Requirement(models.Model):
     #Man darf keine Schlüssel hier angeben
     #def __str__(self):
     #    return self.RequirementID
+
+
+    def get_absolute_url(self):
+        """Returns the url to access a particular book instance."""
+        return reverse('req_detail', args=[str(self.RequirementID)])
 
 class TestCase(models.Model):
     TestCaseID = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Identifikation der TestCases')
@@ -99,7 +104,9 @@ class Student(models.Model):
         return self.Name
 
     def display_project(self):
-        return (Projekt.objects.get(student__Gruppennummer_FK=self.Gruppennummer_FK)) #'9782a5ca-f7b6-4d52-9797-75790dd90c1e'
+        return (Projekt.objects.get(ProjektID=self.Gruppennummer_FK)) #'9782a5ca-f7b6-4d52-9797-75790dd90c1e'
+
+#    return ( Projekt.objects.get(student__Gruppennummer_FK=self.Gruppennummer_FK))  # '9782a5ca-f7b6-4d52-9797-75790dd90c1e'
 
     #der Foreign Key zum Projekt ist noch hardgecoded
     #Hier im Model kann man nicht ein bestimmtes Attribut referenzieren

@@ -5,7 +5,7 @@ from .models import Projekt, Requirement, TestRun, TestCase, Student, Professor,
 
 #admin.site.register(Projekt)
 admin.site.register(Requirement)
-admin.site.register(TestRun)
+#admin.site.register(TestRun)
 admin.site.register(TestCase)
 #admin.site.register(Student)
 admin.site.register(Requirement_TestCase)
@@ -18,13 +18,31 @@ class ProfessorAdmin(admin.ModelAdmin):
 
 admin.site.register(Professor, ProfessorAdmin)
 
+class StudentInline(admin.TabularInline):
+    model = Student
+
 @admin.register(Projekt)
 class ProjektAdmin(admin.ModelAdmin):
-    pass
+    list_filter = ('ProjektID', 'Professorennummer_FK')
+    inlines = [StudentInline]
 
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('Matrikelnummer', 'Name', 'Passwort', 'Gruppennummer_FK', 'display_project')
+
+
+@admin.register(TestRun)
+class TestRunAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('Info', {
+            'fields': ('TestRunID', 'status', 'Dauer')
+        }),
+        ('Verbindungen', {
+            'fields': ('ElementID_FK', 'TestCaseID_FK')
+        }),
+    )
+
+
 
 

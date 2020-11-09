@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Req List</h1>
+  {% if req_list %}
+  <ul>
+    {% for req in req_list %}
+      <li>
+        <a href="{{ req.get_absolute_url }}">{{ req.RequirementID }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no Requirements in the library.</p>
+  {% endif %}       
+{% endblock %}
