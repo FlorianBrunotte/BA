@@ -1,0 +1,3 @@
+Irgendwie habe ich mich bei der Erstellung der HTML Seiten vertan.
+Neuer Branch mit HTML2 wurde angelegt für einen neuen Versuch
+Heute dann nochmal genauer das Tutorial lesen oder erstmal etwas zum Klicken erstellen mti den Tools, die mir Herr Hastenteufel empfohlen hat

@@ -1,0 +1,7 @@
+Erste Ideen zu den HTML Seiten wurden gemacht.
+Aber trotzdem sollte erstmal ein Prototyp in Balsamiq gemacht werden
+Plan für morgen:
+
+1) In Balsamiq einen Prototypen erstellen
+2) HTML Seiten schonmal definieren
+3) Die Tutorials nochmal genau lesen, um nicht wieder in die falsche Richtung zu laufen
