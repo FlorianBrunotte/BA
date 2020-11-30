@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,8 +25,12 @@ SECRET_KEY = 'y$umg)chbn=dy##w)bthxcw!6fdfqj$#b^hzh0io*j7-l2@&pd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+PYCHARM_DEBUG=True
 
-ALLOWED_HOSTS = [] #vorher Leer
+# vorher Leer
+ALLOWED_HOSTS = ['192.168.0.94', #für das Handy zum Erreichen
+                 '127.0.0.1',
+                 '192.168.178.57'] # vom Surface für das normale Laufen
 
 
 # Application definition
@@ -55,7 +60,9 @@ ROOT_URLCONF = 'anforderungenundtesten.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,9 +85,9 @@ WSGI_APPLICATION = 'anforderungenundtesten.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'ANFUNDTEST',
         'USER': 'postgres',
-        'PASSWORD': '18101998', #also das Masterpassword oder doch das Passwort vom User
+        'PASSWORD': 'koeln18101998', #also das Masterpassword oder doch das Passwort vom User
         'HOST': 'localhost', #oder localhost unter Windows immer definieren
         'PORT': '5432',
     }
@@ -123,3 +130,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -1,0 +1,41 @@
+{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>Requirements Detail</title>
+{% endblock %}
+
+{% block morecss %}
+<link href="/static/aut/dashstyle.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+
+  <h1>Requirement Detail</h1>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Mehr Details</h4>
+
+    {% for req in requirement.requirement_testcase_set.all %}
+      <p> {{ req.TestCaseID_FK }} </p>
+      <p> {{ req.RequirementID_FK }} </p>
+      <p> {{ req }} </p>
+
+    {% endfor %}
+  </div>
+
+<!-- Hier dann die Form sachen -->
+
+<p> {{ requ_instance.RequirementID }} </p>
+<p> {{ requ_instance.ElementFK_ID }} </p>
+<p> {{ requ_instance.Kategorie }} </p>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <input type="submit" value="Submit">
+
+</form>
+
+{% endblock %}

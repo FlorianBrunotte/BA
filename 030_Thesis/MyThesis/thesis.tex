@@ -68,60 +68,171 @@ Die Rückmeldungen waren:
 when it is good, it is very, very good; and when it is bad, 
 it is better than nothing.}{\textit{Dick Brandon}}}
 
+mo: Warum sollte man Django verwenden ist in der Tabelle tab dargestellt:
+mo: Geschichte von Django und die Popularität
+mo: den generellen Aufbau und Ablauf eines HTTP Request kann man in der Abbildung abb sehen. In Django Applikationen werden die verschiedenen Aufgaben von verschiedenen Dateien erledigt. In URLS.py werden die Views zu den HTML Seiten gelinkt. Sie verknüpfen also die spezifischen URL Patterns mit den gewünschten View Funktionen. In den Views werden noch die HTML Seiten mit Daten versehen aus den Modellen, die man zuvor definiert hat. Eine View verarbeitet die HTTP requests und sendet basierend auf diesen die HTTP responses. Hierbei ist die render Funktion entscheidet. Models sind Python objects und stellen so Funktionen zur Verfügung zum erstellen, ändern und löschen der Daten, aber auch um die Daten in die Datenbank zu speichern mit Querys. Die Templates können dynamisch HTML Seiten erzeugen. Sie haben noch Platzhalter für die richtigen Inhalte. Es müssen aber keine HTML Dateien sein. Django nennt diese Methode Model View Template und das kann man vergleichen mit dem Model View Controller Architektur.
+
+mo: Das Model View Controller Architektur kann auf folgenden Weg beschrieben werden... und mit der Abbildung abb auch erklärt werden.
+
+mo: Die Kommunikation mit der Datenbank wird von Django erledigt, das heißt die beiden Sachen sind entkoppelt voneinander. Man kann so die Models einfach definieren und dann die Datenbank auswählen. 
+
+mo: Python unterstützt die Objektorientierte Programmierung bzw. ist eine objektorienritere Programmiersprache. 
+
+mo: Django hat von sich aus einen Development Webserver dabei, den man benutzen kann um seine Anwendung zu testen. 
+
+mo: zur Instalation wurde in PyCharm ein neues Projekt angelegt und dann in dem virtual environment kann mit pip die verschiedenen Python Erweiterungen runtergeladen werden. Man muss sich hierbei entscheiden ob man es global installiert, dann kann man aber nur von jeder Sache nur eine Version gleichzeitig da sein. Bei einem virtual Environmnet kann man dann in einer eigenen Version verschiedene Versionen unterbringen. Die Sachen gelten dann auch nur in dem Environment. Die hier verwndeten Versionen von Python ist 3.7.2, von Django ist 3.1.2 und von PIP ist 1. Die verwendete Datenbank ist Postgres und die Version davon ist 3.7. In der Tabelle sind die verwendeten Versionen und Software mit Download Link angegeben. Virtualwrapper mit virtualvenv ist auch verwendet worden. In Pycharm wird bei einem neuen Projekt auch ein neues venv gemacht. Zum venv gibt es die verschidenen Befehle workon, deactivate, remove. 
 
 %Quellen sind hier das Django und das Mozilla Tutorial
-Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren. Mit Pip install django kann man dann django installieren
+Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren. Mit Pip install django kann man dann django installieren. Ebenfalls sollte hier bereits die Datenbank wie Postgres installiert werden. Nach anlegen des Projekts kann die Datenbank auch schon registriert werden. Wichtig hierbei sind das Passwort für den Benutzer und der Benutzername neben dem Namen der Datenbank.
 
 Dann einfach das Tutorial machen von Django Documentation.
 
-Django entstand in einem Nachrichtenumfeld
+Django entstand in einem Nachrichtenumfeld als Einführung in Django
 
-Man startet ein neues Django Project mit django-admin startproject name, dabei sollte der Name nicht wie django oder test heißen, das könnte zu Problemen führen
-cd ./anforderungenundtesten um in den richtigen Ordner zu kommen, der die manage.py Datei enthält
-
-über python manage.py runserver kann der Developerserver aufgerufen werden und man sieht, dass die Installation geklappt hat. Man kann hierbei auch die IP Adresse so ändern, dass alle Geräte im gleichen Netzwerk Zugriff haben.
-
-Man erhält verschiedene Dateien beim Start eines Projects, die Funktionen der einzelnen Dateien sind in der Tabelle 111 dargestellt. 
-%Tabelle mit den dateien und den Funktionen
+Man startet ein neues Django Project mit 
+\verb|django-admin startproject anforderungenundtesten|
+, dabei sollte der Name nicht wie django oder test heißen, das könnte zu Problemen führen \verb|cd ./anforderungenundtesten| um in den richtigen Ordner zu kommen, der die \verb|manage.py|  Datei enthält. Durch diesen Schritt wurde in dem ausgewählten Ordner ein Django Projekt erstellt und dazu notwendiger Code autogeneriert. In der Tabelle ~\ref{tab:AutoCode} können die bis jetzt generierten Dateien und Ordner gesehen werden.
 
 
-Es gibt dabei einen Unterschied zwischen einem Projekt und einer App in Django, so kann ein Projekt mehrere Apps enthalten und eine App kann in verschiedenen Projekten enthalten sein. Man sollte auf die Wiederverwendbarkeit achten.
+\begin{table}
+\centering
+\begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Datei}} & 
+\multicolumn{1}{|c|}{\textbf{Inhalt}} \\\hline
+/anforderungenundtesten & Der äußere Ordner ist ein Container für das Projekt, der Name ist nicht wichtig und kann beliebig unbenannt werden\\\hline
+manage.py     & In dieser Datei sind die Command Line Befehle enthalten, wie zum Beispiel runserver \\\hline
+anforderungenundtesten/    & der innere Ordner ist der eigentliche Python Package mit diesem Namen werden alle Dateien importiert, wie zum Beispiel anforderungenundtesten.urls \\\hline   
+\end{tabular}
+\caption{Die erstellten Dateien und Ordner nach dem django-admin startproject anforderungenundtesten Befehl}
+\label{tab:AutoCode}
+\end{table}
+
+
+
+
+über python manage.py runserver kann der Developerserver aufgerufen werden und man sieht, dass die Installation geklappt hat. Man kann hierbei auch die IP Adresse so ändern, dass alle Geräte im gleichen Netzwerk Zugriff haben. Weitergehend kann unter PyCharm die Run Configuration so angepasst werden, dass bei einem Run der runserver Befehl aufgerufen wird. Über STR C kann der Server wieder beendet werden.
+
+
+Es gibt dabei einen Unterschied zwischen einem Projekt und einer App in Django, so kann ein Projekt mehrere Apps enthalten und eine App kann in verschiedenen Projekten enthalten sein. Man sollte auf die Wiederverwendbarkeit achten. Eine App ist auch etwas, dass etwas macht, wie ein Blog oder eine Datenbank auslesen und Daten darstellen. Ein Projekt ist dann eine Sammlung von Apps und Einstellungen für eine explizite Webseite.
+
+Über den Befehl \verb|python manage.py startapp aut| wird eine neue App angelegt und auch hier wird zuerst wieder Code autogeneriert. Dieser ist in der Tabelle ~\ref{tab:AutoCode2} dargestellt mit seinen Komponenten und den verschiedenen Funktionen.
+
+
+\begin{table}
+\centering
+\begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Datei}} & 
+\multicolumn{1}{|c|}{\textbf{Inhalt}} \\\hline
+/aut & Der Ordner beinhaltet die App und die nachfolgenden Dateien\\\hline
+manage.py     & In dieser Datei sind die Command Line Befehle enthalten, wie zum Beispiel runserver \\\hline
+anforderungenundtesten/    & der innere Ordner ist der eigentliche Python Package mit diesem Namen werden alle Dateien importiert, wie zum Beispiel anforderungenundtesten.urls \\\hline   
+\end{tabular}
+\caption{Die erstellten Dateien und Ordner nach dem django-admin startproject anforderungenundtesten Befehl}
+\label{tab:AutoCode2}
+\end{table}
+
 
 Hierbei kam der Begriff Boiler Code auf, der Codeabschnitte beschreibt, die wenige Änderungen haben und an vielen Stellen auftauchen können. Beispiele sind in den Listings 1 und 2 dargestellt. Man sieht in dem 1. Lisitng ein Shebang für die Programmiersprache Python, damit wird dem Compiler klar das es sich hier um Python Code handelt. Im 2. Lisiting sieht man die Basis von einem HTML Dokument. Mit diesem Template können viele verschiedene Websites generiert werden, aber diese Tags sind notwendig. %Quelle Wikipedia --> Verbesserungswürdig
 
 Die App muss unter den installierten Apps angemeldet werden
 
+Danach sollten die URLs definiert werden und zusammengeführt werden. Es gibt eine url Datei für das Projekt und eine für die App. Von dem Projekt kann man auch die Grundseite umleiten lassen auf die Seite der App. Die verschiedenen Routen der Seiten sind in der Abbildung dargestellt. 
+In dieser Datei kann man über den Path angeben welche View für welchen HTTP Request ausgeführt werden soll. Das soll also eine Verlinkung sein.
 
-Danach sollten die URLs definiert werden und zusammengeführt werden. Es gibt eine url Datei für das Projekt und eine für die App. Von dem Projekt kann man auch die Grundseite umleiten lassen auf die Seite der App. Die verschiedenen Routen der Seiten sind in der Abbildung 1 dargestellt. 
+Die andere url Datei vom Hauptprogramm, also anforderungenundtesten, ist dafür zuständig den Hauptpfad zu deklarieren. In dieser Arbeit ist der Hauptpfad "`aut"'. Danach wird das url File von der App inkludiert mit \verb|include()| Daneben wird auch die admin Seite angegeben.
 
-Es müssen auch die Befehle makemigrations und migrate angewandt werden, da sie sämtliche Änderungen an den Datenbanken und den Modellen ausführen. 
+In den Settings kann auch noch die TIMEZONE angepasst werden. 
 
-Zuletzt wird mit runserver der Development Server erstellt und zum Laufen gebracht unter der Adresse 00000 kann man dann lokal die App testen oder man kann auch für alle Geräte im gleichen Netz die App verfügbar machen. Das ist nützlich, um die Webseiten auf mobilen Geräten oder generell Geräten mit verschiedenen Displaygrößen zu testen.
+mo: die 2 anderen Einstellungen, die man beachten sollte sind der Secret Key und DEBUG. Mit dem Secret Key kann Django die Security Sachen machen, darum sollte man ihn geheim halten und schützen während der Produktionsphase. Mit dem DEBUG Keyowrd kann man mehr Informationen bei einem Fehler bekommen, wenn die App dann fertig ist, sollte er False sein.
 
-Die Datenbank, in diesem Fall Postgres muss auch eingerichtet werden, dazu gibt es in settings.py die Einstellungen zu Databases. Diese müssen verändert werden, damit das Django-Projekt mit einer Postgres Datenbank funktioniert. 
+Es müssen auch die Befehle \verb|makemigrations| und\verb|migrate| angewandt werden, da sie sämtliche Änderungen an den Datenbanken und den Modellen ausführen.  Mit \verb|migrate| werden alle notwendigen Datenbank Tabellen erstellt für die unter InstalledApps angegebenen Apps. In der Postgres Umgebung können diese Tabellen auch gesehen werden. 
 
-Danach können die Modelle definiert werden. ORM von Python ist hierbei wichtig. Die Modelle werden aus den Tabellen, die wiederrum aus den ER-Modellen hergeleitet werden, erstellt.
+Zuletzt wird mit runserver der Development Server erstellt und zum Laufen gebracht unter der Adresse kann man dann lokal die App testen oder man kann auch für alle Geräte im gleichen Netz die App verfügbar machen. Das ist nützlich, um die Webseiten auf mobilen Geräten oder generell Geräten mit verschiedenen Displaygrößen zu testen.
 
-Die ER-Modelle sind in der Abbildung 1 dargestellt....weiter erklären. Die Modelle sind in Abbildung 1 dargestellt... auch weiter erklären.
+Die Datenbank, in diesem Fall Postgres muss auch eingerichtet werden, dazu gibt es in settings.py die Einstellungen zu Databases. Diese müssen verändert werden, damit das Django-Projekt mit einer Postgres Datenbank funktioniert. Es müssen der Name und das Passwort des Benutzers zum Anmelden benutzt werden, nicht das Masterpassword.  
 
-Nachdem man die Modelle geschrieben hat muss man das Modul noch für den Admin zur Bearbeitung freischalten bzw. registrieren. Der Admin oder Superuser muss auch erstellt werden.
 
-Modelle in Django verfolgen die DRY Regel, also man sollte sich nicht wiederholen.
+Danach können die Modelle definiert werden. ORM von Python ist hierbei wichtig. Die Modelle werden aus den Tabellen, die wiederrum aus den ER-Modellen hergeleitet werden, erstellt. Bei Modellen hat Django das Dont Repeat Yourself Prinzip, welches besagt dass...
 
-Nachdem die Modelle erstellt/geschrieben wurden, kann man mit makemigrations und migrate die Tabellen/Relationen in die Datenbank einspielen. Mit makemigrations werden die migrations erstellt als Datei um noch mal drüber zu gucken. Dabei konnte ich auch den Fehler mit dem Default DateTimeField ausbessern. Da die Migrationen nacheinander gemacht werden. Jetzt kann man bereits über den Admin die Daten einpflegen. Dazu ist zu sagen, dass das bis jetzt nur der Admin kann und die Admin Seite zwar Funktional ist, aber im Sinne von UI/Aussehen noch verbessert werden kann.
+Die ER-Modelle sind in der Abbildung 1 dargestellt....weiter erklären. Die Modelle sind in Abbildung 1 dargestellt... auch weiter erklären. Zuerst werden einfache Modelle angelegt in Django mit Foreign Keys und Char Feldern. Der Primary Key ist definiert so wie er als Standard definiert wäre, aber das wurde überschrieben, um den einzelnen Schlüsseln die richtigen Namen zu geben. Ansonsten ist der Primary Key einfach ein AutoField und hat Integer Werte die bei 1 anfangen. Die Foreign KEys sind auch damit OK, dass sie keinen Wert am Anfang haben. 
+
+Durch diese Beschreibung der Modelle kann Django die entsprechenden Datenbanken erstellen und für den Entwickler die API bereitstellen.
+
+Nachdem man die Modelle geschrieben hat muss man das Modul noch für den Admin zur Bearbeitung freischalten bzw. registrieren. Der Admin oder Superuser muss auch erstellt werden. Unter installed Apps muss man dann aut noch eintragen.
+
+
+Nachdem die Modelle erstellt/geschrieben wurden, kann man mit makemigrations und migrate die Tabellen/Relationen in die Datenbank einspielen. Mit makemigrations werden die migrations erstellt als Datei um noch mal drüber zu gucken mit den SQL Befehlen. Dabei konnte ich auch den Fehler mit dem Default DateTimeField ausbessern. Da die Migrationen nacheinander gemacht werden. Jetzt kann man bereits über den Admin die Daten einpflegen. Dazu ist zu sagen, dass das bis jetzt nur der Admin kann und die Admin Seite zwar Funktional ist, aber im Sinne von UI/Aussehen noch verbessert werden kann. Mit dem Befehl \verb|python manage.py sqlmigrate 0001| kann man die SQL Anweisungen zu dem entsprechenden Migrate sehen in der Konsole, z.b. zu 0001 initial. Der Befehl zeigt nur die Befehle an, die gemacht werden ohne diese tatsächlich zu machen.
+Mit dem Befehl \verb|check| kann auch vorher gecheckt werden, ob es Probleme gibt mit den Migrationen ohne das diese schon gemacht werden.
+
+
+Die Schritte beim Arbeiten mit der Datenbank und den Modellen ist wie folgt:
+\begin{itemize}
+\item Die Modelle anpassen in models.py
+\item mit makemigrations die migrations für die Änderungen erstellen
+\item mit migrate die migrations anwenden
+\item optional: check um Fehler zu finden
+\item optional: sqlmigrations um die SQL Befehle zu sehen
+\end{itemize}
+
 
 Der Admin muss zuerst angelegt werden über create superuser.
-Und die Modelle müssen noch angemeldet werden, damit der Admin diese bearbeiten kann. Dann kann man über die Admin Seite bereits Daten einfügen, ändern und löschen. Im nächsten Schritt wird die Admin Seite aber angepasst, damit sie besser aussieht und auch neue Funktionalitäten hat.
+Und die Modelle müssen noch angemeldet werden, damit der Admin diese bearbeiten kann. Dann kann man über die Admin Seite bereits Daten einfügen, ändern und löschen. Im nächsten Schritt wird die Admin Seite aber angepasst, damit sie besser aussieht und auch neue Funktionalitäten hat. 
+
+Mit dem runserver Befehl kann dann der Development Server aufgerufen werden, der die Seiten, die unter den Urls und den Views definiert sind anzeigt. Dazu kommt dann auch noch die admin Seite unter der die Modelle mit ersten Daten versorgt werden können und auch angezeigt werden können
+
+mo: Mit der RedirectView kann man die GrundURL auf eine App lenken. Das macht hier Sinn, da es nur eine App geben wird aut.
+mo: Damit die Seite auch noch static Files unterstützt, wie JS und CSS kann man auch noch eine Zeile hinzufügen.
+mo: makemigration und migrate sind die wichtigen Befehle für die Datenbank 
+
+mo: Django übernimmt die Kommunikation mit der Datenbank, darum muss man bei der Definition der Models nicht darauf achten.
+
+mo: Bei den Modellen können eine Menge Attribute definiert werden. Zum Beispiel ein Hilfetext für den Nutzer in den HTML-Seiten. Wichtig ist auch die str Methode, damit die einzelnen Elemente etwas sinnvolles zurückgeben an dem man sie unterscheiden kann. Mit dem getabsolute url kann man den einzelnen Elementen sofort eine verlinkte Seite geben.
+
+mo: f Strings könnten auch verwendet werden
+
+mo: Jedes Model muss einzeln eingetragen werden in die Admin Seite. Wichtig hierbei ist, dass die Admin Seite ist automatisch erstellt worden. Nicht als eigenes verkaufen. Es können aber verschiedene Veränderungen gemacht werden zu den Admin Seiten. Damit kann doch ein eigenes Look and Feel hergestellt werden. 
+
+mo: Die Templates sind dafür da dynamisch die HTML Seiten zu generieren und mit Daten zu füllen. In den Templates können dann Variablen angezeigt werden, die vorher aus der Datenbank generiert oder berechnet wurden. Man braucht hierzu die View und das template
+
+mo: Wichtig ist hierbei die Render Funktion, die 3 Elemente weitergibt. Zum einen das request Objekt, ein HTML Template und eine context Variable, was ein Python Dictionary ist. 
+
+mo: Es wird mal das Kapitel mit generic und detailed View ausprobiert an den Requirements. Es wurden einfache Seiten gemacht die die Elemente anzeigen und Details auch.
+
+mo: Sessions wurden auch gemacht, es gibt einen Counter wie oft man die Webseite besucht hat
+
+mo: Es gibt jetzt eigene Login und Logout Seiten, die noch erweitert werden sollten. Daneben kommen auch noch die Seiten für Passwörter, also zum resetten. Diese Sachen sind auch wieder von django vorgegeben. Die Funktion das Passwort zurückzusetzen musste simuliert werden, da Emails senden so noch nicht funktioniert. Dazu wird die gesendete Email mit dem Link in der Konsole geloggt. Es können auch Seiten so geschrieben werden, dass sie einen Login brauchen bevor man auf sie zugreifen kann.
+
+mo: jetzt kommt die Hauptsache, die noch am wichtigsten ist: die Forms mit denen die Nutzer Daten eingeben können.
+
+WICHTIG: Danach wird das Projekt einmal aufgeräumt, damit es übersichtlicher ist. Es wird dazu einen neuen Branch geben
 
 Darunter fällt auch das JOIN von verschiedenen Tabellen, wie die einzelnen Tabellen miteinander verbunden wurde, kann man in den Abbildungen 1 sehen.
-
+Mit so Pfeilen zwischen den Schlüsseln und so
 
 Das UI wird aber später kommen, da man erstmal einen Prototyp haben möchte der die Grundlegenden Funktionen einer  Datenbank hat: Daten eintragen, löschen, ändern und anzeigen.
 
+Das erste UI was man auch klicken kann wurde in Axure erstellt. Diese Dateien konnte man als HTML exportieren und auch CSS und Javascript war dabei. Der nächste große Schritt ist jetzt diese Dateien in das Django Projekt einzubinden. 
+
+Bei der Admin Seite werden nur die Modelle angezeigt, die unter admin.py registriert sind. Darum müssen alle Modelle zuerst registriert werden
 
 
+Im nächsten Schritt werden die Views kreiert, die man braucht. Django vergleicht welche View angezeigt werden soll durch die URL, darum mussten die Views auch erst verknüpft werden um jetzt benutzt werden zu können.
+Bei diesen Views kann  man auch aus der Anfrage Variablen abfangen. Das heißt man kann zusätzliche Variablen angeben oder zum Beispiel ein Requirement im Detail angucken, wenn die entsprechende ID angegeben wurde in der URL. So kann man mit \verb|<int:>| etwas abfangen
+Nachdem auf diesem Weg erste einfache Views geschrieben wurden, kann man jetzt das auf dem Weg machen, wie es auch in Django vorgesehen ist. Man erstellt templates, also html Dateien und tut sie in den entsprechenden Ordner. Der Pfad ist so gewählt, dass die templates wieder den Apps zugeordnet werden können. In den Templates wird dann auch Django Code verwendet mit den Klammern und den Befehlen wie if und so.
 
+Zum einen muss man die richtigen Befehle benutzen um in den Views die richtigen Werte der Models zu bekommen. Das ist eine Qual. Danach sollte man die Views Sachen übergeben an das HTML und in die entsprechenden Felder die Sachen ausgeben. Dabei wird bei mir bis jetzt eine Liste mit Dictionarys übergeben. Das muss dann entsprechend mit 2 For Schleifen ausgegeben werden. Dann kann man so die Daten die bis jetzt in der Datenbank sind ausgeben in der HTML Datei, das war echt ein langer Weg. 
 
+Um die richtigen Werte zu bekommen hat man zuerst die Elemente gefiltert nach dem richtigen Projekt. Das Projekt sollte später von irgendwo herkommen, wie zum Beispiel automatisch und unsichtbar für den Nutzer. Die Nutzer sind ja sowieso eingeteilt in die Gruppen und gehören nur zu einem Projekt. Danach werden alle Elemente dazu geholt, damit man auch auf die Attribute zugreifen kann wie Name oder so. Hier im Beispiel wird einfach alles ausgegeben. Mit den Forms die später kommen sollen kann man so vielleicht dann noch Sachen Filtern oder so. Damit sollte man dann auch endlich den anderen Weg beschreiten könne, dass man die Daten in die Datenbank schreibt ohne die Admin Seite benutzen zu müssen. Es ist bei alldem sehr wichtig auch die richtige view in den URLS verknüpft zu haben. 
+
+Mit der render Funktion kann man eine Abkürzung machen. Man muss dann nicht mehr zuerst das Template laden, sondern kann es sofort in der render Funktion angeben.
+
+Man kann den Apps in den url EInstellungen auch einen Namen geben, das ist vor allem nützlich, wenn man mehrere Apps hat und man aber in den Templates auf eine bestimmte zugreifen möchte. In diesem Beispiel ist der appname dann aut und man kann so auf die views zugreifen mit aut:requirement. Auf diese Weise können jetzt alle Links zu den verschiedenen Django Templates, also HTML Dateien geschreiben werden und man kann die Seite bereits navigieren.
+
+Das Dashboard und die entsprechenden Seiten sind in der Abbildung abb angezeigt.
+
+Die HTML Siten wurden mit einer Testversion von Axure erstellt. Mit der Seite kann man HTML Seiten erstellen und bereits ausprobieren. Bei der Integration muss daraug geachtet werden, dass die ganzen Dateien, also auch die CSS Dateien in den richtigen Ordnern sind. Die Links in den Dateien müssen noch angepasst werden an die static Variable. Die ganzen ressourcen, die mit src anfangen und die href müssen jetzt noch /static/ davor stehen haben, da die Sachen in diesem Ordner zu finden sind.
 
 \chapter{\LaTeX-Sachen} \label{chap:latex}
 \section{Latex Sachen als Section}
@@ -515,10 +626,13 @@ meist vermeiden.
 sondern einen passenden publizierten Artikel zitieren.
 
 %So kann man Befehle anzeigen
+%eigene Zeile
 \begin{verbatim}
 $ bibtex thesis1
 $ bibtex thesis2
 \end{verbatim}
+%in einer Zeile
+\verb|bibtex|
 
 
 \chapter{Zusammenfassung und Ausblick} \label{chap:fazit}

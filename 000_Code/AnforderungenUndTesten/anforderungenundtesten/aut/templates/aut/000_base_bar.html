@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block titel %} <title>Anforderungen und Testen</title> {% endblock %}
+
+    {% load static %}
+    <link href="/static/aut/000_base_css_bar.css" type="text/css" rel="stylesheet"/>
+
+    {% block morecss %} <!-- MORE --> {% endblock %}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/aut/images/favicon.ico">
+</head>
+<body>
+    <!-- Statusleiste Grundrahmen -->
+    <div id="statusleiste">
+
+      <!-- Die einzelnen Elemente -->
+
+      <!-- Willkommenstext -->
+      <div id="willkommen" class="textdisplay heading_1">
+        Willkommen, 1812178
+      </div>
+
+
+      <!-- Logo -->
+      <img id="logo" src="/static/aut/images/logo.png"/>
+
+      <!-- die anderen Elemente in der Mitte -->
+
+      <div class="dropdown">
+        <div class="dropdown-content textdisplay">
+          <a href=" {% url 'aut:dash' %} ">Dashboard</a>
+          <a href=" {% url 'aut:req' %} ">Requirements</a>
+          <a href=" {% url 'aut:requ' %} ">TestCases testc</a>
+          <a href=" {% url 'aut:testr' %} ">TestRun</a>
+          <a href=" {% url 'aut:testrd' %} ">TestRun durchführen</a>
+          <a href=" {% url 'aut:pro' %} ">Projekt</a>
+          <a href=" {% url 'aut:stat' %} ">Statistik</a>
+        </div>
+      </div>
+    </div>
+
+    {% block content %} <!-- Hier kommen die Seitenspezifischen Sachen rein --> {% endblock %}
+
+{% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'aut:requbyuser'%}">meine requs</a></li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+   {% endif %}
+
+
+<!--
+{% if perms.aut.can_mark_category %}
+     Etwas machen
+{% endif %}
+-->
+
+</body>
+</html>
