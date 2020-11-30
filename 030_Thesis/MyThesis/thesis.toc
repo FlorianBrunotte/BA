@@ -2,6 +2,6 @@
 \contentsline {chapter}{\numberline {1}Motivation - Warum wurde diese Software geschrieben?}{2}%
 \contentsline {chapter}{\numberline {2}Anforderungsanalyse - Welche Anforderungen hat das Projekt?}{3}%
 \contentsline {chapter}{\numberline {3}Implementierung - Wie erstellt man eine Django-Applikation?}{4}%
-\contentsline {chapter}{\numberline {4}\LaTeX -Sachen}{7}%
-\contentsline {section}{\numberline {4.1}Latex Sachen als Section}{7}%
-\contentsline {chapter}{\numberline {5}Zusammenfassung und Ausblick}{14}%
+\contentsline {chapter}{\numberline {4}\LaTeX -Sachen}{11}%
+\contentsline {section}{\numberline {4.1}Latex Sachen als Section}{11}%
+\contentsline {chapter}{\numberline {5}Zusammenfassung und Ausblick}{18}%
