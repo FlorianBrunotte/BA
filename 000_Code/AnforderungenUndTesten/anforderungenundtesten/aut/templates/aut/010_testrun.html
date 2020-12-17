@@ -1,0 +1,71 @@
+﻿{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>A&T TestCase</title>
+{% endblock %}
+
+{% block morecss %}
+<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
+<link href="/static/aut/010_testrun_style.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block bodyfunction %} <body onload="myFunction()">
+<script>
+function myFunction() {
+  loadIframe('ifrm', {{ testrun.get_absolute_url }} );
+}
+</script>
+
+{% endblock %}
+
+{% block content %}
+<!-- Hier kommen die Tables rein -->
+
+    <div id="tabellen">
+    <div class="row">
+      <div class="column">
+          <ul class="testrunlist">
+    <li> <a href="{% url 'aut:testrun_create' %}" onclick="return loadIframe('ifrm', this.href);"> Neuer TestRun</a>  </li>
+    <li> <a href="{% url 'aut:testrun_create_and_run' %}" onclick="return loadIframe('ifrm', this.href);"> Neuer TestRun und Run </a>  </li>
+    {% for testrun in testruns %}
+      <li> <a href="{{ testrun.get_absolute_url }}" onclick="return loadIframe('ifrm', this.href);"> {{ testrun }}</a>  </li>
+
+    {% endfor %}
+
+</ul>
+
+      </div>
+        <div class="column">
+            <div class="iframe">
+    <iframe name="ifrm" id="ifrm" frameborder="0" src="http://" crolling="yes"
+    style="width:40rem; height: 500px; overflow: show; border:1px solid #000;">
+        Your browser doesn't support iframes.
+    </iframe>
+</div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<script>
+function loadIframe(iframeName, url) {
+    var $iframe = $('#' + iframeName);
+    if ( $iframe.length ) {
+        $iframe.attr('src',url);
+        return false;
+    }
+    $("#testrunlist").load(location.href + " #testrunlist");
+    return true;
+}
+</script>
+
+
+{% endblock %}
+
+

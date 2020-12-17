@@ -1,0 +1,63 @@
+﻿{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>A&T Requirement</title>
+{% endblock %}
+
+{% block morecss %}
+<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
+<link href="/static/aut/010_requirement_style.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<!-- Hier kommen die Tables rein -->
+    <div id="tabellen">
+    <div class="row">
+      <div class="column">
+          <ul class="requirementlist">
+    <li> <a href="{% url 'aut:requirement_create' %}" onclick="return loadIframe('ifrm', this.href);" id="New"> Neues Requirement</a>  </li>
+    <li> <a href="{% url 'aut:requirement_create_and_testcase' %}" onclick="return loadIframe('ifrm', this.href);"> Neues Requirement und Testcase </a>  </li>
+    {% for requirement in requirements %}
+      <li> <a href="{{ requirement.get_absolute_url }}" onclick="return loadIframe('ifrm', this.href);"> {{ requirement }}</a>  </li>
+
+    {% endfor %}
+
+</ul>
+
+      </div>
+        <div class="column">
+            <div class="iframe">
+    <iframe name="ifrm" id="ifrm" frameborder="0" src="http://" srolling="yes"
+    style="width:40rem; height: 500px; overflow: show; border:1px solid #000;">
+        Your browser doesn't support iframes.
+    </iframe>
+</div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<script>
+function loadIframe(iframeName, url) {
+    var $iframe = $('#' + iframeName);
+    if ( $iframe.length ) {
+        $iframe.attr('src',url);
+        return false;
+    }
+    $("#requirementlist").load(location.href + " #requirementlist");
+    return true;
+}
+
+
+</script>
+
+
+{% endblock %}
+
+

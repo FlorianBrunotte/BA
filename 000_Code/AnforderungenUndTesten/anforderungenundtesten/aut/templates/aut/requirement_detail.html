@@ -1,33 +1,33 @@
-{% extends "aut/000_base_bar.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-{% block titel %}
-<title>Requirements Detail</title>
-{% endblock %}
+    <title>Requirements Detail</title>
+    <link href="/static/aut/000_basebar.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.5.1.js">
+    </script>
 
-{% block morecss %}
-<link href="/static/aut/dashstyle.css" type="text/css" rel="stylesheet"/>
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/aut/images/favicon.ico">
+</head>
+<body>
 
-{% block content %}
 
   <h1>Requirement Detail</h1>
 
-  <div style="margin-left:20px;margin-top:20px">
-    <h4>Mehr Details</h4>
+<!-- Hier dann die Sachen die man nicht ändern kann -->
+    <p>{{ requ_instance }}</p>
+    <p>Erstellung: {{ requ_instance.req_datum_erstellung }}</p>
+    <p>Änderung: {{ requ_instance.req_datum_aenderung }}</p>
 
-    {% for req in requirement.requirement_testcase_set.all %}
-      <p> {{ req.TestCaseID_FK }} </p>
-      <p> {{ req.RequirementID_FK }} </p>
-      <p> {{ req }} </p>
 
-    {% endfor %}
+
+
   </div>
 
-<!-- Hier dann die Form sachen -->
-
-<p> {{ requ_instance.RequirementID }} </p>
-<p> {{ requ_instance.ElementFK_ID }} </p>
-<p> {{ requ_instance.Kategorie }} </p>
+<!-- Hier dann die Form sachen die man ändern kann-->
 
 <form action="" method="post">
   {% csrf_token %}
@@ -38,4 +38,7 @@
 
 </form>
 
-{% endblock %}
+
+
+</body>
+</html>

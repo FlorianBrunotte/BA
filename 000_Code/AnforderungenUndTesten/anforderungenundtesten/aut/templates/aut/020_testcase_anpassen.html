@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% load static %}
+    <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.5.1.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+html {
+  font-size: calc(0.2rem + 1vw);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th{
+  width: 25rem;
+}
+
+.column2 {
+  float: left;
+  width: 40%;
+  background-color: white;
+  text-align: center;
+
+}
+.column22 {
+  float: left;
+  width: 55%;
+  background-color: white;
+  text-align: center;
+  margin-left: 1rem;
+
+}
+</style>
+<body>
+
+<div class="column2">
+  <h1>{{ testc_instance }}</h1>
+    <table>
+     <tr>
+         <td><input form="searchForm" id="sub1" type="submit" value="Speichern"></td>
+         <td><input form="searchForm" name="tc_and_tr"  id="sub2" type="submit" value="Speichern und TestRun erstellen" onclick="btnClicked = 'Sub2'"></td>
+
+
+<form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" method="post">
+  {% csrf_token %}
+  <td><input name="delete_testcase" type="submit" value="Löschen"></td>
+</form>
+
+     </tr>
+
+ </table>
+    <p>Erstellung: {{ testc_instance.testc_datum_erstellung }} Änderung: {{ testc_instance.testc_datum_aenderung }} Ersteller: {{ testc_instance.testc_fk_ersteller }}</p>
+
+
+ <form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" id="searchForm" method="post">
+ <table>
+     {% csrf_token %}
+     <tr>
+         <td><label for="{{ form.testc_form_name.id_for_label }}">Name</label></td>
+         <td>{{ form.testc_form_name }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.testc_form_beschreibung.id_for_label }}">Beschreibung</label></td>
+         <td>{{ form.testc_form_beschreibung }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.testc_form_kommentar.id_for_label }}">Kommentar</label></td>
+         <td>{{ form.testc_form_kommentar }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.testc_form_vorbedingung.id_for_label }}">Vorbedingung</label></td>
+         <td>{{ form.testc_form_vorbedingung }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.testc_form_fk_requirement.id_for_label }}">Requirement</label></td>
+         <td>{{ form.testc_form_fk_requirement }}</td>
+     </tr>
+
+ </table>
+ </form>
+
+</div>
+
+
+
+<div class="column22">
+
+  <h1>TestCase Schritte</h1>
+   <table class="table textdisplay">
+          <tr>
+              <th>Schritt</th>
+              <th>erwartetes Ergebnis</th>
+
+          </tr>
+       <!-- Hier die For Schleife mit den Schritten -->
+       {% for schritt in schritte_instance %}
+        <tr>
+              <td style="width: 10rem;" >{{ schritt.schritt_schritte }}</td>
+              <td style="width: 10rem;" >{{ schritt.schritt_erwartetesergebnis }} </td>
+              <td style="width: 5rem;" >
+                 <form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" method="post">
+                     {% csrf_token %}
+                       <input type="hidden" name="delete_schritt" value="{{ schritt.schritt_pk_id }}">
+                     <input name="delete_schrittttt" type="submit" value="Entfernen">
+                 </form>
+              </td>
+        </tr>
+        {% endfor %}
+
+     <tr>
+<form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" method="post">
+    {% csrf_token %}
+
+
+            <td>{{ schritt_form.schritt_form_schritt }}</td>
+            <td>{{ schritt_form.schritt_form_erwartetesergebnis }}</td>
+
+
+    <td ><input id="sub3" type="submit" value="Hinzufügen"></td>
+</form></tr>
+
+ </table>
+</div>
+
+
+<script>
+  var btnClicked = "";
+</script>
+<script>
+// Attach a submit handler to the form    onclick="btnClicked = 'Sub2'"
+$( "#searchForms" ).submit(function( event ) {
+
+
+  // Stop form from submitting normally
+  event.preventDefault();
+
+  // Get some values from elements on the page:
+  var $form = $( this );
+  var values = $(this).serialize();
+  url = $form.attr( "action" );
+
+  // Send the data using post
+  var posting = $.post( url, values );
+
+  // Put the results in a div
+  posting.done(function() {
+  console.log(btnClicked)
+
+         // window.open(" {% url 'aut:view_testrun' %} ", "_parent");
+         //open tesrrun view and load somethin in a iframe
+         window.open(" {% url 'aut:testrun_create_2' testc_instance.testc_pk_testcaseid  %} ", "_parent");
+
+
+
+  });
+});
+
+</script>
+</body>
+</html>

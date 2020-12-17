@@ -1,0 +1,117 @@
+html {
+  font-size: calc(0.2rem + 1vw);
+}
+body {
+  position:relative;
+  height: auto;
+  width: auto;
+  text-align:left;
+
+}
+
+/* Die Rows und Columns für den Rest */
+/* Create three equal columns that floats next to each other */
+#tabellen{
+  margin-top: 3rem;
+  position:relative;
+  width:auto;
+  height: auto;
+  border-width:0.1rem;
+  border-style:solid;
+  border-color:red;
+  overflow: auto;
+
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  background-color: white;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.table {
+  background-color: #668cff;
+  margin: auto;
+  border: 0.1rem solid red;
+  padding: 0.5rem;
+}
+
+td, th {
+  border: 0.1rem solid green;
+  text-align: left;
+  padding: 1rem 2rem 1rem 2rem; /* t r b l*/
+}
+
+tr:nth-child(even) {
+  background-color: #ccd9ff;
+}
+tr:nth-child(odd) {
+  background-color: #0040ff;
+}
+
+#knoepfe_id{
+  margin-top: 3rem;
+  position: relative;
+  width:auto;
+  height: auto;
+  border-width:0.1rem;
+  border-style:solid;
+  border-color:red;
+  overflow: auto;
+}
+
+.knoepfe {
+  background-color: #668cff;
+  margin: auto;
+  border: 0.1rem solid red;
+  padding: 0.5rem;
+  width: 50%;
+  height: 50%;
+  padding: 0.1rem;
+
+}
+/* Create three equal columns that floats next to each other */
+.columnk {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.rowk:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .columnk{
+    width: 100%;
+  }
+}
+
+
+
+.knoepfe_innen {
+  background-color: #668cff;
+  margin: auto;
+  border: 0.1rem solid red;
+  padding: 0.5rem;
+  width: 50%;
+  height: 50%;
+  padding: 0.1rem;
+
+}
