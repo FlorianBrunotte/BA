@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ANFUNDTEST',
         'USER': 'postgres',
-        'PASSWORD': 'koeln18101998', #also das Masterpassword oder doch das Passwort vom User
+        'PASSWORD': 'Koeln18101998!', #also das Masterpassword oder doch das Passwort vom User Für PC Koeln18101998! für Surcafe koeln18101998
         'HOST': 'localhost', #oder localhost unter Windows immer definieren
         'PORT': '5432',
     }
@@ -140,3 +140,5 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

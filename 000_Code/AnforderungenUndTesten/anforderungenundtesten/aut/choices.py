@@ -3,8 +3,6 @@ KATEGORIEN = (
     ('2', 'Kategorie 2'),
 )
 
-<<<<<<< Updated upstream
-=======
 RUN_STATUS = (
     ('n', 'no run yet'),
     ('p', 'pass'),
@@ -22,5 +20,8 @@ GRUPPEN = (
     ('8', 'Gruppe 8'),
     ('9', 'Gruppe 9'),
 )
->>>>>>> Stashed changes
 
+ROLLEN = (
+    ('s', 'Student'),
+    ('p', 'Professor'),
+)

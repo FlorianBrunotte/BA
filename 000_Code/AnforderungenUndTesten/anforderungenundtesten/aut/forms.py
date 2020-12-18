@@ -1,13 +1,10 @@
 from django import forms
+from .models import requirement, testcase
 #import der Choices damit die überall verwendbar sind
 from .choices import *
 
 
 class RequirementForm(forms.Form):
-<<<<<<< Updated upstream
-    form_category = forms.ChoiceField(choices=KATEGORIEN)
-
-=======
     #Felder die verändert werden können
     req_form_name = forms.CharField(widget=forms.Textarea(attrs={"rows": 2, "cols": 80}))
     req_form_beschreibung = forms.CharField(widget=forms.Textarea(attrs={"rows": 2, "cols": 80}))
@@ -60,4 +57,3 @@ class GroupForm(forms.Form):
     # Felder die verändert werden können
     group_form_group = forms.ChoiceField(choices=GRUPPEN)
 
->>>>>>> Stashed changes
