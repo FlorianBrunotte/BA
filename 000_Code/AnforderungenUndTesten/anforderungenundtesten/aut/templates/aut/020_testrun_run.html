@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TestRun</title>
+</head>
+<style type="text/css">
+html {
+  font-size: calc(0.2rem + 1vw);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th{
+  width: 25rem;
+}
+
+</style>
+<body>
+    <h1>{{ testr_instance }}</h1>
+<a href=" {% url 'aut:view_testrun' %} ">DONE</a>
+   <table class="table textdisplay">
+          <tr>
+              <th>Schritt</th>
+              <th>erwartetes Ergebnis</th>
+              <th>tatsächliches Ergebnis</th>
+              <th>Ergebnis</th>
+          </tr>
+   </table>
+{% for schritt in testr_schritte %}
+          <table class="table textdisplay">
+          <tr>
+              <td> {{ schritt.schritt_schritte }}</td>
+              <td> {{ schritt.schritt_erwartetesergebnis }}</td>
+              <td> {{ schritt.schritt_tatsaechlichesergebnis }}</td>
+              <td> {{ schritt.schritt_ergebnis }}</td>
+          </tr>
+          </table>
+    <!-- und noch die Form für die anderen Sachen zum Anpassen -->
+
+    <form action="{% url 'aut:testrun_run' pk=testr_instance.testr_pk_testrunid  %}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ schritt_form.as_table }}
+    </table>
+    <input name="update_schritt" type="submit" value="{{ schritt.schritt_pk_id }}">Update</input>
+    </form>
+
+ {% endfor %}
+
+</body>
+</html>

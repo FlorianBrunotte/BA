@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% load static %}
+    <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.5.1.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+html {
+  font-size: calc(0.2rem + 1vw);
+}
+table, th, td {
+  border: 1px solid black;
+}
+th{
+  width: 25rem;
+}
+
+.column2 {
+  float: left;
+  width: 40%;
+  background-color: white;
+  text-align: center;
+
+}
+.column22 {
+  float: left;
+  width: 55%;
+  background-color: white;
+  text-align: center;
+  margin-left: 1rem;
+
+}
+</style>
+<body>
+<div class="column2">
+  <h1>{{ requ_instance }}</h1>
+    <table>
+     <tr>
+         <td><input form="searchForm" id="sub1" type="submit" value="Speichern"></td>
+         <td><input form="searchForm" name="tc_and_tr"  id="sub2" type="submit" value="Speichern und TestCase erstellen" onclick="btnClicked = 'Sub2'"></td>
+
+
+<form action="{% url 'aut:requirement_create' pk=requ_instance.req_pk_requirementid  %}" method="post">
+  {% csrf_token %}
+  <td><input name="delete_requirement" type="submit" value="Löschen"></td>
+</form>
+
+     </tr>
+
+ </table>
+    <p>Erstellung: {{ requ_instance.req_datum_erstellung }} Änderung: {{ requ_instance.req_datum_aenderung }} Ersteller: {{ requ_instance.req_fk_ersteller }}</p>
+
+ <form action="{% url 'aut:requirement_create' pk=requ_instance.req_pk_requirementid  %}" id="searchForm" method="post">
+ <table>
+     {% csrf_token %}
+     <tr>
+         <td><label for="{{ form.req_form_name.id_for_label }}">Name</label></td>
+         <td>{{ form.req_form_name }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.req_form_beschreibung.id_for_label }}">Beschreibung</label></td>
+         <td>{{ form.req_form_beschreibung }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.req_form_kommentar.id_for_label }}">Kommentar</label></td>
+         <td>{{ form.req_form_kommentar }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.form_category.id_for_label }}">Kategorie</label></td>
+         <td>{{ form.form_category }}</td>
+     </tr>
+
+ </table>
+ </form>
+
+</div>
+
+
+<script>
+  var btnClicked = "";
+</script>
+<script>
+// Attach a submit handler to the form    onclick="btnClicked = 'Sub2'"
+$( "#searchForms" ).submit(function( event ) { //eigentlich searchForm
+
+
+  // Stop form from submitting normally
+  event.preventDefault();
+
+  // Get some values from elements on the page:
+  var $form = $( this );
+  var values = $(this).serialize();
+  url = $form.attr( "action" );
+
+  // Send the data using post
+  var posting = $.post( url, values );
+
+  // Put the results in a div
+  posting.done(function() {
+  console.log(btnClicked)
+
+  });
+});
+
+</script>
+</body>
+</html>

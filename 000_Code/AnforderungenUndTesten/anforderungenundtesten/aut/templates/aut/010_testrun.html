@@ -1,0 +1,37 @@
+﻿{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>A&T TestCase</title>
+{% endblock %}
+
+{% block morecss %}
+<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
+<link href="/static/aut/010_testrun_style.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<!-- Hier kommen die Tables rein -->
+
+<div id="tabellen">
+    <ul id="testrunlist">
+    <li> <a href="{% url 'aut:testrun_create' %}" target="ifrm" > Neuer TestRun</a>  </li>
+    {% for testrun in testruns %}
+      <li> <a href="{{ testrun.get_absolute_url }}" target="ifrm"> {{ testrun }}</a>  </li>
+    {% endfor %}
+
+</ul>
+
+
+    <iframe id="ifrm" name="ifrm">
+        Your browser doesn't support iframes.
+    </iframe>
+</div>
+
+<script type="text/javascript">
+        document.getElementById('ifrm').onload = function() {
+           $("#testrunlist").load(location.href + " #testrunlist li");
+        }
+</script>
+
+{% endblock %}
+

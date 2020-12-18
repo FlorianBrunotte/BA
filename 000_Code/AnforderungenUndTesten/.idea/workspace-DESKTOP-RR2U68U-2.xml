@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1462e1d3-b09e-4564-8bb6-4da139e1dbd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/WS2021.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/protomodul/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/prototyp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/prototyp/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/prototyp/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/prototyp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prototyp/prototyp/wsgi.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1jT6yTpCWHtPgMOLj60fwCJvZFy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/anforderungenundtesten/aut/templates/aut/templatetags" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut" />
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut\static\aut\images" />
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut\static\aut" />
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut\templates\aut" />
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut\templates\aut\templatetags" />
+      <recent name="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\anforderungenundtesten\aut" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.fordebug">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="AnforderungenUndTesten" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/anforderungenundtesten/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fordebug" type="PythonConfigurationType" factoryName="Python">
+      <module name="AnforderungenUndTesten" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Florian\OneDrive\Semester7\Bachelorarbeit\000_Repo\BA\000_Code\AnforderungenUndTesten\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/anforderungenundtesten/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MAKEMIGRATIONS" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/anforderungenundtesten/manage.py" />
+      <option name="SCRIPT_OPTIONS" value="makemigrations" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MIGRATE" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/anforderungenundtesten/manage.py" />
+      <option name="SCRIPT_OPTIONS" value="migrate" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RUNSERVER" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/anforderungenundtesten/manage.py" />
+      <option name="SCRIPT_OPTIONS" value="runserver" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.fordebug" />
+      <item itemvalue="Shell Script.MAKEMIGRATIONS" />
+      <item itemvalue="Shell Script.MIGRATE" />
+      <item itemvalue="Shell Script.RUNSERVER" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1462e1d3-b09e-4564-8bb6-4da139e1dbd3" name="Default Changelist" comment="" />
+      <created>1603815988785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603815988785</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="23" y="0" width="1092" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605813679207">
+      <screen x="0" y="0" width="1200" height="760" />
+    </state>
+    <state x="23" y="0" width="1092" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1200.760@0.0.1200.760" timestamp="1605813679207" />
+    <state x="297" y="115" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1604145760455" />
+    <state x="727" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607095364642">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="341" y="182" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1200.760@0.0.1200.760" timestamp="1606239816856" />
+    <state x="727" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607095364642" />
+    <state width="1718" height="466" key="DebuggerActiveHint" timestamp="1607986301889">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1718" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1607986301889" />
+    <state width="1718" height="466" key="DebuggerActiveHint/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607544271897" />
+    <state x="292" y="117" key="FileChooserDialogImpl" timestamp="1605376320333">
+      <screen x="0" y="0" width="1200" height="760" />
+    </state>
+    <state x="292" y="117" key="FileChooserDialogImpl/0.0.1200.760@0.0.1200.760" timestamp="1605376320333" />
+    <state x="623" y="215" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604678580886" />
+    <state width="1899" height="317" key="GridCell.Tab.0.bottom" timestamp="1608071851172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.0.bottom/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1899" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1608071851172" />
+    <state width="2539" height="490" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607703024092" />
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607464166983" />
+    <state width="2539" height="491" key="GridCell.Tab.0.bottom/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="1899" height="317" key="GridCell.Tab.0.center" timestamp="1608071851172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.0.center/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1899" height="317" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1608071851172" />
+    <state width="2539" height="490" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607703024092" />
+    <state width="2539" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607464166983" />
+    <state width="2539" height="491" key="GridCell.Tab.0.center/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="1899" height="317" key="GridCell.Tab.0.left" timestamp="1608071851171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.0.left/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1899" height="317" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1608071851171" />
+    <state width="2539" height="490" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607703024092" />
+    <state width="2539" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607464166983" />
+    <state width="2539" height="491" key="GridCell.Tab.0.left/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116104" />
+    <state width="1899" height="317" key="GridCell.Tab.0.right" timestamp="1608071851172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.0.right/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1899" height="317" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1608071851172" />
+    <state width="2539" height="490" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607703024092" />
+    <state width="2539" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607464166983" />
+    <state width="2539" height="491" key="GridCell.Tab.0.right/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="2539" height="490" key="GridCell.Tab.1.bottom" timestamp="1608056125079">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.1.bottom/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1224" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1607830693613" />
+    <state width="2539" height="490" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125079" />
+    <state width="2539" height="491" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607702036193" />
+    <state width="2539" height="491" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607464165781" />
+    <state width="2539" height="491" key="GridCell.Tab.1.bottom/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="2539" height="490" key="GridCell.Tab.1.center" timestamp="1608056125078">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.1.center/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1224" height="274" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1607830693613" />
+    <state width="2539" height="490" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="491" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607702036193" />
+    <state width="2539" height="491" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607464165781" />
+    <state width="2539" height="491" key="GridCell.Tab.1.center/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="2539" height="490" key="GridCell.Tab.1.left" timestamp="1608056125078">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.1.left/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1224" height="274" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1607830693613" />
+    <state width="2539" height="490" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125078" />
+    <state width="2539" height="491" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607702036193" />
+    <state width="2539" height="491" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607464165781" />
+    <state width="2539" height="491" key="GridCell.Tab.1.left/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state width="2539" height="490" key="GridCell.Tab.1.right" timestamp="1608056125079">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1179" height="271" key="GridCell.Tab.1.right/0.0.1200.760@0.0.1200.760" timestamp="1606735154327" />
+    <state width="1224" height="274" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1607830693613" />
+    <state width="2539" height="490" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1608056125079" />
+    <state width="2539" height="491" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607702036193" />
+    <state width="2539" height="491" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607464165781" />
+    <state width="2539" height="491" key="GridCell.Tab.1.right/1920.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1607724116105" />
+    <state x="204" y="50" key="SettingsEditor" timestamp="1605813652507">
+      <screen x="0" y="0" width="1200" height="760" />
+    </state>
+    <state x="204" y="50" key="SettingsEditor/0.0.1200.760@0.0.1200.760" timestamp="1605813652507" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603818011471" />
+    <state x="462" y="97" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1603909411821" />
+    <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1607871971357">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1288" height="708" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1607871971357" />
+    <state width="1288" height="708" key="XDebugger.FullValuePopup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607425427685" />
+    <state x="164" y="109" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605813847028">
+      <screen x="0" y="0" width="1200" height="760" />
+    </state>
+    <state x="164" y="109" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1200.760@0.0.1200.760" timestamp="1605813847028" />
+    <state x="1812" y="154" width="739" height="1388" key="dock-window-1" timestamp="1607294965768">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1812" y="154" width="739" height="1388" key="dock-window-1/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1607294965768" />
+    <state x="393" y="239" key="scopes" timestamp="1606241810911">
+      <screen x="0" y="0" width="1200" height="760" />
+    </state>
+    <state x="393" y="239" key="scopes/0.0.1200.760@0.0.1200.760" timestamp="1606241810911" />
+    <state x="2481" y="149" width="1434" height="1249" key="search.everywhere.popup" timestamp="1607942440209">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="263" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1200.760@0.0.1200.760" timestamp="1606581880111" />
+    <state x="2481" y="149" width="1434" height="1249" key="search.everywhere.popup/0.0.1920.1040/1920.0.2560.1400@1920.0.2560.1400" timestamp="1607942440209" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/anforderungenundtesten/aut/templatetags/aut_extras.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/anforderungenundtesten/aut/templatetags/aut_extras.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

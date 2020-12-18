@@ -116,10 +116,10 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #ccd9ff;
+  background-color: #00ffff;
 }
 tr:nth-child(odd) {
-  background-color: #0040ff;
+  background-color: #00cca3;
 }
 
 #knoepfe_id{

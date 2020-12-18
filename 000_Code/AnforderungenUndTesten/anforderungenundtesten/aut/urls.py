@@ -5,6 +5,7 @@ from . import  views
 #auf die Namen aufpassen ob die irgendwo bbenutzt werden
 app_name = 'aut'
 urlpatterns = [
+<<<<<<< Updated upstream
     path('', views.anmelden, name='anmelden'),
     path('dashboard', views.dash, name='dash'), #hier steht nix ist aber unter /polls/ weil das in dem Haupt url File steht
     path('b', views.index2, name='index2'),
@@ -43,5 +44,30 @@ urlpatterns = [
     #projekt
     #abmelden
 
+=======
+    #Basis Views
+    path('', views.view_dashboard, name='view_dashboard'), #vielleicht noch verschönern
+    path('requirement', views.view_requirement, name='view_requirement'),
+    path('testcase', views.view_testcase, name='view_testcase'),
+    path('testrun', views.view_testrun, name='view_testrun'),
+    path('statistik', views.view_statistik, name='view_statistik'),
+
+    #Requirement Views für die Forms
+    path('requirement/<int:pk>/', views.edit_requirement, name='requirement_change'),
+    path('requirement/create/', views.edit_requirement, name='requirement_create'),
+    path('requirement/create/<int:pk>/', views.edit_requirement, name='requirement_create'),
+
+    #TestCase Views für die Forms
+    path('testcase/<int:pk>/', views.edit_testcase, name='testcase_change'),
+    path('testcase/create/', views.edit_testcase, name='testcase_create'),
+    path('testcase/create/<int:pk>/', views.edit_testcase, name='testcase_create'),
+
+    #TestRun Views für die Forms
+    path('testrun/<int:pk>/', views.edit_testrun, name='testrun_change'),
+    path('testrun/create', views.edit_testrun, name='testrun_create'),
+    path('testrun/create/<int:pk>/', views.edit_testrun, name='testrun_create'),
+
+    path('testrun/run/<int:pk>/', views.testrun_run, name='testrun_run'),
+>>>>>>> Stashed changes
 ]
 
