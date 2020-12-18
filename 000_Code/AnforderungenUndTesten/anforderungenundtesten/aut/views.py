@@ -27,8 +27,33 @@ from .choices import *
 def anpassen_requirement(request, pk):
     requ_instance = get_object_or_404(Requirement, pk=pk)
 
+<<<<<<< Updated upstream
     # RequirementID anstatt pkk = pK vieleicht
 =======
+=======
+    context = {
+        'user_gruppennummer': user_gruppennummer,
+        'all_users': all_users,
+
+        'num_req': num_req,
+        'num_req_eigene': num_req_eigene,
+        'num_yes_testcase': num_yes_testcase,
+        'num_no_testcase': num_no_testcase,
+
+        'num_testc': num_testc,
+        'num_testc_eigene': num_testc_eigene,
+        'num_lis_no_testrun_or_no_run': num_lis_no_testrun_or_no_run,
+        'num_lis_yes_testrun_run_failed': num_lis_yes_testrun_run_failed,
+        'num_lis_yes_testrun_run_passed': num_lis_yes_testrun_run_passed,
+
+        'num_testr': num_testr,
+        'num_lis_no_testrun': num_lis_no_testrun,
+        'num_lis_failed_testrun': num_lis_failed_testrun,
+        'num_lis_passed_testrun': num_lis_passed_testrun,
+    }
+    return render(request, 'aut/010_dashboard.html', context=context)
+
+>>>>>>> Stashed changes
 #Ende des Dashboards
 ########################################################################################################################
 def view_requirement(request):
@@ -68,8 +93,11 @@ def edit_requirement(request, pk=None):
             return HttpResponseRedirect(reverse('aut:anpassen_requ', kwargs={'pk': pk}))
     else:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       form = RequirementForm(initial={'form_category': KATEGORIEN })
 =======
+=======
+>>>>>>> Stashed changes
       form = RequirementForm(initial={'form_category': requ_instance.req_kategorie,
                                       'req_form_kommentar': requ_instance.req_kommentar,
                                       'req_form_name': requ_instance.req_name,
@@ -125,6 +153,7 @@ def projektbyprof(request, profid):
     for value in Projekt.objects.filter(Professorennummer_FK=profid):  # '9782a5ca-f7b6-4d52-9797-75790dd90c1e'
         ret.append(value)
 
+<<<<<<< Updated upstream
     return HttpResponse(ret)
 
 
@@ -136,6 +165,8 @@ from django.template import loader
 =======
     return render(request, 'aut/020_requirement_anpassen.html', context)
 
+=======
+>>>>>>> Stashed changes
 #Ende der Requirements
 ########################################################################################################################
 
@@ -349,6 +380,9 @@ def view_statistik(request):
 
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -357,6 +391,7 @@ def anmelden(request):
     return render(request, 'aut/anmelden.html')
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 # use a decorater to restrict access
 @login_required
@@ -436,6 +471,8 @@ def projekt(request):
     #  return HttpResponse(now) #"Moin Leute. Hier ist der Index der App"
     return render(request, 'aut/projekt.html')
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

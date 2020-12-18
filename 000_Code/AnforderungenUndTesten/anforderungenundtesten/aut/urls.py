@@ -6,6 +6,7 @@ from . import  views
 app_name = 'aut'
 urlpatterns = [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     path('', views.anmelden, name='anmelden'),
     path('dashboard', views.dash, name='dash'), #hier steht nix ist aber unter /polls/ weil das in dem Haupt url File steht
     path('b', views.index2, name='index2'),
@@ -45,6 +46,8 @@ urlpatterns = [
     #abmelden
 
 =======
+=======
+>>>>>>> Stashed changes
     #Basis Views
     path('', views.view_dashboard, name='view_dashboard'), #vielleicht noch verschönern
     path('requirement', views.view_requirement, name='view_requirement'),
@@ -68,6 +71,9 @@ urlpatterns = [
     path('testrun/create/<int:pk>/', views.edit_testrun, name='testrun_create'),
 
     path('testrun/run/<int:pk>/', views.testrun_run, name='testrun_run'),
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ]
 
