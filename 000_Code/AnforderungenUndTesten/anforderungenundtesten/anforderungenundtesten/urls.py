@@ -26,7 +26,7 @@ urlpatterns = [
 
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='aut/', permanent=True)),
+    path('', RedirectView.as_view(url='/aut/')),
 
     #Add Django site authentication urls (for login, logout, password management)
     #durch das include von django... hat man schon die richtigen URLs wie oben beim Admin

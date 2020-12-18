@@ -1,7 +1,7 @@
 from django.db import models
-import datetime
+
 # Create your models here.
-import uuid  # Für den Primary Key
+
 from django.db.models import F
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -9,130 +9,170 @@ from django.contrib.auth.models import User
 #import der Choices damit die überall verwendbar sind
 from .choices import *
 
+#Ende der Imports
+########################################################################################################################
 
+class professor(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    prof_pk_professorennummer = models.AutoField(primary_key=True, null=False, unique=True)
 
-class Professor(models.Model):
-    Professorennummer = models.AutoField(primary_key=True, null=False, unique=True)
-    Name = models.CharField(max_length=128, null=True, help_text='Name des Professors')
-    Passwort = models.CharField(max_length=128, null=True)
+    #Atrribute:
+    prof_name = models.CharField(max_length=128, null=True, help_text='Name des Professors')
+    prof_passwort = models.CharField(max_length=128, null=True)
 
-#als erste Idee, um die Sachen zu identifizieren zu können
+    #Funktionen
     def __str__(self):
-        ret = str(self.Name) + str(" ID: ") + str(self.Professorennummer)
+        ret = str(" Name: ") + str(self.prof_name) + str(" ID: ") + str(self.prof_pk_professorennummer)
         return ret
     #als Alternative mit den F-Strings
     #f'{self.Professorennummer} ({self.Name})'
 
 
+class projekt(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    pro_pk_projektid = models.AutoField(primary_key=True, null=False, unique=True)
+    pro_fk_professorennummer = models.ForeignKey('professor', on_delete=models.SET_NULL, null=True, blank=True)
 
-class Projekt(models.Model):
-    ProjektID = models.AutoField(primary_key=True, null=False, unique=True)
-    Name = models.CharField(max_length=128, null=True)
+    #Atrribute:
+    pro_name = models.CharField(max_length=128, null=True)
 
-    Professorennummer_FK = models.ForeignKey('Professor', on_delete=models.SET_NULL, null=True, blank=True)
-
+    #Funktionen
     def __str__(self):
-        return self.Name
+        return self.pro_name
 
 
-class Element(models.Model):
-    ElementID = models.AutoField(primary_key=True, null=False, unique=True)
+class student(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    stud_pk_matrikelnummer = models.AutoField(primary_key=True, null=False, unique=True)
+    stud_fk_gruppennummer = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
 
-    Name = models.CharField(max_length=128, null=True)
-    Kommentar = models.CharField(max_length=128, null=True)
-    Datum_Erstellung = models.DateTimeField(auto_now_add=True)
-    Datum_Aenderung = models.DateTimeField(auto_now=True)
+    #Atrribute:
+    stud_name = models.CharField(max_length=128, null=True)
+    stud_passwort = models.CharField(max_length=128, null=True)
 
-    ProjektID_FK = models.ForeignKey('Projekt', on_delete=models.SET_NULL, null=True, blank=True)
-    Matrikelnummer_FK = models.ForeignKey('Student', on_delete=models.SET_NULL, null=True, blank=True)
-
-    def __str__(self):
-        return self.Name
-
-class Requirement(models.Model):
-    RequirementID = models.AutoField(primary_key=True, null=False, unique=True)
-
-    Kategorie = models.CharField(
-        max_length=1,
-        choices=KATEGORIEN,
-        blank=True,
-        help_text='Kategorie des Requirements',
-    )
-    #um mit dem Nutzer zu verbinden
-    ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-
-    ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True, blank=True)
-
-#    class Meta:
-#        permissions = (("can_mark_category", "Set a Category"), )
-
-
-
-    #Man darf keine Schlüssel hier angeben
-    def __str__(self):
-        e = Element.objects.get(requirement__ElementID_FK=self.ElementID_FK)
-        return "ID: " + str(self.RequirementID) + " Element-Name: " + str(e.Name)
-
-    def get_absolute_url(self):
-        return reverse('aut:requ_detail', args=[str(self.RequirementID)])
-
-
-
-
-class TestCase(models.Model):
-    TestCaseID = models.AutoField(primary_key=True, null=False, unique=True)
-
-    Vorbedingung = models.CharField(max_length=128, null=True)
-    Schritte = models.CharField(max_length=128, null=True)
-    erwartetesErgebnis = models.CharField(max_length=128, null=True)
-    tatsaechlichesErgebnis = models.CharField(max_length=128, null=True)
-
-    ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True, blank=True)
-
-    #def __str__(self):
-    #    return self.TestCaseID
-
-class TestRun(models.Model):
-    TestRunID = models.AutoField(primary_key=True, null=False, unique=True)
-
-    LOAN_STATUS = (
-        ('p', 'pass'),
-        ('f', 'fail'),
-    )
-    status = models.CharField(
-        max_length=1,
-        choices=LOAN_STATUS,
-        blank=True,
-        help_text='TestRun Ergebnis',
-    )
-    Dauer = models.FloatField(null=True)
-    Datum_Durchführung = models.DateTimeField(auto_now_add=True) #Wird beim Erstellen geschrieben, macht Sinn da man danach nicht mehr verändert
-
-    ElementID_FK = models.ForeignKey('Element', on_delete=models.SET_NULL, null=True, blank=True)
-    TestCaseID_FK = models.ForeignKey('TestCase', on_delete=models.SET_NULL, null=True, blank=True)
-
-    #def __str__(self):
-    #    return self.TestRunID
-
-
-class Student(models.Model):
-    Matrikelnummer = models.AutoField(primary_key=True, null=False, unique=True)
-    Name = models.CharField(max_length=128, null=True)
-    Passwort = models.CharField(max_length=128, null=True)
-
-    Gruppennummer_FK = models.ForeignKey('Projekt', on_delete=models.SET_NULL, null=True, blank=True)
-
+    #Funktionen:
     def __str__(self):
         return self.Name
 
     def display_project(self):
-        return (Projekt.objects.get(student__Gruppennummer_FK=self.Gruppennummer_FK)) #'9782a5ca-f7b6-4d52-9797-75790dd90c1e'
+        return (projekt.objects.get(student__stud_fk_gruppennummer=self.stud_fk_gruppennummer))
     display_project.short_description = 'ProjektName'
 
-class Requirement_TestCase(models.Model):
+###
+#neue Klasse die den User erweitern soll
+###
+from django.contrib.auth.models import User
 
-    RequirementID_FK = models.ForeignKey('Requirement', on_delete=models.SET_NULL, null=True, blank=True)
-    TestCaseID_FK = models.ForeignKey('TestCase', on_delete=models.SET_NULL, null=True, blank=True)
+class user_erweitern(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    gruppennummer = models.CharField(max_length=1, choices=GRUPPEN, blank=True)
+    rolle = models.CharField(max_length=1, choices=ROLLEN, blank=True)
 
-    #def __str__(self):
-    #    return self.RequirementID_FK
+###
+
+#Ende der organisatorischen Klassen
+########################################################################################################################
+
+class requirement(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    req_pk_requirementid = models.AutoField(primary_key=True, null=False, unique=True)
+    req_fk_projektid = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
+    req_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+
+    #Atrribute:
+    req_name = models.CharField(max_length=128, null=True)
+    req_kommentar = models.CharField(max_length=128, null=True)
+    req_datum_erstellung = models.DateTimeField(auto_now_add=True)
+    req_datum_aenderung = models.DateTimeField(auto_now=True)
+    req_beschreibung = models.CharField(max_length=128, null=True)
+
+    req_kategorie = models.CharField(max_length=1, choices=KATEGORIEN, blank=True, help_text='Kategorie des Requirements')
+
+    #Funktionen:
+    def __str__(self):
+        return "ID: " + str(self.req_pk_requirementid) + " Name: " + str(self.req_name)
+
+    def get_absolute_url(self):
+        return reverse('aut:requirement_change', args=[str(self.req_pk_requirementid)])
+
+    #Metaoptionen
+    class Meta:
+        ordering = ["req_pk_requirementid"]
+
+class testcase(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    testc_pk_testcaseid = models.AutoField(primary_key=True, null=False, unique=True)
+    testc_fk_projektid = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
+    testc_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    testc_fk_requirement = models.ManyToManyField(requirement, blank=True)
+
+    #Atrribute:
+    testc_name = models.CharField(max_length=128, null=True)
+    testc_kommentar = models.CharField(max_length=128, null=True)
+    testc_datum_erstellung = models.DateTimeField(auto_now_add=True)
+    testc_datum_aenderung = models.DateTimeField(auto_now=True)
+    testc_beschreibung = models.CharField(max_length=128, null=True)
+
+    testc_vorbedingung = models.CharField(max_length=128, null=True)
+
+    #Funktionen:
+    def __str__(self):
+        return "ID: " + str(self.testc_pk_testcaseid) + " Name: " + str(self.testc_name)
+
+    def get_absolute_url(self):
+        return reverse('aut:testcase_change', args=[str(self.testc_pk_testcaseid)])
+
+    #Metaoptionen
+    class Meta:
+        ordering = ["testc_pk_testcaseid"]
+
+class testcase_schritt(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    schritt_pk_id = models.AutoField(primary_key=True, null=False, unique=True)
+    schritt_fk_testcase = models.ForeignKey('testcase', on_delete=models.SET_NULL, null=True, blank=True)
+
+    #Atrribute:
+    schritt_schritte = models.CharField(max_length=128, null=True)
+    schritt_erwartetesergebnis = models.CharField(max_length=128, null=True)
+    schritt_tatsaechlichesergebnis = models.CharField(max_length=128, null=True)
+
+    schritt_ergebnis = models.CharField(max_length=1, choices=RUN_STATUS, blank=True)
+
+    def __str__(self):
+        return "ID: " + str(self.schritt_pk_id) + "Schritt: " + str(self.schritt_schritte)
+
+class testrun(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    testr_pk_testrunid = models.AutoField(primary_key=True, null=False, unique=True)
+    testr_fk_projektid = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
+    testr_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    testr_fk_testcaseid = models.ForeignKey('testcase', on_delete=models.SET_NULL, null=True, blank=True)
+
+    #Atrribute:
+    testr_name = models.CharField(max_length=128, null=True)
+    testr_kommentar = models.CharField(max_length=128, null=True)
+    testr_datum_erstellung = models.DateTimeField(auto_now_add=True)
+    testr_datum_aenderung = models.DateTimeField(auto_now=True)
+    testr_beschreibung = models.CharField(max_length=128, null=True)
+
+    testr_status = models.CharField(max_length=1, choices=RUN_STATUS, blank=True, help_text='TestRun Ergebnis')
+    testr_dauer = models.FloatField(null=True)
+    testr_datum_durchführung = models.DateTimeField(auto_now_add=True) # Wird beim Erstellen geschrieben, macht Sinn da man danach nicht mehr verändert
+
+    #Funktionen:
+    def __str__(self):
+        return "ID: " + str(self.testr_pk_testrunid) + "Name: " + str(self.testr_name)
+
+    def get_absolute_url(self):
+        return reverse('aut:testrun_change', args=[str(self.testr_pk_testrunid)])
+
+    def get_run_absolute_url(self):
+        return reverse('aut:testrun_run', args=[str(self.testr_pk_testrunid)])
+
+    #Metaoptionen
+    class Meta:
+        ordering = ["testr_pk_testrunid"]
+
+#Ende der Elemente-Klassen
+########################################################################################################################

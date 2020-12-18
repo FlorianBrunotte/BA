@@ -1,0 +1,37 @@
+﻿{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>A&T Requirement</title>
+{% endblock %}
+
+{% block morecss %}
+<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
+<link href="/static/aut/010_requirement_style.css" type="text/css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<!-- Hier kommen die Tables rein -->
+
+<div id="tabellen">
+    <ul id="requirementlist">
+    <li> <a href="{% url 'aut:requirement_create' %}" target="ifrm" > Neues Requirement</a>  </li>
+    {% for requirement in requirements %}
+      <li> <a href="{{ requirement.get_absolute_url }}" target="ifrm"> {{ requirement }}</a>  </li>
+    {% endfor %}
+
+</ul>
+
+    <iframe id="ifrm" name="ifrm">
+        Your browser doesn't support iframes.
+    </iframe>
+</div>
+
+<script type="text/javascript">
+        document.getElementById('ifrm').onload = function() {
+           $("#requirementlist").load(location.href + " #requirementlist li");
+        }
+</script>
+
+{% endblock %}
+
+
