@@ -12,13 +12,10 @@ body {
 /* Die Rows und Columns für den Rest */
 /* Create three equal columns that floats next to each other */
 #tabellen{
-  margin-top: 3rem;
+  margin-top: 1rem;
   position:relative;
   width:auto;
   height: auto;
-  border-width:0.1rem;
-  border-style:solid;
-  border-color:red;
   overflow: auto;
 
 }
@@ -39,24 +36,45 @@ body {
 
 
 
-.table {
-  background-color: #668cff;
+#req_table {
+  background-color: #FE877C;
   margin: auto;
-  border: 0.1rem solid red;
   padding: 0.5rem;
+  width: 100%;
 }
 
-td, th {
-  border: 0.1rem solid green;
-  text-align: left;
-  padding: 1rem 2rem 1rem 2rem; /* t r b l*/
+#req_table td, th {
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem; /* t r b l*/
+border: solid;
+border-color: black;
 }
 
-tr:nth-child(even) {
-  background-color: #00ffff;
+#testc_table {
+  background-color: #D4E88B;
+  margin: auto;
+  padding: 0.5rem;
+  width: 100%;
 }
-tr:nth-child(odd) {
-  background-color: #00cca3;
+
+#testc_table td, th {
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem; /* t r b l*/
+border: solid;
+border-color: black;
+}
+#testr_table {
+  background-color: #58A7C6;
+  margin: auto;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#testr_table td, th {
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem; /* t r b l*/
+border: solid;
+border-color: black;
 }
 
 #knoepfe_id{
@@ -113,5 +131,16 @@ tr:nth-child(odd) {
   width: 50%;
   height: 50%;
   padding: 0.1rem;
+
+}
+
+#gruppe {
+font-family: 'Source Sans Pro', sans-serif;
+margin-top: 1rem;
+text-align: center;
+display: block;
+        padding: 0.2rem;
+        color: black;
+        background-color:#0099ff;
 
 }

@@ -43,7 +43,7 @@ th{
          <td><input form="searchForm" id="sub1" type="submit" value="Speichern"></td>
          <td><input form="searchForm" name="tc_and_tr"  id="sub2" type="submit" value="Speichern und TestRun durchführen" onclick="btnClicked = 'Sub2'"></td>
 
-<a href="{{ testr_instance.get_run_absolute_url }}" target="_parent"> TestRun durchführen </a>
+         <td><a href="{{ testr_instance.get_run_absolute_url }}" target="_parent"> <button>TestRun durchführen</button> </a></td>
 
 <form action="{% url 'aut:testrun_create' pk=testr_instance.testr_pk_testrunid  %}" method="post">
   {% csrf_token %}
@@ -75,7 +75,11 @@ th{
          <td>{{ form.testr_form_status }}</td>
      </tr>
      <tr>
-         <td><label for="{{ form.testr_form_fk_testcase.id_for_label }}">Requirement</label></td>
+         <td><label for="{{ testr_instance.testr_dauer }}">Dauer</label></td>
+         <td>{{ testr_instance.testr_dauer }}</td>
+     </tr>
+     <tr>
+         <td><label for="{{ form.testr_form_fk_testcase.id_for_label }}">TestCase</label></td>
          <td>{{ form.testr_form_fk_testcase }}</td>
      </tr>
 
@@ -90,7 +94,7 @@ th{
 </script>
 <script>
 // Attach a submit handler to the form    onclick="btnClicked = 'Sub2'"
-$( "#searchForm" ).submit(function( event ) { //eigentlich searchForm
+$( "#searchForms" ).submit(function( event ) { //eigentlich searchForm
 
 
   // Stop form from submitting normally

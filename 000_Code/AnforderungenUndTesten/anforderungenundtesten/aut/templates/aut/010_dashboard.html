@@ -1,127 +1,168 @@
 ﻿{% extends "aut/000_base_bar.html" %}
 
-
-
 {% block titel %}
 <title>A&T Dashboard</title>
 {% endblock %}
 
-{% block morecss %}
-<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
-{% endblock %}
-
+{% load aut_extras %}
 {% block content %}
 <!-- Hier kommen die Tables rein -->
+
+<style>
+  #dash {
+  background-color: #0099ff;
+}
+
+</style>
+
+  <style>
+    #gruppenform{
+    display: inline-block;
+    border: green soiid 1px;
+    }
+  </style>
+  <style>
+    #button_drucken{
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    }
+    #button_drucken_button{
+    width: 10rem;
+    height: 2rem;
+    font-size: inherit;
+    background-color: #22c8ff;
+    }
+    #button_drucken_button:hover {
+    background-color: #0099ff;
+    color: white;
+    }
+  </style>
+  <style>
+    #errors{
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color: #ff9900;
+    }
+  </style>
+<div id="gruppe">
+  {% if user.is_authenticated %}
+  {%  if user.user_erweitern.rolle == 'p' %}
+  <div id="gruppenform">
+<form action="" id="searchForm" method="post">
+    {% csrf_token %}
+  <p><label for="{{ form.group_form_group.id_for_label }}">Gruppennummer: </label>
+    {{ form.group_form_group }}
+  <input type="submit" value="submit"></p>
+</form>
+  </div>
+
+  {% endif %}
+  {% endif %}
+
+<p>Gruppe: {{user_gruppennummer}} </p>
+<p>
+  Gruppenmitglieder:
+  {% for user in all_users %}
+    {{user}}
+  {% endfor %}
+</p>
+
+</div>
 
 
     <div id="tabellen">
     <div class="row">
       <div class="column">
-        <table class="table textdisplay">
+        <table class="table textdisplay" id="req_table">
           <tr>
             <td>Requirements</td>
             <td>{{num_req}}</td>
           </tr>
           <tr>
-            <td>Eigene Requirements</td>
+            <td>Meine Requirements</td>
             <td>{{num_req_eigene}}</td>
           </tr>
           <tr>
             <td>Requirements mit TestCase</td>
             <td>{{num_yes_testcase}}</td>
           </tr>
-          <tr>
+          <tr {{ num_no_testcase|rote_markierung }}>
             <td>Requirements ohne TestCase</td>
             <td>{{num_no_testcase}}</td>
           </tr>
 
         </table>
-        <button type="button" name="button" class="knoepfe_innen textdisplay"> Requirements </button>
-      </div>
+       </div>
       <div class="column">
-        <table class="table textdisplay">
+        <table class="table textdisplay" id="testc_table">
           <tr>
             <td>TestCases</td>
             <td>{{ num_testc }}</td>
           </tr>
           <tr>
-            <td>Eigene TestCases</td>
+            <td>Meine TestCases</td>
             <td>{{ num_testc_eigene }}</td>
           </tr>
           <tr>
+            <td>TestCases mit Passed TestRun</td>
+            <td>{{ num_lis_yes_testrun_run_passed }}</td>
+          </tr>
+          <tr {{ num_lis_yes_testrun_run_failed|rote_markierung }}>
+            <td>TestCases mit Failed TestRun</td>
+            <td>{{  num_lis_yes_testrun_run_failed}}</td>
+          </tr>
+          <tr {{ num_lis_no_testrun_or_no_run|rote_markierung }}>
             <td>TestCases ohne TestRun</td>
             <td>{{num_lis_no_testrun_or_no_run  }}</td>
           </tr>
-          <tr>
-            <td>TestCases ohne erfolgreichen TestRun</td>
-            <td>{{  num_lis_yes_testrun_run_failed}}</td>
-          </tr>
-          <tr>
-            <td>TestCases mit erfolgreichem TestRun</td>
-            <td>{{ num_lis_yes_testrun_run_passed }}</td>
-          </tr>
-
 
         </table>
-        <button type="button" name="button" class="knoepfe_innen textdisplay"> TestCases </button>
-      </div>
+        </div>
       <div class="column">
-        <table class="table textdisplay">
+        <table class="table textdisplay" id="testr_table">
           <tr>
             <td>TestRuns</td>
             <td>{{ num_testr }}</td>
           </tr>
           <tr>
-            <td>TestRuns ohne Run</td>
-            <td>{{ num_lis_no_testrun }}</td>
-          </tr>
-          <tr>
-            <td>Failed TestRuns</td>
-            <td>{{ num_lis_failed_testrun }}</td>
+            <td>Meine TestRuns</td>
+            <td>{{ num_testr_eigene }}</td>
           </tr>
           <tr>
             <td>Passed TestRuns</td>
             <td>{{ num_lis_passed_testrun }}</td>
           </tr>
+          <tr {{ num_lis_failed_testrun|rote_markierung }}>
+            <td>Failed TestRuns</td>
+            <td>{{ num_lis_failed_testrun }}</td>
+          </tr>
+          <tr {{ num_lis_no_testrun|rote_markierung }}>
+            <td>TestRuns ohne Run</td>
+            <td>{{ num_lis_no_testrun }}</td>
+          </tr>
 
         </table>
-        <button type="button" name="button" class="knoepfe_innen textdisplay"> <a href="#">TestRun</a></button>
-      </div>
+        </div>
     </div>
   </div>
 
-  <div id="knoepfe_id">
-    <div class="rowk">
-      <div class="columnk">
-        <button type="button" name="button" class="knoepfe textdisplay"> Projekt </button>
-      </div>
-      <div class="columnk">
-        <button type="button" name="button" class="knoepfe textdisplay"> Statistik </button>
-      </div>
-      <div class="columnk">
-        <button type="button" name="button" class="knoepfe textdisplay"> Abmelden </button>
-      </div>
-    </div>
-  </div>
-            {% if user.is_authenticated %}
-            {%  if user.user_erweitern.rolle == 'p' %}
-<form action="" id="searchForm" method="post">
-    {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
+<div id="errors">
+  {% for line in check_for_errors %}
+  <p>{{ line }}</p>
+ {% endfor %}
+</div>
 
-  <input type="submit" value="submit">
-</form>
-        {% endif %}
-            {% endif %}
-<div>
-<p>Gruppe: {{user_gruppennummer}} Gruppenmitglieder:
-
-      {% for user in all_users %}
-      {{user}}
-    {% endfor %}
-  </p>
+<div id="button_drucken">
+  <a href="{% url 'aut:test2' %}">
+      <button id="button_drucken_button">
+    PDF Erstellen
+  </button>
+  </a>
 </div>
 
 {% endblock %}
+

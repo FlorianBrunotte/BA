@@ -24,9 +24,6 @@ class professor(models.Model):
     def __str__(self):
         ret = str(" Name: ") + str(self.prof_name) + str(" ID: ") + str(self.prof_pk_professorennummer)
         return ret
-    #als Alternative mit den F-Strings
-    #f'{self.Professorennummer} ({self.Name})'
-
 
 class projekt(models.Model):
     #Private Keys, Foreign Keys and other relationships:
@@ -68,8 +65,6 @@ class user_erweitern(models.Model):
     gruppennummer = models.CharField(max_length=1, choices=GRUPPEN, blank=True)
     rolle = models.CharField(max_length=1, choices=ROLLEN, blank=True)
 
-###
-
 #Ende der organisatorischen Klassen
 ########################################################################################################################
 
@@ -78,7 +73,6 @@ class requirement(models.Model):
     req_pk_requirementid = models.AutoField(primary_key=True, null=False, unique=True)
     req_fk_projektid = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
     req_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-
 
     #Atrribute:
     req_name = models.CharField(max_length=128, null=True)
@@ -91,7 +85,7 @@ class requirement(models.Model):
 
     #Funktionen:
     def __str__(self):
-        return "ID: " + str(self.req_pk_requirementid) + " Name: " + str(self.req_name)
+        return "r_" + str(self.req_pk_requirementid) + ": " + str(self.req_name)
 
     def get_absolute_url(self):
         return reverse('aut:requirement_change', args=[str(self.req_pk_requirementid)])
@@ -118,7 +112,7 @@ class testcase(models.Model):
 
     #Funktionen:
     def __str__(self):
-        return "ID: " + str(self.testc_pk_testcaseid) + " Name: " + str(self.testc_name)
+        return "tc_" + str(self.testc_pk_testcaseid) + ": " + str(self.testc_name)
 
     def get_absolute_url(self):
         return reverse('aut:testcase_change', args=[str(self.testc_pk_testcaseid)])
@@ -133,9 +127,9 @@ class testcase_schritt(models.Model):
     schritt_fk_testcase = models.ForeignKey('testcase', on_delete=models.SET_NULL, null=True, blank=True)
 
     #Atrribute:
-    schritt_schritte = models.CharField(max_length=128, null=True)
-    schritt_erwartetesergebnis = models.CharField(max_length=128, null=True)
-    schritt_tatsaechlichesergebnis = models.CharField(max_length=128, null=True)
+    schritt_schritte = models.CharField(max_length=128, null=True, blank=True)
+    schritt_erwartetesergebnis = models.CharField(max_length=128, null=True, blank=True)
+    schritt_tatsaechlichesergebnis = models.CharField(max_length=128, null=True, blank=True)
 
     schritt_ergebnis = models.CharField(max_length=1, choices=RUN_STATUS, blank=True)
 
@@ -157,12 +151,12 @@ class testrun(models.Model):
     testr_beschreibung = models.CharField(max_length=128, null=True)
 
     testr_status = models.CharField(max_length=1, choices=RUN_STATUS, blank=True, help_text='TestRun Ergebnis')
-    testr_dauer = models.FloatField(null=True)
+    testr_dauer = models.CharField(null=True, blank=True, max_length=100)
     testr_datum_durchführung = models.DateTimeField(auto_now_add=True) # Wird beim Erstellen geschrieben, macht Sinn da man danach nicht mehr verändert
 
     #Funktionen:
     def __str__(self):
-        return "ID: " + str(self.testr_pk_testrunid) + "Name: " + str(self.testr_name)
+        return "tr_" + str(self.testr_pk_testrunid) + ": " + str(self.testr_name)
 
     def get_absolute_url(self):
         return reverse('aut:testrun_change', args=[str(self.testr_pk_testrunid)])
@@ -176,3 +170,9 @@ class testrun(models.Model):
 
 #Ende der Elemente-Klassen
 ########################################################################################################################
+
+class note(models.Model):
+    #Private Keys, Foreign Keys and other relationships:
+    note_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+    notes = models.CharField(max_length=128, null=True)

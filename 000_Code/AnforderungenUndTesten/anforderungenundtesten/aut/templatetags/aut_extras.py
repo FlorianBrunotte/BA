@@ -71,3 +71,41 @@ def color_req(requirement):
         result = 'style="color: red;"'
 
     return mark_safe(result)
+
+
+@register.filter(name='requirement_color')
+def requirement_color(requirement):
+    result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #FF0000 100%);"'
+    if requirement.testcase_set.all().exists():
+        result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #00ff00 100%);"'
+    return mark_safe(result)
+
+#müssen noch getestet werden
+@register.filter(name='testcase_color')
+def testcase_color(testcase):
+    result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #FF0000 100%);"'
+    if testcase.testrun_set.all().exists():
+        result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #00ff00 100%);"'
+    return mark_safe(result)
+
+@register.filter(name='testrun_color')
+def testrun_color(testrun):
+    result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #FF0000 100%);"'
+    if testrun.testr_status == 'p':
+        result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #00ff00 100%);"'
+    if testrun.testr_status == 'n':
+        result = ' style=" background: linear-gradient(to right, #FFcccc 0%, #ffcccc 50%, #0000ff 100%);"'
+    return mark_safe(result)
+
+
+#Timer
+@register.filter(name='testrun_time')
+def testrun_time(testrun, time):
+    testrun.testr_dauer = time
+
+
+#Rote Markierung
+@register.filter(name='rote_markierung')
+def rote_markierung(element):
+    if int(element) > 0:
+        return mark_safe('style="color: red;"')

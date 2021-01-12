@@ -4,24 +4,30 @@
 <title>A&T Requirement</title>
 {% endblock %}
 
+{% load aut_extras %}
+
 {% block morecss %}
-<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
 <link href="/static/aut/010_requirement_style.css" type="text/css" rel="stylesheet"/>
 {% endblock %}
 
 {% block content %}
 <!-- Hier kommen die Tables rein -->
+<style>
+  #req {
+  background-color: #0099ff;
+}
+</style>
 
 <div id="tabellen">
     <ul id="requirementlist">
-    <li> <a href="{% url 'aut:requirement_create' %}" target="ifrm" > Neues Requirement</a>  </li>
+    <li> <a id="req_a" href="{% url 'aut:requirement_create' %}" target="ifrm" > Neues Requirement</a>  </li>
     {% for requirement in requirements %}
-      <li> <a href="{{ requirement.get_absolute_url }}" target="ifrm"> {{ requirement }}</a>  </li>
+      <li {{ requirement|requirement_color }} > <a href="{{ requirement.get_absolute_url }}" target="ifrm"> {{ requirement }}</a>  </li>
     {% endfor %}
 
 </ul>
 
-    <iframe id="ifrm" name="ifrm">
+    <iframe id="ifrm" name="ifrm" src="{% url 'aut:test' %}">
         Your browser doesn't support iframes.
     </iframe>
 </div>

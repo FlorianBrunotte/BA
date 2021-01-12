@@ -29,7 +29,13 @@ Ziel dieser Bachelorarbeit war die Erstellung einer leichtgewichtigen Software m
 \end{abstract}
 
 \tableofcontents %Inhaltsverzeichnis wird erstellt
-\chapter{Motivation - Warum wurde diese Software geschrieben?} \label{chap:motivation}
+
+Fragen: 
+Kuchen Diagramme im Dashboard oder in der Statistik Seite?
+Lieber PDf oder doch Docs Datei?
+
+
+\chapter{Motivation - Warum wurde diese Software erstellt?} \label{chap:motivation}
 Es ist vorzuziehen, dass...
 
 Motivation:
@@ -38,8 +44,79 @@ Die Zielgruppe für diese Arbeit und für diese Software sind die Hochschulangeh
 Es soll eine leichtgewichtiges Softwaretool entwickelt werden zum Anforderungs- und Testmanagement. Dabei sollte man sich auf die Kernfunktionalitäten beschränken, damit man sich auf das Wesentliche konzentrieren kann, dem Schreiben von Anforderungen und dem Ausführen von Tests. Andere Softwaretools, die am Markt verfügbar sind, sind für den Einsatz in der Lehre nicht geeignet, da sie zu komplex sind und auch Geld kosten können. Sollte man nicht bezahlen, werden bestimmte Funktionen gesperrt. Insgesamt sind sie zu schwergewichtig und man verliert das eben beschriebene wesentliche aus dem Blick. Eine intuitive und simple Software, wie ,,Anforderungen und Testen (WIP)'' soll hierbei Abhilfe schaffen.
 
 Hier werden dann noch manche Tools aufgezählt. Vielleicht mit Bilder die Limitierung und die Überfülle zeigen.
+\chapter{Anforderungs- und Testmanagement - Was ist das?} 
+\label{chap:sw}
 
-\chapter{Anforderungsanalyse - Welche Anforderungen hat das Projekt?} \label{chap:Anforderungen}
+
+\chapter{Tools - Welche Tools gibt es schon?} 
+\label{chap:Tools}
+Schauen Sie sich das mal an: https://testcollab.com/
+
+Sie können sich einen kostenlosen Account anlegen.
+
+Für Jira gibt es spezielle Add-Ons für das Testmanagement, z.B. XRay. Auch hier können Sie sich einen
+kostenlosen Cloud-Zugang anlegen. Allerdings ist Jira/Xray noch komplexer als testcollab.
+
+Die Tage habe ich mir nochmal ein paar kommerzielle Tools angeschaut. Kann ich Ihnen auch empfehlen.
+
+-          testlodge
+
+-          testcaselab
+
+-          qa touch
+
+ 
+
+Bei allen hatte ich was zu bemängeln (einige konnten keine Requirements, alle konnten keine Trace-Matrizen, von den Kosten abgesehen).
+
+Aber man kann sich ein paar Ideen und Anregungen holen.
+
+
+
+
+
+Es gibt verschiedene Tools mit diversen Gründen warum diese nicht geeignet sind um im Rahmen einer Lehrveranstalltung benutzt zu werden. Sie können zu komplex sein, andere eigene Begriffe verwenden, Geld kosten oder kostenlos sein mit eingeschränkten Funktionen. 
+Beim Studium dieser Sachen geht es darum zu Lernen was Software-Anforderungen und TestCases sind und nicht darum das Tool kennenzulernen und zu meistern. Das Tools sollte also nur unterstützen und nicht die Lehrveranstaltung dominieren. Das Tool sollte also möglichst selbsterklärend sein, sodass das Gelernte im Unterricht sofort angewendet werden kann. Es gibt dazu eine Beschreibung in PDF Form
+
+Die Meinungen werden von der Sicht geschrieben, wenn man zum ersten Mal so ein Tool benutzt.
+
+Ein generelles Problem ist das die meisten Tools oder auch alle nur free Trial sind und sich deshalb eine Verwendung über das Semester nicht anbietet.
+Das größte Problem bei diesen Tools ist wohl, dass sie Geld kosten oder nur eine bestimmte Zeit lang kostenlos sind als Free Trial. Ein Tool, dass eine Fremium Version hat, ist Pearls.
+
+Zu den verschiedenen Tools, die es auf dem Markt schon gibt, gibt es hier eine kurze Einführung mit den Aspekten, die die Tools nicht geeignet machen für die Lehre und die Aspekte, die das eigene Tool inspiriert haben.
+
+Das erste Tool TestCollab bietet zum Beispiel keine Möglichkeit direkt und getrennt voneinander die Requirements, TestCases und TestRuns zu definieren. Außerdem muss man vorher eine TestSuit definieren
+Man könnte dadurch auf den ersten Blick verwirrt werden, wo der Unterschied zwischen diesen Elementen liegt. Außerdem wird man mit einen Mengen Fenstern und Informationen bombardiert. 
+Daraus inspiriert ist das man alle Informationen auf einer Seite sieht, die man gegebenenfalls auch scrollen kann. Es sollen keine neuen Tabs oder Overlay Sachen passieren.
+Auch die TestSuiten sollten nicht implementiert werden. Die Elemente sollten einzeln und unabhängig definiert werden und danach verlinkt werden können. Zum Beispiel durch Checkboxen und Foreign Keys
+Andererseits wurde aus dem Dashboard die Navigationsleiste am oberen Bildschirmrand übernommen, damit man immer einen Überblick hat wo man gerade ist. Ebenfalls gibt es in dem Dashboard für ein Projekt ein Ausrufezeichen, wenn etwas fehlgeschlagen ist. Daraus abgeleitet ist bei meinem Dashboard die rote Markierung und der Satz, dass es noch Fehler gibt bevor man die PDF erstellt. Die PDF kann zwar noch erstellt werden, aber es ist eine Warnung.
+Bei diesem Tool kann man mehrere Projekte erstellen, aber im Rahmen des Semesters sollte nur 1 Projekt bearbeitet werden, darum entfällt diese Möglichkeit. Im Semester werden die Studierenden in Gruppen aufgeteilt und müssen dann eine Aufgabe bearbeiten. Die Gruppen werden dann auch vom Professor zugeteilt.
+
+
+Das nächste Tool ist die Jira Erweiterung Xray. Da fällt direkt auf, dass es sehr auf die Agile Methode ausgelegt ist. Mit Stories und des Weiteren.
+Bei diesem Tool oder Erweiterung sind die Tests noch weiter aufgeteilt. Diese Aufteilung kann man in der Abbildung 222 sehen. Weiterhin muss man hierbei zum Einen Jira und dann noch die Erweiterung kennenlernen. Anhand der vielen Buttons in der Statusleiste kann man auch die Komplexität erkennen. 
+
+
+Das nächste Tool ist ReQTest und beinhaltet die Möglichkeit die TestCases und Requirements getrennt voneinander zu definieren. Auch wenn es etwas versteckt ist kann man hier die Requirements und die TEstCAses verlinken. Ebenfalls können TestRuns durchgeführt werden. Die Struktur der Requirements ähnelt einer Ornderstrkutur in Windows, wie in der Abbildung 222 zu sehen ist. In größeren Projekten macht das durchaus Sinn, aber bei der Semesterarbeit wird das wahrscheinlich keinen Sinn machen und verkompliziert die Sache eher. Realisieren kann man aber Kategorien in die man die Elemente sortieren kann, wenn man möchte. Das war die Inspiration aus diesem Tool. 
+
+
+Hierbei kam die Idee auch Dokumente zu generieren. Wenn das Projekt beendet ist und alle TestCases mindestens einen erfolgreichen TestRun haben, könnte man zur Abgabe das Dokument einreichen, damit der Professor direkt alle notwendigen Infos hat. Zur Not kann er aber auch immer noch die einzelnen Projekte betrachten. 
+
+https://pearls-inc.com/
+
+
+ReqSuite ist ein weiteres Tool, dass betrachtet wurde.
+
+\url{https://www.osseno.com/en/requirements-management-tool/?r=rmt&dpm=39467}
+
+
+https://www.qatouch.com/
+
+https://testcaselab.com/
+
+https://www.testlodge.com/
+
+\chapter{Anforderungsanalyse - Welche Anforderungen gibt es an das Projekt?} \label{chap:Anforderungen}
 
 Zuerst hat Herr Hastenteufel ein Dokument mit Anforderungen gesendet. Nach Absprache per Mail wurden noch folgende Sachen geklärt:
 \begin{itemize}
@@ -58,6 +135,9 @@ Es wurden ein Use Case Diagramm skizziert, mehrere Activity Diagramme, die die U
 Es wurden ebenfalls erste Skizzen zu den UIs vollzogen und abgesprochen mit dem Kunden, also Herrn Hastenteufel.
 Die Rückmeldungen waren:
 
+\chapter{Entity-Relationship-Modell - Wie kann die reale Welt abgebildet werden?} \label{chap:erm}
+
+In dem folgenden Bild Nummer 1 kann das ER-Modell gesehen werden. Es dient dazu die relationale Datenbank zu designen. Es ist aus den Anforderungen geschrieben worden, dass ein Projekt mehrere Anforderungen hat
 
 
 
@@ -233,6 +313,124 @@ Man kann den Apps in den url EInstellungen auch einen Namen geben, das ist vor a
 Das Dashboard und die entsprechenden Seiten sind in der Abbildung abb angezeigt.
 
 Die HTML Siten wurden mit einer Testversion von Axure erstellt. Mit der Seite kann man HTML Seiten erstellen und bereits ausprobieren. Bei der Integration muss daraug geachtet werden, dass die ganzen Dateien, also auch die CSS Dateien in den richtigen Ordnern sind. Die Links in den Dateien müssen noch angepasst werden an die static Variable. Die ganzen ressourcen, die mit src anfangen und die href müssen jetzt noch /static/ davor stehen haben, da die Sachen in diesem Ordner zu finden sind.
+
+Beim Aufräumen musste erstmal das Model aufgeräumt werden die Realisierung durch ein Element mit einer is a Beziehung und die Realisierung mit foreign keys war zu viel Arbeit, da man dadurch kompliziertere Joins schreiben musste. Stattdessen haben die Elemente wie Requirement und so jetzt die Attribute von Element erhalten.
+
+Als nächstes sind nun die HTML seiten dran
+
+Kleiner Rückschlag die HTML Seiten konnten nicht benutzt werden da alles als DIV realisiert wurde. Und die Namen waren auch nur div\_999 also nicht sehr einleuchtend. 
+
+Als nächstes musste das Problem beseitigt werden erst nach dem Submit auf andere Seiten zu verweisen, aber das wurde gelöst durch JavaScript.
+
+Jetzt kommt der TestCase mit der Tabelle und den verschiedenen Zeilen
+Dazu braucht der TestCase noch ein weiteres Modell, da es mehrere Schritte geben wird pro TestCase. Die Schritte haben dann einen Foreign Key auf den passenden TestCase.
+Vielleicht ein MultiForm, da die Schritte auch noch ein Ergebnis haben und so
+Tech With Tim Video hat hier geholfen 
+
+Der TestRun wurde auch erstmal simpel integriert
+
+
+Als nächstes kommt dann die Statistik Seite. Dazu kommt hier die Skizze in der man sehen kann wie die HTML Tabelle generiert wird.
+Das hat geklappt
+
+Die nächste Sache war die Requirements und so den einzelnen Gruppen zuzuordnen. Dazu wurde der normale User erweitert um die Elemente Gruppe und Rolle. Über die Gruppe werden nur die Elemente angezeigt von allen Nutzern mit der gleichen Gruppennummer. Dazu wird basierend auf der eigenen Nummer die Elemente gefiltert. 
+
+Die Rolle wird benutzt um dem Prof und dem Student verschiedene Views zu geben. So kann der Prof seine Gruppe aussuchen in dem Dashboard um die verschiedenen Gruppen anzugucken.
+
+Es sollte noch Permissions geben damit der Prof keine Sachen verändert, sondern nur ansieht und bewertet. Vielleicht sollte dazu die normale Groups verwendet werden.
+
+
+Es steht wieder aufräumen auf dem Programm. Die Funktionen wurden nur für jeweils ein Element getestet und implementiert. Jetzt müssen sie für alle gemacht werden.
+Zuerst die Views für das Dashboard mit den jeweiligen Requriements und anderen Elementen. Das muss auch gemacht werden für die einzelnen Seiten, damit man alle Elemente der Gruppe sieht.
+
+Um bei den TestCases die Einteilung zu bekommen zu den TestRuns muss man sich das letzte Element angucken, darum wird es sortiert nach dem Änderungsdatum, da abgeschlossene TestRuns dann ganz oben stehen. Mit der Funktion latest bekommt man nur das letzte Element. Dann filtert man nach dem Status ob der TestRun geklappt hat oder nicht. 
+In einer ersten Version wurde mit einer For Schleife alle TestRuns von einem TestCase betrachtet, dabei würde dann aber herauskommen, dass man zwar 10 TestCases hat, aber 20 mit fehlerhaften TestRuns. Darum darf immer nur der letzte gezählt werden.
+Das macht auch aus der Anwendung her Sinn, da der letzte TestRun zum Beispiel neue Features testet oder einfach anders geschrieben ist.
+
+Die Farben bei der Statistik Seite sind mit Custom Filtern gemacht worden. Diese gucken nach ob zum Beispiel ein TestCase ein Requirement abdeckt oder nicht und passt dann die Farbe an. Marksafe damit das HTML CSS übertragen werden kann an das Template
+
+Auf dem Dashboard kann man auch ein Kuchendiagramm angucken mit den Daten
+
+
+Die Referenzen auf die anderen Elemente mussten in den Forms auf required=False gesetzt werden, da man sonst die Sachen nicht unabhängig voneinander speichern konnten
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+Code Cleanup und Bugfixes
+
+Wenn man in den edit views der Elemente sofort nach dem Erstellen der Element den User aus dem Request hinzufügt, dann wird das Element auch sofort in der Liste angezeigt. Das funktioniert auch deshalb, da man eine Methode benutzt die entweder das Objekt findet oder erstellt.
+
+Das die Ids immer weiter hochgezählt werden auch wenn man die schon gelöscht hat ist wohl so richtig, dazu sollte man nochmal eine Quelle herbeiziehen
+
+Mit CSS wird das aktuelle Tab angezeigt
+
+Die Farben die mit den Elementen assoziiert werden müssen noch überdacht werden.  
+
+Bei disabled Inputs gab es das Problem das diese Inputs nicht submitted werden bzw das Form dachte es wäre leer, dann wurde das Form überschrieben mit dem Value None und alles war weg
+
+es gibt noch 2 Stellen an denen man mit submit buttons arbeiten muss, was etwas nervt
+
+Jetzt wird die App etwas schöner gemacht.
+Gradient mit den richtigen Colors aus der Statistik wenn es ein TestCase gibt oder der TestRun erfolgreich ist.
+Mit dem Skew Tool kann man die ganzen Sachen auch noch was stylen.
+
+
+
+
+Eine Funktion, die noch implementiert werden musste ist die Funktion die TestRuns zu timen. Der Timer soll starten, wenn die Seite aufgerufen wurde und soll beendet werden, wenn der Nutzer den Button abschließen drückt.
+In javascript kann man den Timer bauen. Der Wert beim Drücken des Buttons muss dann nur noch an das passende Feld der testrun instance geschickt werden. wie das geht weiß ich noch nicht.
+Die Template Filter Customs kann man leider nicht benutzen, da diese beim Rendern der Seite aufgerufen werden. 
+
+Für den Timer wurde ein Beispiel aus Stackovertflow geniommen und noch erweitert um Stunden, falls der Test mal länger dauert. Es gibt einfach einen Zähler der in Sekunden hochzählt und die Darstellung geht über ein dreiteilliges Label, dass sich die Sachen entsprechend raussucht. 
+Um die JS Variable übergeben zu können wird auch hier ein Form benutzt. Damit kann beim Button Clicken noch ein Value Übergeben werden, was dann die JS Variable ist. Wichtig ist auch save aufzurufen
+Aus dem Request wird dann noch der hidden Wert geholt für den Unput und dann in der View Funktion gescpeichert
+Ein Problem was hier noch auftauchte ist das man nur Sekunden hatte und diese noch umwandeln musste in ein datetiem.time Format, damit Python das dem Attribut dauer zuordnen kann.
+Beziehungsweise aus Darstellungszwekcen wird die Zeit gespeichert in einem Charfield. Die umwandlung zu einem datetime.time Format wird trotzdem gemacht.
+
+
+Als Beispieldaten werden meine Unterlagen aus SOE zu der Packstation benutzt zum eintragen bei den Tests.
+Die Software-Anforderungen von HTM können schon eingetragen werden vor der Vorstellung nächste Woche. 
+Die TestRuns müssen noch ReadOnly werden nach abschluss des TestRuns.
+TestCase und TestRun noch auf das neue Design anpassen
+
+
+Um farbige Markierungen zu machen wurden einfach custom Filter in Django geschrieben. In den Django Templates, also den HTML Seiten wird diesen Templates eine Variable übergeben und darauf basierend verschiedene Aktionen ausgeführt. Zum Beispiel im Dashboard wird basierend auf der Zahl der Requirements ohne TestCase diese Zeile rot markiert, wenn es mehr als 0 sind. Wenn es null sind, dann wird diese Zeile in der Tabelle nicht markiert.
+
+Eins der letzten Features war die Generation eines Word Dokumentes mit allen wichtigen Daten über das Dokument.  Wurde geändert zu PDF damit man nichts verändern kann. Ein Logo wurde auch hinzugefügt. 
+
+Nach Vergleich mit der ersten Forderung von Herrn HTM wurde noch auf der Statistik Seite der Radiobutton Projektstatistik hinzugefügt. Hier kann man sehen wer wie viele Elemente erstellt hat.
+
+
+Beim Ansehen eines Elements aus der Sicht eines anderen Studenten gab es das Problem, dass ein neues Element erstellt werden soll, da diese Zeile auch nach dem Ersteller filtert und da dieser jetzt anders ist will er ein Element mit dem selben Private Key erstellen, was nicht funktioniert. Zum Glück gibt es in der gleichen Zeile die Variable created. Wenn man die abfragt kann man erst bei der Abfrage den User angeben als Ersteller. Bei der Suche nach dem Element kann man also nur noch den Private Key angeben und der Fehler sollte behoben sein.
+Wichtig hierbei ist auch das man save ausruft, da ansonsten der ersteller nicht gespeichert.
+
+
+Bei der Statistik Seite und an mindestens einer anderen Stelle im Dashboard sieht es nicht gut aus, wenn der Professor selber als Teil der Gruppe aufgelistet wird. Darum musste man ihn noch herausfiltern, so dass man nur die Studenten angezeigt bekommt.
+
+Es wurde an alle Stellen, die nach Usern filtern noch der Ausdruck in listing 1 hinzugefügt, da sonst auch vom Prof erstellte Sachen hinzukommen könnten. Man könnte noch extremer werden und für den Prof alle Sachen deaktivieren. Andererseits ist die große Übersicht in dem PDF enthalten.
+
+\begin{listing}[htbp]
+\begin{lstlisting}
+.filter(user_erweitern__rolle='s')
+\end{lstlisting}
+\caption{Filter um nur Studenten zu erhalten}
+\label{code:ggt}
+\end{listing}
+
+
+Vortrag: Best Of Bugs: Endlosschleife, Forms einfach weg
+
+
+\chapter{Usability Test} \label{chap:use}
+
+Ein Usability Test wurde durchgeführt. Dazu wurde die Software auf Heroku angemeldet und kann dort ausgeführt werden. Das Feedback der Usergruppen war wie folgt:
+
+
+
+\chapter{Fazit - Wurde alles umgesetzt?} \label{chap:fazit}
+
+
+
 
 \chapter{\LaTeX-Sachen} \label{chap:latex}
 \section{Latex Sachen als Section}

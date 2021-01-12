@@ -7,19 +7,10 @@ I found no \bibdata command---while reading file thesis.aux
 Warning--I didn't find a database entry for "gnulogo"
 Warning--I didn't find a database entry for "fal"
 Warning--I didn't find a database entry for "tikzautomata"
-Warning--I didn't find a database entry for "gockel"
-Warning--I didn't find a database entry for "rechenberg"
 Warning--I didn't find a database entry for "manna70"
-Warning--I didn't find a database entry for "kopka"
-Warning--I didn't find a database entry for "acm"
-Warning--I didn't find a database entry for "ieee"
-Warning--I didn't find a database entry for "wikipedia"
-Warning--I didn't find a database entry for "wikiciting"
-Warning--I didn't find a database entry for "libsvm"
-Warning--I didn't find a database entry for "bibtexing"
 You've used 0 entries,
             2118 wiz_defined-function locations,
-            510 strings with 4088 characters,
+            501 strings with 4026 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
