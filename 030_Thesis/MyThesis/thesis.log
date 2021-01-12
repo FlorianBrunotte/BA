@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.14)  21 NOV 2020 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.29)  12 JAN 2021 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -28,10 +28,10 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \openout2 = `preamble.aux'.
 
 (./preamble.tex (c:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/07/07 3.46 The Babel package
+Package: babel 2020/06/10 3.45 The Babel package
 
 (c:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/07/07 3.46 Babel common definitions
+File: babel.def 2020/06/10 3.45 Babel common definitions
 \babel@savecnt=\count176
 \U@D=\dimen135
 \l@babelnohyphens=\language86
@@ -320,11 +320,18 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ulht=\dimen163
 ))
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2020-06-23 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count284
 \l__pdf_internal_box=\box51
 )
-(./thesis.aux (./vorspann.aux))
+(./thesis.aux (./vorspann.aux)
+
+LaTeX Warning: Label `code:ggt' multiply defined.
+
+
+LaTeX Warning: Label `chap:fazit' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -343,8 +350,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 23
 .
-
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 \big@size=\dimen164
@@ -512,28 +518,29 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 4
-6.
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [3
+[3
 
 ]
 Kapitel 3.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 83.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 83.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 83.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 83.
 [4
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 93
-.
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 10
+1.
+ (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 101.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [5]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
+0.
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -541,81 +548,108 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (102.14447pt too wide) in paragraph at lines 92--95
+Overfull \hbox (4.31047pt too wide) in paragraph at lines 110--111
+[]$\T1/pcr/m/n/10.95 https : / / www . osseno . com / en / requirements -[] man
+agement -[] tool / ?r = rmt &
+ []
+
+[6]
+Kapitel 4.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
+23.
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [7
+
+] [8]
+Kapitel 5.
+[9
+
+]
+Kapitel 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 163.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 163.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 163.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 163.
+[10
+
+]
+Overfull \hbox (102.14447pt too wide) in paragraph at lines 172--175
 []\T1/ppl/m/n/10.95 (-20) Man star-tet ein neu-es Djan-go Pro-ject mit [][]\T1/
 pcr/m/n/10.95 django-admin startproject anforderungenundtesten
  []
 
 
-Overfull \hbox (2.31311pt too wide) in paragraph at lines 103--103
+Overfull \hbox (2.31311pt too wide) in paragraph at lines 183--183
 []\T1/ppl/m/n/10.95 (-20) /anforderungenundtesten| 
  []
 
 
-Overfull \hbox (3.63806pt too wide) in paragraph at lines 105--105
+Overfull \hbox (3.63806pt too wide) in paragraph at lines 185--185
 []\T1/ppl/m/n/10.95 (-20) anforderungenundtesten/| 
  []
 
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 99--107
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 179--187
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 11
-8.
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 118.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `phv' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [5]
-Overfull \hbox (3.63806pt too wide) in paragraph at lines 130--130
+[11]
+Overfull \hbox (3.63806pt too wide) in paragraph at lines 210--210
 []\T1/ppl/m/n/10.95 (-20) anforderungenundtesten/| 
  []
 
 
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 124--132
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 204--212
  [][] 
  []
 
-[6] [7]
-Overfull \hbox (22.35384pt too wide) in paragraph at lines 166--168
+[12] [13]
+Overfull \hbox (22.35384pt too wide) in paragraph at lines 246--248
 \T1/ppl/m/n/10.95 (-20) noch ver-bes-sert wer-den kann. Mit dem Be-fehl [][]\T1
 /pcr/m/n/10.95 python manage.py sqlmigrate 0001
  []
 
-[8] [9] [10]
-Kapitel 4.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 217.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 217.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 217.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 217.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 217.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 217.
-
-LaTeX Warning: Reference `chap:layout' on page 11 undefined on input line 245.
-
-
-LaTeX Warning: Reference `chap:bilder' on page 11 undefined on input line 247.
-
-
-LaTeX Warning: Reference `chap:stil' on page 11 undefined on input line 250.
-
-[11
+[14] [15] [16] [17] [18] [19] [20] [21]
+Kapitel 7.
+[22
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 28
-8.
+Kapitel 8.
+[23
+
+]
+Kapitel 9.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 435.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 435.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 435.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 435.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 435.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 435.
+
+LaTeX Warning: Reference `chap:layout' on page 24 undefined on input line 463.
+
+
+LaTeX Warning: Reference `chap:bilder' on page 24 undefined on input line 465.
+
+
+LaTeX Warning: Reference `chap:stil' on page 24 undefined on input line 468.
+
+[24
+
+]
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 50
+6.
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -623,61 +657,61 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 303.
+(Font)              scaled to size 10.44997pt on input line 521.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 303.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 521.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.44997pt on input line 303.
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 3
-15.
+(Font)              scaled to size 10.44997pt on input line 521.
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 5
+33.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 318.
+(Font)              scaled to size 9.37807pt on input line 536.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 318.
+(Font)              scaled to size 7.29405pt on input line 536.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 318.
+(Font)              scaled to size 5.21004pt on input line 536.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 318.
+(Font)              scaled to size 9.37807pt on input line 536.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 318.
+(Font)              scaled to size 7.29405pt on input line 536.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 318.
+(Font)              scaled to size 5.21004pt on input line 536.
 
 
-LaTeX Warning: Reference `chap:bilder' on page 12 undefined on input line 332.
+LaTeX Warning: Reference `chap:bilder' on page 25 undefined on input line 550.
 
 
-LaTeX Warning: Reference `chap:bilder' on page 12 undefined on input line 333.
+LaTeX Warning: Reference `chap:bilder' on page 25 undefined on input line 551.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 346.
-[12] [13]
-<gnu.png, id=66, 702.625pt x 686.565pt>
+(Font)              scaled to size 6.64998pt on input line 564.
+[25] [26]
+<gnu.png, id=108, 702.625pt x 686.565pt>
 File: gnu.png Graphic file (type png)
 <use gnu.png>
-Package pdftex.def Info: gnu.png  used on input line 422.
+Package pdftex.def Info: gnu.png  used on input line 640.
 (pdftex.def)             Requested size: 113.81102pt x 111.20406pt.
-<automata.pdf, id=67, 453.79137pt x 89.83162pt>
+<automata.pdf, id=109, 453.79137pt x 89.83162pt>
 File: automata.pdf Graphic file (type pdf)
 <use automata.pdf>
-Package pdftex.def Info: automata.pdf  used on input line 449.
+Package pdftex.def Info: automata.pdf  used on input line 667.
 (pdftex.def)             Requested size: 363.62366pt x 71.98326pt.
  (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 480.
+(Font)              scaled to size 10.40245pt on input line 698.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 481.
+(Font)              scaled to size 10.40245pt on input line 699.
 
 
-LaTeX Warning: Reference `code:ggtaua' on page 14 undefined on input line 496.
+LaTeX Warning: Reference `code:ggtaua' on page 27 undefined on input line 714.
 
-[14 <./gnu.png> <./automata.pdf>]
+[27 <./gnu.png> <./automata.pdf>]
 (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -690,14 +724,14 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1.
 )
-[15]
+[28]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-548.
+766.
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [16] [17]
-Kapitel 5.
-[18
+) [29] [30]
+Kapitel 10.
+[31
 
 ]
 \openout3 = `btaux.aux'.
@@ -709,16 +743,19 @@ Kapitel 5.
 
 \openout3 = `thesis2.aux'.
 
- (./thesis2.bbl) [19] (./thesis.aux (./vorspann.aux))
+ (./thesis2.bbl) [32] (./thesis.aux (./vorspann.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9933 strings out of 480471
- 146347 string characters out of 5903300
- 623279 words of memory out of 5000000
- 25495 multiletter control sequences out of 15000+600000
+ 9927 strings out of 480471
+ 146240 string characters out of 5903300
+ 623374 words of memory out of 5000000
+ 25489 multiletter control sequences out of 15000+600000
  630742 words of font info for 320 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  52i,19n,60p,1045b,1358s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -739,10 +776,10 @@ s/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/pal
 atino/uplr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/202
 0/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (22 pages, 328800 bytes).
+Output written on thesis.pdf (35 pages, 350051 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 211 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  60944 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -11,7 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" href="/static/aut/images/favicon.ico">
 </head>
+
+<style>
+    #loginscreen{
+    text-align: center;
+    }
+</style>
 <body>
+
+<div id="loginscreen">
+    <img id="logo" src="/static/aut/images/logo.png"/>
 
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
@@ -26,7 +35,7 @@
     {% endif %}
   {% endif %}
 
-  <form method="post" action="{% url 'login' %}">
+  <form method="post" action="{% url 'login' %}" style="width: max-content; margin: auto;">
     {% csrf_token %}
     <table>
       <tr>
@@ -44,8 +53,7 @@
 
   {# Assumes you setup the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-
-
+</div>
 
 </body>
 </html>

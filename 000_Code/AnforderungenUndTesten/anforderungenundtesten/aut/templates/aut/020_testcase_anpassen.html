@@ -7,6 +7,13 @@
     <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.5.1.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+
 </head>
 <style type="text/css">
 html {
@@ -76,55 +83,35 @@ th{
          <td>{{ form.testc_form_vorbedingung }}</td>
      </tr>
      <tr>
+         <td> TestSchritte </td>
+         <td>
+         <iframe style="width:100%;" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="ifrm" name="ifrm" src="{% url 'aut:schritte' id=testc_instance.testc_pk_testcaseid  %}  ">
+        Your browser doesn't support iframes.
+         </iframe></td>
+     </tr>
+     <tr>
          <td><label for="{{ form.testc_form_fk_requirement.id_for_label }}">Requirement</label></td>
          <td>{{ form.testc_form_fk_requirement }}</td>
+     </tr>
+     <tr>
+         <td>TestRuns:</td>
+         <td>
+             {% for testrun in testruns %}
+             <p>
+                 {{testrun}} {{testrun.get_testr_status_display}}
+             </p>
+             {% endfor %}
+
+         </td>
      </tr>
 
  </table>
  </form>
 
+
+
 </div>
 
-
-
-<div class="column22">
-
-  <h1>TestCase Schritte</h1>
-   <table class="table textdisplay">
-          <tr>
-              <th>Schritt</th>
-              <th>erwartetes Ergebnis</th>
-
-          </tr>
-       <!-- Hier die For Schleife mit den Schritten -->
-       {% for schritt in schritte_instance %}
-        <tr>
-              <td style="width: 10rem;" >{{ schritt.schritt_schritte }}</td>
-              <td style="width: 10rem;" >{{ schritt.schritt_erwartetesergebnis }} </td>
-              <td style="width: 5rem;" >
-                 <form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" method="post">
-                     {% csrf_token %}
-                       <input type="hidden" name="delete_schritt" value="{{ schritt.schritt_pk_id }}">
-                     <input name="delete_schrittttt" type="submit" value="Entfernen">
-                 </form>
-              </td>
-        </tr>
-        {% endfor %}
-
-     <tr>
-<form action="{% url 'aut:testcase_create' pk=testc_instance.testc_pk_testcaseid  %}" method="post">
-    {% csrf_token %}
-
-
-            <td>{{ schritt_form.schritt_form_schritt }}</td>
-            <td>{{ schritt_form.schritt_form_erwartetesergebnis }}</td>
-
-
-    <td ><input id="sub3" type="submit" value="Hinzufügen"></td>
-</form></tr>
-
- </table>
-</div>
 
 
 <script>

@@ -1,27 +1,33 @@
-﻿{% extends "aut/000_base_bar.html" %}
+﻿﻿{% extends "aut/000_base_bar.html" %}
 
 {% block titel %}
 <title>A&T TestCase</title>
 {% endblock %}
 
+{% load aut_extras %}
+
 {% block morecss %}
-<link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
 <link href="/static/aut/010_testcase_style.css" type="text/css" rel="stylesheet"/>
 {% endblock %}
 
 {% block content %}
 <!-- Hier kommen die Tables rein -->
+<style>
+  #testc {
+  background-color: #0099ff;
+}
+</style>
 
 <div id="tabellen">
     <ul id="testcaselist">
-    <li> <a href="{% url 'aut:testcase_create' %}" target="ifrm" > Neuer TestCase</a>  </li>
+    <li> <a id="testc_a" href="{% url 'aut:testcase_create' %}" target="ifrm" > Neuer TestCase</a>  </li>
     {% for testcase in testcases %}
-      <li> <a href="{{ testcase.get_absolute_url }}" target="ifrm"> {{ testcase }}</a>  </li>
+      <li {{ testcase|testcase_color }}> <a href="{{ testcase.get_absolute_url }}" target="ifrm"> {{ testcase }}</a>  </li>
     {% endfor %}
 
 </ul>
 
-    <iframe id="ifrm" name="ifrm">
+    <iframe id="ifrm" name="ifrm" src="{% url 'aut:test' %}">
         Your browser doesn't support iframes.
     </iframe>
 </div>
