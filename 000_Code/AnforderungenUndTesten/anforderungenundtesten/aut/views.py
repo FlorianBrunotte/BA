@@ -3,8 +3,8 @@ import time
 from io import StringIO, BytesIO
 from xml.dom.minidom import Document
 import os
-
-from PIL.Image import Image
+from pathlib import Path
+from PIL import Image
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 import datetime
@@ -536,39 +536,6 @@ def form_note(request):
 
     return render(request, 'aut/030_special_notepad_inner.html', context)
 
-#Dokument Erstellung:
-from docx import *
-
-def TestDocument2(request):
-
-    document = Document()
-    docx_title="TEST_DOCUMENT.docx"
-    # ---- Cover Letter ----
-    document.add_paragraph()
-
-    document.add_paragraph('Dear Sir or Madam:')
-    document.add_paragraph('We are pleased to help you with your widgets.')
-    document.add_paragraph('Please feel free to contact me for any additional information.')
-    document.add_paragraph('I look forward to assisting you in this project.')
-
-    document.add_paragraph()
-    document.add_paragraph('Best regards,')
-    document.add_paragraph('Acme Specialist 1]')
-    document.add_page_break()
-
-    # Prepare document for download
-    # -----------------------------
-    f = BytesIO()
-    document.save(f)
-    length = f.tell()
-    f.seek(0)
-    response = HttpResponse(
-        f.getvalue(),
-        content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-    )
-    response['Content-Disposition'] = 'attachment; filename=' + docx_title
-    response['Content-Length'] = length
-    return response
 
 import io
 from django.http import FileResponse
@@ -604,8 +571,7 @@ def TestDocument(request):
     # ###################################
     # 5) Draw a image
 
-    from pathlib import Path
-    from PIL import Image
+
     cwd = os.getcwd()  # Get the current working directory (cwd)
     im = Image.open(Path(cwd + '/anforderungenundtesten/aut/logo.jpg' ))
 
