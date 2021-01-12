@@ -3,34 +3,60 @@
 <title>A&T Dashboard</title>
 {% endblock %}
 
+{% block morecss %}
+{% endblock %}
+
 
 
 {% block content %}
 
     {% load aut_extras %}
 
-    <style type="text/css">
-.selectt {
-color: #fff;
-padding: 30px;
+<style type="text/css">
+.select {
 display: none;
-margin-top: 30px;
-width: 60%;
+margin-top: 1rem;
+text-align: center;
+
+}
+.select_table{
+ margin-left: auto;
+margin-right: auto;
+margin-top: 1rem;
+text-align: center;
+
 }
 
 </style>
+<style>
+  #stat {
+  background-color: yellow;
+}
+  #radiobuttons {
+  margin-top: 1rem;
+  background-color: #0099ff;
+  text-align:center;
+}
+</style>
 
-<div>
+<div id="radiobuttons">
 <label>
 <input type="radio" name="colorRadio"
 value="TestCase">TestCase</label>
 <label>
 <input type="radio" name="colorRadio"
 value="TestRun">TestRun</label>
+<label>
+<input type="radio" name="colorRadio"
+value="Projekt">Projekt</label>
 </div>
 
-<div class="TestCase selectt">
-   <table class="table textdisplay" border="solid">
+<div class="TestCase select">
+        <div>
+        <p style="color: red;">Formel von TestCase Coverage: Requirements mit TestCase / Requirements</p>
+        <p style="color: red;">Ergebnis: {{ TestCase_Coverage }} %</p>
+    </div>
+   <table class="select_table" border="solid">
 
           <tr>
             <th>Requirements X TestCase</th>
@@ -53,16 +79,14 @@ value="TestRun">TestRun</label>
         </tr>
       {% endfor %}
    </table>
-    <div>
-        <p style="color: red;">Formel von TestCase Coverage: Requirements mit TestCase / Requirements</p>
-        <p style="color: red;">Ergebnis: {{ TestCase_Coverage }} %</p>
-    </div>
-
-
-
 </div>
-<div class="TestRun selectt">
-   <table class="table textdisplay" border="solid">
+
+<div class="TestRun select">
+        <div>
+        <p style="color: red;">Formel von TestRun Coverage: Requirements mit erfolgreichem TestRun / Requirements</p>
+        <p style="color: red;">Ergebnis: {{ TestRun_Coverage }} %</p>
+    </div>
+   <table class="select_table" border="solid">
 
           <tr>
             <th>Requirements X TestCase</th>
@@ -84,13 +108,28 @@ value="TestRun">TestRun</label>
       {% endfor %}
 
    </table>
-    <div>
-        <p style="color: red;">Formel von TestRun Coverage: Requirements mit erfolgreichem TestRun / Requirements</p>
-        <p style="color: red;">Ergebnis: {{ TestRun_Coverage }} %</p>
-    </div>
+
 </div>
 
+<div class="Projekt select">
+   <table class="select_table" border="solid">
+        <tr>
+            <th> Name </th>
+            <th> Anzahl Requirements </th>
+            <th> Anzahl TestCases</th>
+            <th> Anzahl TestRuns</th>
 
+          </tr>
+    {% for user in users %}
+          <tr>
+            <th> {{ user.username }} </th>
+              <td> {{ user.requirement_set.count }}</td>
+              <td> {{ user.testcase_set.count }}</td>
+              <td> {{ user.testrun_set.count }}</td>
+          </tr>
+       {% endfor %}
+   </table>
+</div>
 
 
 
@@ -100,7 +139,7 @@ $(document).ready(function() {
 $('input[type="radio"]').click(function() {
 var inputValue = $(this).attr("value");
 var targetBox = $("." + inputValue);
-$(".selectt").not(targetBox).hide();
+$(".select").not(targetBox).hide();
 $(targetBox).show();
 });
 });

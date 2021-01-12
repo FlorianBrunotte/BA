@@ -6,6 +6,7 @@
 
     {% load static %}
     <link href="/static/aut/000_basebar.css" type="text/css" rel="stylesheet"/>
+    <link href="/static/aut/010_dashstyle.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.5.1.js"></script>
     {% block morecss %} <!-- MORE --> {% endblock %}
 
@@ -40,13 +41,12 @@
 
       <div class="dropdown">
         <div class="dropdown-content textdisplay">
-          <a href=" {% url 'aut:view_dashboard' %} ">Dashboard</a>
 
-
-          <a href=" {% url 'aut:view_requirement' %} ">Requirements</a>
-          <a href=" {% url 'aut:view_testcase' %} ">TestCases</a>
-          <a href=" {% url 'aut:view_testrun' %} ">TestRuns</a>
-          <a href=" {% url 'aut:view_statistik' %} ">Statistik</a>
+          <a id="dash" href=" {% url 'aut:view_dashboard' %} ">Dashboard</a>
+          <a id="req" href=" {% url 'aut:view_requirement' %} ">Requirements</a>
+          <a id="testc" href=" {% url 'aut:view_testcase' %} ">TestCases</a>
+          <a id="testr" href=" {% url 'aut:view_testrun' %} ">TestRuns</a>
+          <a id="stat" href=" {% url 'aut:view_statistik' %} ">Statistik</a>
 
             {% if user.is_authenticated %}
 
@@ -61,5 +61,6 @@
 
     {% block content %} <!-- Hier kommen die Seitenspezifischen Sachen rein --> {% endblock %}
 
+{% include 'aut/030_special_notepad.html' %}
 </body>
 </html>

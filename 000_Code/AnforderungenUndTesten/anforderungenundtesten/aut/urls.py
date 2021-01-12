@@ -7,7 +7,7 @@ from . import views
 app_name = 'aut'
 urlpatterns = [
     #Basis Views
-    path('', views.view_dashboard, name='view_dashboard'), #vielleicht noch verschönern
+    path('', views.view_dashboard, name='view_dashboard'),
     path('requirement', views.view_requirement, name='view_requirement'),
     path('testcase', views.view_testcase, name='view_testcase'),
     path('testrun', views.view_testrun, name='view_testrun'),
@@ -29,5 +29,18 @@ urlpatterns = [
     path('testrun/create/<int:pk>/', views.edit_testrun, name='testrun_create'),
 
     path('testrun/run/<int:pk>/', views.testrun_run, name='testrun_run'),
-]
 
+    #Views für die TestCase Schritte
+    path('test', views.test, name='test'),
+    path('schritte/<int:id>', views.formset_view, name='schritte'),
+    path('schritte_run/<int:id>', views.formset_view_run, name='schritte_run'),
+
+    #Notepad für Notizen
+    path('note/', views.form_note, name='notepad'),
+    path('note/<int:pk>/', views.form_note, name='notepad'),
+
+    path('test2', views.TestDocument, name='test2'),
+
+
+
+]

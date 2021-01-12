@@ -6,7 +6,6 @@ body {
   height: auto;
   width: auto;
   text-align:left;
-
 }
 
 .textdisplay {
@@ -22,104 +21,82 @@ body {
   text-align:left;
 }
 
-
-/* mit dem Overflow bekommt man die Liste angezeigt über den Parent*/
 #statusleiste {
   position:relative;
   width:auto;
   height:4rem;
-  border-width:0.1rem;
-  border-style:solid;
-  border-color:red;
   z-index: 10;
-
+  border: 1px solid #28ffff;
+  background-color: #e6ffff;
 }
 
 #willkommen {
-  border-style: solid;
-  border-width:0.1rem;
-  border-color: green;
-
-
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-
+font-weight: 700;
   float: left;
-
   display: inline-block;
 }
 
-
 #logo {
-  border-style: solid;
-  border-width:0.1rem;
-  border-color: green;
-
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   float: right;
-
   width: 4rem;
   height: 3rem;
+  right: 1rem;
 }
 
 
 /* für die anderen Elemente in der Mitte */
 .dropdown {
-  border-style: solid;
-  border-width: 0.1rem;
-  border-color: green;
-
   margin-left: 1rem;
   margin-bottom: 0;
   padding-bottom: 0;
-
-
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-
   display: inline-block;
-
   font-size: 0;
-
-  background-color: lightgreen;
-
-
 }
 
 .dropdown-content {
-
   position: relative;
   display: inline-block;
-
-  background-color: lightgreen;
-
+  background-color: #22c8ff;
+  transition: background 0.3s;
 }
+
 /* kleiner Trick mit der FOnt Size um die komische Sache wegzunekommen */
 .dropdown-content a {
   font-size: calc(0.2rem + 1vw);
-
   text-decoration: none;
-
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   display: inline-block;
-
   transition: background-color 0.5s;
-
 }
 
 /* wenn man drüber hovered */
 .dropdown-content a:hover {
-    background-color: green;
+    background-color: #0099ff;
+    color: white;
+}
+.dropdown-content a:active {
+    background-color: #348F9A;
+    color: black;
+}
+.dropdown-content a:link, .dropdown-content a:visited, {
+  color:black;
 }
 
 
+
+/* Mal gucken ob man das noch braucht */
 /* Das Erste Element wird trotzdem angezeigt mit first child*/
 @media screen and (max-width: 40rem) {
 

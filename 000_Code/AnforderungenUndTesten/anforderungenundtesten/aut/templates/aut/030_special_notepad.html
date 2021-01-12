@@ -1,0 +1,34 @@
+
+<button id="fixedbutton">Notizen</button>
+
+<iframe id="framey" src="{% url 'aut:notepad' %}" style="display:None;">
+</iframe>
+
+<style>
+#fixedbutton {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  text-align: center;
+  display: block;
+  border: 5px solid #1C6EA4;
+  border-radius: 20px 0px 0px 0px;
+  background: #0099ff;
+
+}
+#framey {
+    position: fixed;
+    bottom: 25px;
+    right: 0px;
+    height: 400px;
+    width: 400px;
+}
+</style>
+<script>
+$(document).ready(function(){
+  $("#fixedbutton").click(function(){
+    $("#framey").toggle(1000);
+  });
+});
+</script>
+
