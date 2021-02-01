@@ -37,16 +37,16 @@ Warning--to sort, need author or key in heroku
 Warning--to sort, need author or key in snack
 You've used 44 entries,
             2118 wiz_defined-function locations,
-            608 strings with 7451 characters,
-and the built_in function-call counts, 7261 in all, are:
-= -- 623
+            651 strings with 10256 characters,
+and the built_in function-call counts, 7734 in all, are:
+= -- 752
 > -- 116
 < -- 0
 + -- 68
 - -- 24
 * -- 266
-:= -- 878
-add.period$ -- 57
+:= -- 1007
+add.period$ -- 100
 call.type$ -- 44
 change.case$ -- 144
 chr.to.int$ -- 0
@@ -54,17 +54,17 @@ cite$ -- 76
 duplicate$ -- 308
 empty$ -- 1001
 format.name$ -- 24
-if$ -- 1736
+if$ -- 1865
 int.to.chr$ -- 0
 int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 148
+newline$ -- 191
 num.names$ -- 24
-pop$ -- 395
+pop$ -- 352
 preamble$ -- 1
 purify$ -- 100
 quote$ -- 0
-skip$ -- 350
+skip$ -- 307
 stack$ -- 0
 substring$ -- 220
 swap$ -- 44
@@ -75,5 +75,5 @@ type$ -- 176
 warning$ -- 32
 while$ -- 24
 width$ -- 46
-write$ -- 292
+write$ -- 378
 (There were 32 warnings)

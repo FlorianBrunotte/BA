@@ -1,0 +1,250 @@
+\begin{thebibliography}{10}
+
+\bibitem{mozillatuto1}
+{Django introduction - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction},
+  22.01.2021.
+
+\bibitem{mvc}
+{MVC (model view controller) :: Modell-Ansicht-Steuerung :: ITWissen.info}.
+\newblock
+  \url{https://www.itwissen.info/MVC-model-view-controller-Modell-Ansicht-Steuerung.html},
+  25.01.2021.
+
+\bibitem{webframe}
+{Web-Framework :: web framework :: ITWissen.info}.
+\newblock \url{https://www.itwissen.info/Web-Framework-web-framework.html},
+  25.01.2021.
+
+\bibitem{mozillatuto12}
+{Django Tutorial Part 10: Testing a Django web application - Learn web
+  development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing},
+  27.01.2021.
+
+\bibitem{mozillatuto13}
+{Django Tutorial Part 11: Deploying Django to production - Learn web
+  development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment},
+  27.01.2021.
+
+\bibitem{mozillatuto4}
+{Django Tutorial Part 2: Creating a skeleton website - Learn web development |
+  MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website},
+  27.01.2021.
+
+\bibitem{mozillatuto5}
+{Django Tutorial Part 3: Using models - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models},
+  27.01.2021.
+
+\bibitem{mozillatuto6}
+{Django Tutorial Part 4: Django admin site - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site},
+  27.01.2021.
+
+\bibitem{mozillatuto7}
+{Django Tutorial Part 5: Creating our home page - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page},
+  27.01.2021.
+
+\bibitem{mozillatuto8}
+{Django Tutorial Part 6: Generic list and detail views - Learn web development
+  | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views},
+  27.01.2021.
+
+\bibitem{mozillatuto9}
+{Django Tutorial Part 7: Sessions framework - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions},
+  27.01.2021.
+
+\bibitem{mozillatuto10}
+{Django Tutorial Part 8: User authentication and permissions - Learn web
+  development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication},
+  27.01.2021.
+
+\bibitem{mozillatuto11}
+{Django Tutorial Part 9: Working with forms - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms},
+  27.01.2021.
+
+\bibitem{mozillatuto3}
+{Django Tutorial: The Local Library website - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website},
+  27.01.2021.
+
+\bibitem{mozillatuto2}
+{Setting up a Django development environment - Learn web development | MDN}.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment},
+  27.01.2021.
+
+\bibitem{djangotuto3}
+{Writing your first Django app, part 1 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial01/},
+  28.01.2021.
+
+\bibitem{djangotuto4}
+{Writing your first Django app, part 2 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial02/},
+  28.01.2021.
+
+\bibitem{djangotuto5}
+{Writing your first Django app, part 3 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial03/},
+  28.01.2021.
+
+\bibitem{djangotuto6}
+{Writing your first Django app, part 4 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial04/},
+  28.01.2021.
+
+\bibitem{djangotuto7}
+{Writing your first Django app, part 5 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial05/},
+  28.01.2021.
+
+\bibitem{djangotuto8}
+{Writing your first Django app, part 6 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial06/},
+  28.01.2021.
+
+\bibitem{djangotuto9}
+{Writing your first Django app, part 7 | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/tutorial07/},
+  28.01.2021.
+
+\bibitem{testcollab}
+{Best Test Management Software {\&} Test Case Management Tool}.
+\newblock \url{https://testcollab.com/}, 29.01.2021.
+
+\bibitem{testcollabprice}
+{Pricing | Test Collab}.
+\newblock \url{https://testcollab.com/pricing/}, 29.01.2021.
+
+\bibitem{testcaselab}
+{TestCaseLab - Powerful tool for QA engineers}.
+\newblock \url{https://testcaselab.com/}, 29.01.2021.
+
+\bibitem{guru}
+{What is Requirements Traceability Matrix (RTM)? Example Template}.
+\newblock \url{https://www.guru99.com/traceability-matrix.html}, 29.01.2021.
+
+\bibitem{heroku}
+{Cloud Application Platform | Heroku}.
+\newblock \url{https://www.heroku.com/}, 31.01.2021.
+
+\bibitem{signup}
+{Create Advanced User Sign Up View in Django | Step-by-Step - DEV Community}.
+\newblock
+  \url{https://dev.to/coderasha/create-advanced-user-sign-up-view-in-django-step-by-step-k9m},
+  31.01.2021.
+
+\bibitem{djangotuto1}
+{Django at a glance | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/overview/},
+  31.01.2021.
+
+\bibitem{snack}
+{How To Create a Snackbar / Toast}.
+\newblock \url{https://www.w3schools.com/howto/howto_js_snackbar.asp},
+  31.01.2021.
+
+\bibitem{testlodge}
+{Online Test Case Management Tool - TestLodge}.
+\newblock \url{https://www.testlodge.com/}, 31.01.2021.
+
+\bibitem{djangotuto2}
+{Quick install guide | Django documentation | Django}.
+\newblock \url{https://docs.djangoproject.com/en/3.1/intro/install/},
+  31.01.2021.
+
+\bibitem{jiraxray}
+Atlassian.
+\newblock {Jira | Issue {\&} Project Tracking Software | Atlassian}.
+\newblock \url{https://www.atlassian.com/software/jira}, 29.01.2021.
+
+\bibitem{axure}
+Axure.
+\newblock {Axure RP 9 - Prototypes, Specifications, and Diagrams in One Tool}.
+\newblock \url{https://www.axure.com/}, 28.01.2021.
+
+\bibitem{nielsend}
+Johannes Borchard.
+\newblock {10 Usability Heuristiken nach Nielsen - Systeme bewerten ohne zu
+  fluchen}.
+\newblock \url{https://www.usabilityreport.de/usability-heuristiken-nielsen},
+  25.02.2020.
+
+\bibitem{djangowhat}
+Hackr.io.
+\newblock {What is Django? Advantages and Disadvantages of using Django}.
+\newblock
+  \url{https://hackr.io/blog/what-is-django-advantages-and-disadvantages-of-using-django},
+  26.01.2021.
+
+\bibitem{isoui}
+ISO.
+\newblock {ISO 9241-110:2020}.
+\newblock \url{https://www.iso.org/standard/75258.html}, 29.01.2021.
+
+\bibitem{isousa}
+ISO.
+\newblock {ISO 9241-11:2018}.
+\newblock \url{https://www.iso.org/standard/63500.html}, 29.01.2021.
+
+\bibitem{confirm}
+Khan.
+\newblock {Warn user before leaving web page with unsaved changes}.
+\newblock
+  \url{https://stackoverflow.com/questions/7317273/warn-user-before-leaving-web-page-with-unsaved-changes},
+  2011.
+
+\bibitem{sotimer}
+Mark.
+\newblock plain count up timer in javascript.
+\newblock
+  \url{https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript},
+  2011.
+
+\bibitem{nielsen}
+{Nielsen Norman Group}.
+\newblock {10 Usability Heuristics for User Interface Design}.
+\newblock \url{https://www.nngroup.com/articles/ten-usability-heuristics/},
+  29.01.2021.
+
+\bibitem{qatouch}
+{QA Touch}.
+\newblock {Test Case Management Tool | Software Test Management tool | QA
+  Touch}.
+\newblock \url{https://www.qatouch.com/}, 19.01.2021.
+
+\bibitem{soallsame}
+{Stack Overflow}.
+\newblock {Python: determine if all items of a list are the same item - Stack
+  Overflow}.
+\newblock
+  \url{https://stackoverflow.com/questions/3787908/python-determine-if-all-items-of-a-list-are-the-same-item},
+  31.01.2021.
+
+\bibitem{xray}
+Xray.
+\newblock {Xray - Cutting Edge Test Management for Jira}.
+\newblock \url{https://www.getxray.app/}, 15.01.2021.
+
+\end{thebibliography}

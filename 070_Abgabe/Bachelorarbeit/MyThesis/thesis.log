@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.14)  1 FEB 2021 08:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.14)  1 FEB 2021 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
+**thesis
 (./thesis.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18>
@@ -342,11 +342,7 @@ File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count289
 \l__pdf_internal_box=\box55
 )
-(./thesis.aux (./vorspann.aux)
-
-LaTeX Warning: Label `f:testrun' multiply defined.
-
-)
+(./thesis.aux (./vorspann.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -365,7 +361,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 23
 .
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 \big@size=\dimen165
@@ -535,9 +532,9 @@ f>] [1
 ]
 Kapitel 1.
 
-Overfull \hbox (25.37105pt too wide) in paragraph at lines 56--57
-[]\T1/ppl/m/n/10.95 (-20) Daraufhin wer-den ba-sie-rend auf den An-for-de-run-g
-en der \T1/ppl/m/it/10.95 (-20) Sta-ke-hol-der Software-Anforderungen
+Overfull \hbox (4.30624pt too wide) in paragraph at lines 56--57
+[]\T1/ppl/m/n/10.95 (-20) Dabei wer-den ba-sie-rend auf den An-for-de-run-gen d
+er \T1/ppl/m/it/10.95 (-20) Sta-ke-hol-der Software-Anforderungen
  []
 
 [2
@@ -887,30 +884,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 rver -[] side /
  []
 
-[41]) [42] (./thesis.aux (./vorspann.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+\T1/pcr/m/n/10.95 https : / / www . itwissen . info / MVC -[] model -[] view -[
+] controller -[]
+ []
 
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
+\T1/pcr/m/n/10.95 https : / / developer . mozilla . org / en -[] US / docs / Le
+arn / Server -[]
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 48--52
+[]\T1/ppl/m/n/10.95 (+20) Django Tu-to-ri-al Part 4: Djan-go ad-min si-te - Lea
+rn web de-ve-lop-ment
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 48--52
+\T1/ppl/m/n/10.95 (+20) | MDN.  $\T1/pcr/m/n/10.95 https : / / developer . mozi
+lla . org / en -[] US / docs / Learn /
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 92--96
+[]\T1/ppl/m/n/10.95 (+20) Setting up a Djan-go de-ve-lop-ment en-vi-ron-ment - 
+Learn web de-ve-lop-
+ []
+
+[41]
+Underfull \hbox (badness 2096) in paragraph at lines 149--151
+[]\T1/ppl/m/n/10.95 (+20) Cloud Ap-p-li-ca-ti-on Plat-form | He-ro-ku.  $\T1/pc
+r/m/n/10.95 https : / / www . heroku . com/$\T1/ppl/m/n/10.95 (+20) ,
+ []
+
+[42]
+Underfull \hbox (badness 6725) in paragraph at lines 212--217
+[]\T1/ppl/m/n/10.95 (+20) Khan.  Warn user be-fo-re lea-ving web pa-ge with un-
+sa-ved chan-
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 226--230
+[]\T1/ppl/m/n/10.95 (+20) Nielsen Nor-man Group.  10 Usa-bi-li-ty Heu-ri-stics 
+for User In-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
+\T1/ppl/m/n/10.95 (+20) De-sign.  $\T1/pcr/m/n/10.95 https : / / www . nngroup 
+. com / articles / ten -[] usability -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+\T1/pcr/m/n/10.95 python -[] determine -[] if -[] all -[] items -[] of -[] a -[
+] list -[] are -[] the -[] same -[]
+ []
+
+) [43] (./thesis.aux (./vorspann.aux)) ) 
 Here is how much of TeX's memory you used:
- 10050 strings out of 480471
- 148165 string characters out of 5903300
+ 10045 strings out of 480471
+ 148122 string characters out of 5903300
  598846 words of memory out of 5000000
- 25578 multiletter control sequences out of 15000+600000
- 583225 words of font info for 269 fonts, out of 8000000 for 9000
+ 25579 multiletter control sequences out of 15000+600000
+ 582915 words of font info for 265 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 52i,10n,53p,1595b,1359s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
-f-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2020/texmf-dist/fonts/typ
-e1/urw/courier/ucrr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/u
-crro8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/
-texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/te
-xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2020/texmf-dist/fonts/
-type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (45 pages, 1717024 bytes).
+ 52i,10n,53p,1672b,1359s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/d
+vips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
+><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/p
+alatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplr8a.
+pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (46 pages, 1719795 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
+ 349 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  33948 words of extra memory for PDF output out of 35830 (max. 10000000)
 
