@@ -3,44 +3,77 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis2.aux
 The style file: plain.bst
 Database file #1: online.bib
-You've used 21 entries,
+Warning--to sort, need author or key in mozillatuto1
+Warning--to sort, need author or key in mvc
+Warning--to sort, need author or key in webframe
+Warning--to sort, need author or key in mozillatuto2
+Warning--to sort, need author or key in mozillatuto3
+Warning--to sort, need author or key in mozillatuto4
+Warning--to sort, need author or key in mozillatuto5
+Warning--to sort, need author or key in mozillatuto6
+Warning--to sort, need author or key in mozillatuto7
+Warning--to sort, need author or key in mozillatuto8
+Warning--to sort, need author or key in mozillatuto9
+Warning--to sort, need author or key in mozillatuto10
+Warning--to sort, need author or key in mozillatuto11
+Warning--to sort, need author or key in mozillatuto12
+Warning--to sort, need author or key in mozillatuto13
+Warning--to sort, need author or key in djangotuto3
+Warning--to sort, need author or key in djangotuto1
+Warning--to sort, need author or key in djangotuto2
+Warning--to sort, need author or key in djangotuto4
+Warning--to sort, need author or key in djangotuto9
+Warning--to sort, need author or key in djangotuto8
+Warning--to sort, need author or key in djangotuto7
+Warning--to sort, need author or key in djangotuto6
+Warning--to sort, need author or key in djangotuto5
+Warning--to sort, need author or key in guru
+Warning--to sort, need author or key in testcollabprice
+Warning--to sort, need author or key in testlodge
+Warning--to sort, need author or key in testcollab
+Warning--to sort, need author or key in testcaselab
+Warning--to sort, need author or key in signup
+Warning--to sort, need author or key in heroku
+Warning--to sort, need author or key in snack
+You've used 44 entries,
             2118 wiz_defined-function locations,
-            571 strings with 5746 characters,
-and the built_in function-call counts, 3599 in all, are:
-= -- 359
-> -- 33
+            651 strings with 10256 characters,
+and the built_in function-call counts, 7734 in all, are:
+= -- 752
+> -- 116
 < -- 0
-+ -- 25
-- -- 4
-* -- 88
-:= -- 438
-add.period$ -- 63
-call.type$ -- 21
-change.case$ -- 84
++ -- 68
+- -- 24
+* -- 266
+:= -- 1007
+add.period$ -- 100
+call.type$ -- 44
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 147
-empty$ -- 482
-format.name$ -- 4
-if$ -- 887
+cite$ -- 76
+duplicate$ -- 308
+empty$ -- 1001
+format.name$ -- 24
+if$ -- 1865
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 108
-num.names$ -- 4
-pop$ -- 193
+newline$ -- 191
+num.names$ -- 24
+pop$ -- 352
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 100
 quote$ -- 0
-skip$ -- 125
+skip$ -- 307
 stack$ -- 0
-substring$ -- 105
-swap$ -- 21
+substring$ -- 220
+swap$ -- 44
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
-warning$ -- 0
-while$ -- 4
-width$ -- 23
-write$ -- 191
+type$ -- 176
+warning$ -- 32
+while$ -- 24
+width$ -- 46
+write$ -- 378
+(There were 32 warnings)

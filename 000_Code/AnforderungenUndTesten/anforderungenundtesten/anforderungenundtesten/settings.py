@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'anforderungenundtesten.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ANFUNDTEST',
-        'USER': 'postgres',
+        'NAME': '1812178_ANFUNDTEST', #ANFUNDTEST
+        'USER': '1812178', #postgres
         'PASSWORD': 'Koeln18101998!', #also das Masterpassword oder doch das Passwort vom User Für PC Koeln18101998! für Surcafe koeln18101998
-        'HOST': 'localhost', #oder localhost unter Windows immer definieren
+        'HOST': '141.19.96.205', #oder localhost unter Windows immer definieren
         'PORT': '5432',
     }
 }
@@ -138,7 +138,5 @@ STATICFILES_DIRS = [
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

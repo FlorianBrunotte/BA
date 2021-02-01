@@ -12,12 +12,12 @@
 \newcommand{\welchethesis}{Bachelor}
 \newcommand{\thesisofwas}{of Science}
 \newcommand{\studiengang}{Technische Informatik}
-\newcommand{\titel}{Arbeitstitel: Anforderungen und Testen}
+\newcommand{\titel}{Entwicklung des Softwaretools ,,Anforderungen und Testen'' für das Anforderungs- und Testmanagement im Softwareentwicklungsumfeld}
 \newcommand{\kurztitel}{Arbeitstitel: Anforderungen und Testen}
 \newcommand{\autor}{Florian Brunotte}
-\newcommand{\datum}{30.01.2021} % Abgabedatum
+\newcommand{\datum}{01.02.2021} % Abgabedatum
 \newcommand{\ort}{Mannheim}
-\newcommand{\referent}{Prof.\ Dr.\ Ing. Mark Hastenteufel}
+\newcommand{\referent}{Prof.\ Dr.\ Mark Hastenteufel}
 \newcommand{\korreferent}{Prof.\ Dr.\ Martin Damm}
 
 \begin{document}
@@ -25,817 +25,1120 @@
 \include{vorspann} % Titelseite, Erklärungen, etc.
 
 \begin{abstract} 
-Ziel dieser Bachelorarbeit war die Erstellung einer leichtgewichtigen Software mit der Requirements und Testcases aufgenommen werden können und durch Testruns validiert werden. (Unterschied Validierung und Verifikation?) Eingesetzt wird diese Software im Rahmen von kleinen Semesterprojekten an der Hochschule Mannheim. Geschrieben wurde sie in als Webapplikation in Python und Django während die Visualiisierung und das User Interface durch HTML und CSS erstellt wurde.
+
+Das Ziel dieser Bachelorarbeit ist die Entwicklung eines leichtgewichtigen \textit{Softwaretools} für das \textit{Anforderungs- und Testmanagement} im \textit{Softwareentwicklungsumfeld}. Dafür gibt es zwar professionelle Tools, diese sind jedoch für Lehrzwecke zu komplex. Diese Lücke soll durch das Ergebnis dieser Bachelorarbeit gefüllt werden mit dem Tool \textit{"`Anforderungen und Testen"'}. Eingesetzt werden kann diese Anwendung im Rahmen von kleinen Semesterprojekten, die dadurch unterstützt werden sollen, ohne vom Wesentlichen abzulenken.
+
+Geschrieben wurde das Tool als \textit{Webanwendung} in der Programmiersprache \textit{Python} und mit dem \textit{Webframework Django}.
+Ergänzend dazu wurde auch \textit{HTML}, \textit{CSS} und \textit{JavaScript} verwendet. Durch einen \textit{UI-Prototypen} konnte das generelle Aussehen der Anwendung getestet werden. Dadurch konnten bereits Rückmeldungen für die Implementierung erhalten werden.
+
+Der Fokus liegt dabei auf der Erstellung von simplen und leicht verständlichen Benutzerschnittstellen, welche durch einen \textit{Usabilitytest} auf ihre Benutzerfreundlichkeit überprüft werden. Daneben soll das \textit{Softwaretool} auch über eine Datenbankanbindung verfügen, zum Beispiel an \textit{PostgreSQL}. Aus diesem Grund spielt das Datenbankdesign ebenfalls eine wichtige Rolle in dieser Arbeit.
+
+
 \end{abstract}
 
 \tableofcontents %Inhaltsverzeichnis wird erstellt
 
-Fragen: 
-Kuchen Diagramme im Dashboard oder in der Statistik Seite?
-Lieber PDf oder doch Docs Datei?
+\chapter{Grundlagen} 
+\label{c:grund}
+
+Es soll ein leichtgewichtiges \textit{Softwaretool} entwickelt werden, welches die Lehrveranstaltung unterstützt. Das \textit{Tool} sollte sich auf die Kernfunktionalitäten beschränken, damit sich die Anwender auf das Wesentliche konzentrieren können. Andere \textit{Softwaretools}, die auf dem Markt verfügbar sind, sind für den Einsatz in der Lehre nicht geeignet, da sie nicht nur zu komplex sind, sondern auch zu große Kosten mit sich bringen. Eine intuitive und simple Software, wie \textit{"`Anforderungen und Testen"'} soll hier Abhilfe schaffen.
+
+Im Nachfolgenden wird das \textit{Anforderungs- und Testmanagement} erklärt. Danach werden die professionellen Tools vorgestellt, an denen sich die Software  \textit{"`Anforderungen und Testen"'} orientiert, bevor zuletzt das Thema \textit{Usability} angesprochen wird.
+
+\section{Anforderungs- und Testmanagement} 
+\label{s:anfundtest}
+
+Im Rahmen des \textit{Anforderungsmanagement} gibt es verschiedene Arten von Anforderungen, die bei der Entwicklung eines Systems erfasst werden sollten. Es gibt die \textit{Produkt-} beziehungsweise \textit{Stakeholderanforderungen}, die aus der Kunden- oder Nutzersicht entstehen. Damit werden die zu erreichenden Ziele und der Zweck des Systems beschrieben, die die \textit{Stakeholder} verfolgen \cite{htm}. 
+
+Als \textit{Stakeholder} werden Individuen, Gruppen oder Organisationen bezeichnet, die von einem Projekt beeinflusst werden, das Projekt beeinflussen oder durch das Ergebnis des Projekts beeinflusst werden \cite{pmbok}. Beispiele für \textit{Stakeholder} sind die Kunden oder Geschäftspartner in einem Projekt. In diesem Projekt ist Herr Prof. Dr. Hastenteufel ein \textit{Stakeholder}.
 
 
-\chapter{Motivation - Warum wurde diese Software erstellt?} \label{chap:motivation}
-Es ist vorzuziehen, dass...
-
-Motivation:
-Die Zielgruppe für diese Arbeit und für diese Software sind die Hochschulangehörigen, die innerhalb des Studiums Anforderungen und Tests verwalten müssen. 
-
-Es soll eine leichtgewichtiges Softwaretool entwickelt werden zum Anforderungs- und Testmanagement. Dabei sollte man sich auf die Kernfunktionalitäten beschränken, damit man sich auf das Wesentliche konzentrieren kann, dem Schreiben von Anforderungen und dem Ausführen von Tests. Andere Softwaretools, die am Markt verfügbar sind, sind für den Einsatz in der Lehre nicht geeignet, da sie zu komplex sind und auch Geld kosten können. Sollte man nicht bezahlen, werden bestimmte Funktionen gesperrt. Insgesamt sind sie zu schwergewichtig und man verliert das eben beschriebene wesentliche aus dem Blick. Eine intuitive und simple Software, wie ,,Anforderungen und Testen (WIP)'' soll hierbei Abhilfe schaffen.
-
-Hier werden dann noch manche Tools aufgezählt. Vielleicht mit Bilder die Limitierung und die Überfülle zeigen.
-\chapter{Anforderungs- und Testmanagement - Was ist das?} 
-\label{chap:sw}
+Dabei werden basierend auf den Anforderungen der \textit{Stakeholder} \textit{Software-Anforderungen} aufgestellt. Diese müssen von der Software erfüllt werden, damit der Kunde ein System erhält, das seinen Vorstellungen entspricht \cite{htm}. Zur Überprüfung der Funktionalitäten der Software werden Tests geschrieben und durchgeführt. Die \textit{Stakeholder} werden auf diesem Weg über die Qualität der Software informiert \cite{powerpoint}.
 
 
-\chapter{Tools - Welche Tools gibt es schon?} 
+\section{Marktverfügbare Tools} 
 \label{chap:Tools}
-Schauen Sie sich das mal an: https://testcollab.com/
 
-Sie können sich einen kostenlosen Account anlegen.
 
-Für Jira gibt es spezielle Add-Ons für das Testmanagement, z.B. XRay. Auch hier können Sie sich einen
-kostenlosen Cloud-Zugang anlegen. Allerdings ist Jira/Xray noch komplexer als testcollab.
-
-Die Tage habe ich mir nochmal ein paar kommerzielle Tools angeschaut. Kann ich Ihnen auch empfehlen.
-
--          testlodge
-
--          testcaselab
-
--          qa touch
-
- 
-
-Bei allen hatte ich was zu bemängeln (einige konnten keine Requirements, alle konnten keine Trace-Matrizen, von den Kosten abgesehen).
-
-Aber man kann sich ein paar Ideen und Anregungen holen.
+Es gibt verschiedene Tools mit diversen Gründen, die einen Ausschluss von der Benutzung in einer Lehrveranstaltung rechtfertigen. Sie können andere, eigene Begriffe verwenden, hohe Kosten nach sich ziehen oder zu komplex sein. Das Ziel der Lehrveranstaltung sollte das \textit{Anforderungs- und Testmanagement} sein und nicht das Kennenlernen neuer Tools. Diese sollten die Lehrveranstaltung nur unterstützen und nicht dominieren. Das Tool sollte also möglichst selbsterklärend sein, sodass das Gelernte im Unterricht sofort angewendet werden kann. Zu den verschiedenen Tools, die es auf dem Markt gibt, werden an dieser Stelle die Aspekte präsentiert, die die Tools ungeeignet machen für den Einsatz in Semesterveranstaltungen. Daneben werden aber auch die Aspekte präsentiert, an denen sich die erstellte Software orientiert hat.
 
 
 
 
 
-Es gibt verschiedene Tools mit diversen Gründen warum diese nicht geeignet sind um im Rahmen einer Lehrveranstalltung benutzt zu werden. Sie können zu komplex sein, andere eigene Begriffe verwenden, Geld kosten oder kostenlos sein mit eingeschränkten Funktionen. 
-Beim Studium dieser Sachen geht es darum zu Lernen was Software-Anforderungen und TestCases sind und nicht darum das Tool kennenzulernen und zu meistern. Das Tools sollte also nur unterstützen und nicht die Lehrveranstaltung dominieren. Das Tool sollte also möglichst selbsterklärend sein, sodass das Gelernte im Unterricht sofort angewendet werden kann. Es gibt dazu eine Beschreibung in PDF Form
-
-Die Meinungen werden von der Sicht geschrieben, wenn man zum ersten Mal so ein Tool benutzt.
-
-Ein generelles Problem ist das die meisten Tools oder auch alle nur free Trial sind und sich deshalb eine Verwendung über das Semester nicht anbietet.
-Das größte Problem bei diesen Tools ist wohl, dass sie Geld kosten oder nur eine bestimmte Zeit lang kostenlos sind als Free Trial. Ein Tool, dass eine Fremium Version hat, ist Pearls.
-
-Zu den verschiedenen Tools, die es auf dem Markt schon gibt, gibt es hier eine kurze Einführung mit den Aspekten, die die Tools nicht geeignet machen für die Lehre und die Aspekte, die das eigene Tool inspiriert haben.
-
-Das erste Tool TestCollab bietet zum Beispiel keine Möglichkeit direkt und getrennt voneinander die Requirements, TestCases und TestRuns zu definieren. Außerdem muss man vorher eine TestSuit definieren
-Man könnte dadurch auf den ersten Blick verwirrt werden, wo der Unterschied zwischen diesen Elementen liegt. Außerdem wird man mit einen Mengen Fenstern und Informationen bombardiert. 
-Daraus inspiriert ist das man alle Informationen auf einer Seite sieht, die man gegebenenfalls auch scrollen kann. Es sollen keine neuen Tabs oder Overlay Sachen passieren.
-Auch die TestSuiten sollten nicht implementiert werden. Die Elemente sollten einzeln und unabhängig definiert werden und danach verlinkt werden können. Zum Beispiel durch Checkboxen und Foreign Keys
-Andererseits wurde aus dem Dashboard die Navigationsleiste am oberen Bildschirmrand übernommen, damit man immer einen Überblick hat wo man gerade ist. Ebenfalls gibt es in dem Dashboard für ein Projekt ein Ausrufezeichen, wenn etwas fehlgeschlagen ist. Daraus abgeleitet ist bei meinem Dashboard die rote Markierung und der Satz, dass es noch Fehler gibt bevor man die PDF erstellt. Die PDF kann zwar noch erstellt werden, aber es ist eine Warnung.
-Bei diesem Tool kann man mehrere Projekte erstellen, aber im Rahmen des Semesters sollte nur 1 Projekt bearbeitet werden, darum entfällt diese Möglichkeit. Im Semester werden die Studierenden in Gruppen aufgeteilt und müssen dann eine Aufgabe bearbeiten. Die Gruppen werden dann auch vom Professor zugeteilt.
 
 
-Das nächste Tool ist die Jira Erweiterung Xray. Da fällt direkt auf, dass es sehr auf die Agile Methode ausgelegt ist. Mit Stories und des Weiteren.
-Bei diesem Tool oder Erweiterung sind die Tests noch weiter aufgeteilt. Diese Aufteilung kann man in der Abbildung 222 sehen. Weiterhin muss man hierbei zum Einen Jira und dann noch die Erweiterung kennenlernen. Anhand der vielen Buttons in der Statusleiste kann man auch die Komplexität erkennen. 
 
 
-Das nächste Tool ist ReQTest und beinhaltet die Möglichkeit die TestCases und Requirements getrennt voneinander zu definieren. Auch wenn es etwas versteckt ist kann man hier die Requirements und die TEstCAses verlinken. Ebenfalls können TestRuns durchgeführt werden. Die Struktur der Requirements ähnelt einer Ornderstrkutur in Windows, wie in der Abbildung 222 zu sehen ist. In größeren Projekten macht das durchaus Sinn, aber bei der Semesterarbeit wird das wahrscheinlich keinen Sinn machen und verkompliziert die Sache eher. Realisieren kann man aber Kategorien in die man die Elemente sortieren kann, wenn man möchte. Das war die Inspiration aus diesem Tool. 
 
 
-Hierbei kam die Idee auch Dokumente zu generieren. Wenn das Projekt beendet ist und alle TestCases mindestens einen erfolgreichen TestRun haben, könnte man zur Abgabe das Dokument einreichen, damit der Professor direkt alle notwendigen Infos hat. Zur Not kann er aber auch immer noch die einzelnen Projekte betrachten. 
+%1. Tool testcollab
 
-https://pearls-inc.com/
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testcollab_dash1.png}
+  \caption{Das Dashboard in Testcollab, aus \cite{testcollab}}
+  \label{f:testcollab-dash}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testcollab_run.png}
+  \caption{Die Testrun Druchführung in Testcollab, aus \cite{testcollab}}
+  \label{f:testcollab-testrun}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testcollab_steps.png}
+  \caption{Die Eingabe von Testschritten in Testcollab, aus \cite{testcollab}}
+  \label{f:testcollab-testschritt}
+\end{figure}
+
+Das erste Tool, das an dieser Stelle vorgestellt werden soll, ist \textit{Testcollab} \cite{testcollab}. Dieses Tool ist das einzige, dass eine kostenlose Version anbietet. Bei der kostenlose Variante können maximal drei Personen gleichzeitig an einem Projekt arbeiten, was im Semester eventuell zu einem Problem führen könnte, dass es somit zu viele Gruppen gibt \cite{testcollabprice}. Daneben gibt es noch die Limitierung, dass in einem Projekt nur maximal 200 \textit{Testcases} und 300 \textit{Testruns} erstellt werden können. Da es sich im Semester nur um kleine Projekte handeln wird, sollte diese Limitierung kein Problem darstellen.
 
 
-ReqSuite ist ein weiteres Tool, dass betrachtet wurde.
+Aus Sicht der Benutzerfreundlichkeit fällt bei der Eingabe der \textit{Testschritte} auf, dass diese mit Leerzeilen dazwischen eingegeben werden sollen, wie in der Abbildung \ref{f:testcollab-testschritt} präsentiert. Die Eingabe der Leerzeile könnte vergessen werden, dadurch wären statt vieler \textit{Testschritte} nur ein großer \textit{Testschritt} definiert. Sinnvoller wäre eine Implementierung, in der jeder \textit{Testschritt} ein eigenes Feld hat, zum Beispiel bei der Implementierung als Tabelle. Das Design der \textit{Testrunseite}, die in der Abbildung \ref{f:testcollab-testrun} zu sehen ist, könnte allerdings übernommen werden.
 
-\url{https://www.osseno.com/en/requirements-management-tool/?r=rmt&dpm=39467}
+Ein Nachteil des Tools ist, dass es keine Aussage darüber macht bei welchem Schritt der \textit{Testrun} durchgefallen ist. Es gibt nur eine Aussage darüber, ob die gesamte \textit{Test Suite} erfolgreich war oder nicht.
 
 
-https://www.qatouch.com/
 
-https://testcaselab.com/
+Andererseits wurde aus dem \textit{Dashboard}, das in der Abbildung \ref{f:testcollab-dash} dargestellt ist, die Navigationsleiste am oberen Bildschirmrand übernommen, damit die Nutzer immer einen Überblick haben, an welcher Stelle sie sich gerade befinden. Gleichzeitig wurde die Begrüßung oben rechts auch übernommen, dadurch soll der erfolgreiche \textit{Login} signalisiert werden. Ebenfalls gibt es in dem \textit{Dashboard} ein Ausrufezeichen, wenn etwas fehlgeschlagen ist. Dadurch könnte die Aufmerksamkeit der Nutzer direkt auf die wichtigsten Probleme im Projekt gelenkt werden.
 
-https://www.testlodge.com/
 
-\chapter{Anforderungsanalyse - Welche Anforderungen gibt es an das Projekt?} \label{chap:Anforderungen}
 
-Zuerst hat Herr Hastenteufel ein Dokument mit Anforderungen gesendet. Nach Absprache per Mail wurden noch folgende Sachen geklärt:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%2. Tool Jira Xray
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{jira_dash.png}
+  \caption{Das Dashboard in Jira, aus \cite{xray}}
+  \label{f:jiradash}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{jira_dash2.png}
+  \caption{Die Requirements Liste in Jira, aus \cite{xray}}
+  \label{f:jiradash2}
+\end{figure}
+
+
+Das nächste Tool ist \textit{Xray} \cite{xray}. Es ist eine Erweiterung des Tools \textit{Jira}, welches für \textit{agiles Projektmanagement} verwendet wird \cite{jiraxray}. Auf den ersten Blick wirkt das Tool zu komplex, als das es eine Lehrveranstaltung unterstützend begleiten kann.
+
+Die Visualisierung der Daten durch Kuchendiagramme auf dem \textit{Dashbaord}, wie in der Abbildung \ref{f:jiradash} gesehen werden kann, könnte übernommen werden. Durch die Farben können die Nutzer sofort sehen, ob es ein Problem im Projekt gibt. Bei der Liste der \textit{Requirements}, die in der Darstellung \ref{f:jiradash2} abgebildet ist, kann der Status abgelesen werden. Auf diesem Weg können die Nutzer auch anhand der Farben erkennen, welche \textit{Elemente} noch Aufmerksamkeit benötigen.
+
+
+
+
+
+
+
+%3. Tool testlodge
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{lodgedash.png}
+  \caption{Das Dashboard von Testlodge, aus \cite{testlodge}}
+  \label{f:lodgedash}
+\end{figure}
+
+
+Beim Tool \textit{Testlodge} muss vor dem Erstellen von \textit{Requirements} ein \textit{Requirement Document} erstellt werden und vor dem Erstellen von \textit{Testcases} eine \textit{Test Suite} \cite{testlodge}. Darin werden dann die jeweiligen Elemente gesammelt. Diese Option entfällt bei dem Tool \textit{"`Anforderungen und Testen"'}. Es sollte sofort eine Möglichkeit geben neue \textit{Elemente} zu erstellen, ohne über den Umweg einer weiteren Ebene gehen zu müssen.
+
+Es sollte die Unterscheidung zwischen \textit{Requirements}, \textit{Testcases} und \textit{Testruns} übernommen werden, damit die Nutzer besser unterscheiden können, was gerade bearbeitet wird. Diese Unterscheidung gab es nur in diesem Tool und kann in der Menüleiste in der Graphik \ref{f:lodgedash} gesehen werden.
+
+\textit{Testlodge} bietet auch die Möglichkeiten an, \textit{Testruns} an andere Leute im Projekt anzuweisen. Das ist ein weiteres Feature, das aufgegeben wird, um sich auf das Wesentliche zu begrenzen. Das Aussehen der Software \textit{"`Anforderungen und Testen"'} wird, aufgrund der Aufteilung der \textit{Elemente}, am meisten von diesem Tool beeinflusst.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% 4. Tool testcaselab
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testcaselabdash.png}
+  \caption{Das Dashboard von Testcaselab, aus \cite{testcaselab}}
+  \label{f:testcaselabdash}
+\end{figure}
+
+Ein weiteres Tool, welches für das \textit{Anforderungs- und Testmanagement} entwickelt wurde, ist \textit{Testcaselab} \cite{testcaselab}. Inspirierend bei diesem Tool ist die Anzeige der \textit{Elemente} als Liste auf der linken Seite mit der detaillierten Ansicht auf der rechten Seite. Diese Ansicht kann in der Abbildung \ref{f:testcaselabdash} gesehen werden. 
+
+
+
+
+
+%5. Tool qatouch
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{qatouch.png}
+  \caption{Das Dashboard von QA Touch, aus \cite{qatouch}}
+  \label{f:qatouch}
+\end{figure}
+
+
+Das letzte Tool, das an dieser Stelle erwähnt werden soll, ist \textit{QA Touch} \cite{qatouch}. Negativ auffallend bei diesem Tool ist die Navigation der Seite. Die Seite stellt Inhalte häufig mit Pop-up-Fenstern dar, wodurch es schwierig wird sich den jetzigen Standpunkt der Webseite klar zu machen, und das obwohl es eine Leiste gibt, die den Verlauf auf der Seite anzeigt. Diese Leiste kann in der oberen Bildhälfte der Abbildung \ref{f:qatouch} gesehen werden. Durch diese Unübersichtlichkeit ist dieses Tool für eine Benutzung in der Lehrveranstaltung eher ungeeignet.
+
+
+
+
+
+
+
+
+%Zusammenfassung
+
+
+\begin{table}[htpb]
+\caption{Zusammenfassung der Tools}
+\begin{center}
+\begin{tabular}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Tool}} & 
+	\multicolumn{1}{|c|}{\textbf{Pro}}& 
+	\multicolumn{1}{|c|}{\textbf{Contra}} \\
+    \hline
+    Testcollab & kostenlose Variante wird angeboten & Eingabe der Testschritte nicht benutzerfreundlich und keine Aussage, welcher Testschritt fehlgeschlagen ist \\
+    \hline
+    Xray & Visualisierung macht Probleme sofort ersichtlich & hohe Komplexität und kostenlose Version ist nur als Free Trial verfügbar \\
+    \hline
+    Testlodge & Unterscheidet zwischen Requirements, Testcases und Testruns & kostenlose Version ist nur als Free Trial verfügbar\\
+    \hline
+    Testcaselab & Listenansicht der Elemente mit anschließender Detailansicht & kostenlose Version ist nur als Free Trial verfügbar \\
+    \hline
+    QA Touch & Verlauf der Seite wird angezeigt & ersichtliche Navigation der Seite wird durch Pop-up-Fenster eingeschränkt und kostenlose Version ist nur als Free Trial verfügbar\\
+	\hline
+	
+\end{tabular}
+\end{center}
+\label{t:zusammenfassung}
+\end{table}
+
+In der Tabelle \ref{t:zusammenfassung} sind die vorgestellten Tools mit den Punkten dargestellt, die für und gegen sie sprechen. Ergänzend dazu soll an dieser Stelle noch gesagt werden, dass nur das Tool \textit{Testcollab} eine kostenlose Variante anbietet, die auch zeitlich nicht begrenzt ist. Ein generelles Problem bei allen Tools ist die Tatsache, dass es bei keinem die Möglichkeit gab eine \textit{Traceability-Matrix} zu erzeugen. Wie im späteren Kapitel \ref{c:Anf} gezeigt, wurde so eine Matrix jedoch gefordert.
+
+
+\section{Usability}
+
+Die \textit{Usability}, beziehungsweise die Gebrauchstauglichkeit, wird beschrieben als
+der Nutzungskontext, in dem ein Produkt durch einen Nutzer effektiv, effizient und zufriedenstellend genutzt werden kann. Der Nutzer möchte durch die Benutzung des Produkts ein Ziel erreichen \cite{isousa}. Dahingegen wird ein \textit{User Interface}, beziehungsweise eine Nutzungsschnittstelle, definiert als Bestandteile eines interaktiven Systems, die für den Nutzer nötig sind, um sein Ziel zu erreichen. Dazu stellt das \textit{User Interface} Informationen und Steuerelemente zur Verfügung \cite{isoui}.
+
+Eine Übersicht guter Praktiken beim Design von \textit{User Interfaces} bieten dabei die \textit{zehn Usability-Heuristiken nach Nielsen}. Diese sind in der Tabelle \ref{t:ui} zusammengetragen.
+
+\begin{table}[htpb]
+\caption{Die zehn Usability-Heuristiken nach Nielsen, aus \cite{nielsend} und \cite{nielsen}}
+\begin{center}
+\begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Datei}} & 
+	\multicolumn{1}{|c|}{\textbf{Inhalt}} \\
+    \hline
+    1. Sichtbarkeit des Systemstatus & Die Nutzer sollten eine Rückmeldung bekommen zu ihren Interaktionen mit dem System. Darüber hinaus sollten sie auch wissen an welchem Punkt sie sich in einer Aktion befinden.\\
+	\hline
+  2. Übereinstimmung von System und realer Welt & Das System sollte Begriffe verwenden, die der Kunde aus der realen Welt erwarten würde.\\
+    \hline
+   3.  Nutzerkontrolle und -freiheit & Falls Nutzer einen Fehler machen, sollten sie die Möglichkeit haben diesen Fehler zu korrigieren oder sogar den aktuellen Prozess abzubrechen.	\\
+    \hline
+    4. Konsistenz und Standards & Nutzer sollten nicht überlegen müssen, ob verschiedene in der Software verwendete Begriffe vielleicht doch das gleiche bedeuten. Stattdessen sollten die gleichen Begriffe für die gleichen Funktionen benutzt werden.\\
+    \hline
+   5. Fehlervermeidung & Es sollte vermieden werden, dass Nutzer fehlerhafte Eingaben tätigen können. Das System sollte generell Fehler vermeiden. \\
+   \hline
+   6. Erkennen anstatt Erinnern & Nutzer sollten die Software benutzen können ohne sich an Dialoge erinnern zu müssen. \\
+    \hline
+  7. Flexibilität und effiziente Nutzung & Abkürzungen sollten erfahrenen Nutzern eine effiziente Bedienung ermöglichen. Unerfahrene Nutzer sollten durch Anleitungen angelernt werden. \\
+    \hline
+   8. Ästhetisches und minimalistisches Design & Der Inhalt eines UI sollte auf das Wesentliche reduziert werden. \\
+    \hline
+   9. Hilfe bei Fehlern & Fehlermeldungen sollten das Problem konkret beschreiben und eine konstruktive Lösung vorschlagen. Außerdem sollten sie in leicht verständlicher Sprache geschrieben sein. \\
+    \hline
+    10. Hilfe und Dokumentation & Soweit möglich, sollten Nutzer ohne Hilfe die Software bedienen können. Falls nötig sollte sie aber bereitstehen.\\
+   
+    \hline
+\end{tabular}
+\end{center}
+\label{t:ui}
+\end{table}
+
+
+
+\chapter{Planung} \label{chap:Anforderungen}
+Vor der Implementierung der Anwendung sollte geklärt sein, welche Anforderungen, wie realisiert werden sollen. Basierend auf den vorgegebenen Anforderungen wurden \textit{UML-Diagramme} erstellt. Darüber hinaus wurden sowohl ein \textit{Entity-Relationship Diagramm} erstellt, mit dem das Datenbankdesign beschrieben wird, als auch ein \textit{UI-Prototyp} vorgestellt, mit dem die Navigation und das Aussehen der Seite getestet werden kann.
+
+
+\section{Anforderungsanalyse} \label{c:Anf}
+
+
+Die Anforderungen an die Software wurden von Herrn Prof. Dr. Hastenteufel in Form eines Anforderungsdokuments erhoben. Darin enthalten sind die folgenden Nutzerrollen: 
+
 \begin{itemize}
-\item Die Kategorie für die Requirements werden erstmal als einfache Kategorien wie 1, 2, 3 realisiert. Später vielleicht Auswahl aus der Art der Requirement: Stakeholderanforderung, aber dazu nochmal in SOE reingucken
+\setlength\itemsep{0.1em}
+\item Admin
 
-\item Die Namen Requirement, Testcase und Testrun werden benutzt, um alles einheitlich zu lassen
+\item Professor
 
-\item Da der Admin und der Professor als Nutzer sehr ähnlich sind, wurden die beiden Rollen mit ihren Anforderungen zusammengelegt als Professor 
+\item Student beziehungsweise Entwickler und/oder Tester
+
+\item Nutzer (umfasst alle Rollen)
+
 \end{itemize}
 
 
-Ein Klassendiagramm und ein Zustandsdiagramm wurden erstmal nicht gemacht, da sie nicht für sinnvoll gehalten wurden. Aber das wurde nochmal nachgefragt.
+\begin{table}[htpb]
+\caption{Funktionsblock Administration}
+\begin{center}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|}
+    \hline
+    \multicolumn{2}{|c|}{Administration}\\
+    \hline
+    A10 & Als Nutzer will ich mich einloggen können und einen 				persönlichen Startbildschirm mit meinen
+	Projekten sehen
+	(Bemerkung: Im optimalen Fall SSO mit SWT / HS Account)\\
+	\hline
+    A20 & Als Admin will ich neue Projekte erstellen können\\
+    \hline
+    A30 & Als Admin will ich Studenten zu Projekten zuordnen können		\\
+    \hline
+\end{tabular}
+\end{center}
+\label{t:funkadmin}
+\end{table}
 
-Es wurden ein Use Case Diagramm skizziert, mehrere Activity Diagramme, die die Use Cases verfeinern skizziert und die UIs wurden auch skizziert. Daneben wurde auch das ER-Modell schon in Draw.io gezeichnet und die Tabellen daraus wurden transformiert. Somit hat man für den Prototyp bereits ein Datenmodell mit dem man testen kann. Die Diagramme werden sich wahrscheinlich noch ändern im Verlauf des Projekts, aber für den Anfang sind sie in den Abbildungen 1, 2, 3... zu sehen. Das war der Start des Projekts.
 
-Es wurden ebenfalls erste Skizzen zu den UIs vollzogen und abgesprochen mit dem Kunden, also Herrn Hastenteufel.
-Die Rückmeldungen waren:
+\begin{table}[htpb]
+\caption{Funktionsblock Statistiken}
+\begin{center}
+\begin{tabular}{|p{0.1\textwidth}|p{0.9\textwidth}|}
 
-\chapter{Entity-Relationship-Modell - Wie kann die reale Welt abgebildet werden?} \label{chap:erm}
+    \hline
+    \multicolumn{2}{|c|}{Statistiken}\\
+    \hline
+    A40 &  Als Professor will ich Statistiken zu den einzelnen Projekten sehen.
+(Bemerkung: Statistiken sind genauer zu definieren) Das können z.B. sein    
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item Anzahl der Anforderungen pro Projekt
+\item Anzahl der Testfälle pro Projekt
+\item Anzahl der durchgeführten Testruns pro Projekt
+\item Für jede Anforderung die zugehörigen Testfälle (Testfallabdeckung)
+\item Für jede Anforderung den Status der zugehörigen Testruns (Testabdeckung)
+\item Für jeden Testfall die damit abgedeckten Anforderungen
+\item Für jeden Testfall den Status der zugehörigen Testruns
+\item Angaben über die mit der Testfalldurchführung verbrachte Zeit (minimal, maximal, Durchschnitt, Summe)
+\item Ein übersichtliches Dashboard des Projektstatus (Klärungsbedarf)
+\item Für jedes Teammitglied die Anzahl der Anforderung/Testfälle/Testruns 
 
-In dem folgenden Bild Nummer 1 kann das ER-Modell gesehen werden. Es dient dazu die relationale Datenbank zu designen. Es ist aus den Anforderungen geschrieben worden, dass ein Projekt mehrere Anforderungen hat
+\end{itemize}
+
+    \\
+\hline
+    A50 & Als Student will ich für mein aktuelles Projekt Statistiken sehen\\
+    \hline
+  
+\end{tabular}
+\end{center}
+\label{t:funkstat}
+\end{table}
 
 
 
-\chapter{Implementierung - Wie erstellt man eine Django-Applikation?} \label{chap:einf}
-%So geht ein Zitat oben rechts
-%das sollte auch hier stehen bleiben sonst sieht es nicht gut aus und der Text überlappt
-\epigraphhead[70]{\epigraph{Documentation is like sex: 
-when it is good, it is very, very good; and when it is bad, 
-it is better than nothing.}{\textit{Dick Brandon}}}
+\begin{table}[htpb]
+\caption{Funktionsblock Anforderungs- und Testmanagement}
+\begin{center}
+\begin{tabular}{|p{0.05\textwidth}|p{0.95\textwidth}|}
+  \hline
 
-mo: Warum sollte man Django verwenden ist in der Tabelle tab dargestellt:
-mo: Geschichte von Django und die Popularität
-mo: den generellen Aufbau und Ablauf eines HTTP Request kann man in der Abbildung abb sehen. In Django Applikationen werden die verschiedenen Aufgaben von verschiedenen Dateien erledigt. In URLS.py werden die Views zu den HTML Seiten gelinkt. Sie verknüpfen also die spezifischen URL Patterns mit den gewünschten View Funktionen. In den Views werden noch die HTML Seiten mit Daten versehen aus den Modellen, die man zuvor definiert hat. Eine View verarbeitet die HTTP requests und sendet basierend auf diesen die HTTP responses. Hierbei ist die render Funktion entscheidet. Models sind Python objects und stellen so Funktionen zur Verfügung zum erstellen, ändern und löschen der Daten, aber auch um die Daten in die Datenbank zu speichern mit Querys. Die Templates können dynamisch HTML Seiten erzeugen. Sie haben noch Platzhalter für die richtigen Inhalte. Es müssen aber keine HTML Dateien sein. Django nennt diese Methode Model View Template und das kann man vergleichen mit dem Model View Controller Architektur.
+    \multicolumn{2}{|c|}{Anforderungs- und Testmanagement}\\
+    \hline
+        A60 &  Als Student will ich Anforderungen spezifizieren können.
+Bemerkung: Anforderungen sollten mindestens folgende Attribute enthalten:
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item Eine Anforderungs-ID (automatisch generiert)
+\item Einen Namen
+\item Die eigentlichen Anforderungen
+\item Kommentar
+\item Bearbeiter (automatisch)
+\item Datum der initialen Erstellung und letzte Änderung
+\item Die damit verbundenen Testfälle
+\item Kategorie (Klärungsbedarf)
 
-mo: Das Model View Controller Architektur kann auf folgenden Weg beschrieben werden... und mit der Abbildung abb auch erklärt werden.
+\end{itemize} \\
+\hline
+           A70 & Als Student will ich Testfälle spezifizieren können.
+Bemerkung: Testfälle enthalten mindestens folgende Attribute:
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item Eine Testfall-ID (automatisch generiert)
+\item Einen Namen
+\item Vorbedingungen
+\item Den eigentlichen Testfall aufgegliedert in:
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item Durchzuführende Schritte
+\item Erwartetes Ergebnis
+\item Tatsächliches Ergebnis (wird bei der Testfalldurchführung ausgefüllt)
 
-mo: Die Kommunikation mit der Datenbank wird von Django erledigt, das heißt die beiden Sachen sind entkoppelt voneinander. Man kann so die Models einfach definieren und dann die Datenbank auswählen. 
+\end{itemize}
+\item Kommentar
+\item Bearbeiter (automatisch)
+\item Datum der initialen Erstellung und letzte Änderung
+\item Die mit dem Testfall getesteten Anforderungen
 
-mo: Python unterstützt die Objektorientierte Programmierung bzw. ist eine objektorienritere Programmiersprache. 
 
-mo: Django hat von sich aus einen Development Webserver dabei, den man benutzen kann um seine Anwendung zu testen. 
+\end{itemize} \\
 
-mo: zur Instalation wurde in PyCharm ein neues Projekt angelegt und dann in dem virtual environment kann mit pip die verschiedenen Python Erweiterungen runtergeladen werden. Man muss sich hierbei entscheiden ob man es global installiert, dann kann man aber nur von jeder Sache nur eine Version gleichzeitig da sein. Bei einem virtual Environmnet kann man dann in einer eigenen Version verschiedene Versionen unterbringen. Die Sachen gelten dann auch nur in dem Environment. Die hier verwndeten Versionen von Python ist 3.7.2, von Django ist 3.1.2 und von PIP ist 1. Die verwendete Datenbank ist Postgres und die Version davon ist 3.7. In der Tabelle sind die verwendeten Versionen und Software mit Download Link angegeben. Virtualwrapper mit virtualvenv ist auch verwendet worden. In Pycharm wird bei einem neuen Projekt auch ein neues venv gemacht. Zum venv gibt es die verschidenen Befehle workon, deactivate, remove. 
 
-%Quellen sind hier das Django und das Mozilla Tutorial
-Mit PyCharm ein neues Projekt starten. Dabei wird ein neues virtual Enviroment gebildet in dem man alles installieren kann, das hat aber keine Auswirkungen auf andere Installationen, wie die Hauptinstallation von Python. Neuer Ordner wurde gebildet in dem Bachelorarbeit Ordner für den Prototyp. Als nächstes sollte man Django installieren. Im Terminal von PyCharm kann alles gemacht werden, wie Django installieren. Mit Pip install django kann man dann django installieren. Ebenfalls sollte hier bereits die Datenbank wie Postgres installiert werden. Nach anlegen des Projekts kann die Datenbank auch schon registriert werden. Wichtig hierbei sind das Passwort für den Benutzer und der Benutzername neben dem Namen der Datenbank.
+    \hline
+       A80 & Als Student will ich Testfälle durchführen können (Testfalldurchführung/Testruns).
+Bemerkung: Testfalldurchführungen enthalten mindestens folgende Attribute:
+       
+       \begin{itemize}
+\setlength\itemsep{0.1em}
+\item ID des zugrundeliegenden Testfalls
+\item Datum des Testruns
+\item Kommentarfeld für z.B. Dokumentation der Testumgebung
+\item Für jeden Schritt des Testfalls: pass oder fail
+\item Für jeden Schritt des Testfalls: Kommentar
+\item Gesamtstatus der Testdurchführung: berechnet aus den einzelnen Testschritten
+\item Name des durchführenden Testers
+\item Potentiell Anhänge für die Testevidenz (png, pdf, …)
+\item Dauer der Durchführung in min
 
-Dann einfach das Tutorial machen von Django Documentation.
+\end{itemize}\\
+    \hline
+    
+\end{tabular}
+\end{center}
+\label{t:funkanfundtest}
+\end{table}
 
-Django entstand in einem Nachrichtenumfeld als Einführung in Django
 
-Man startet ein neues Django Project mit 
-\verb|django-admin startproject anforderungenundtesten|
-, dabei sollte der Name nicht wie django oder test heißen, das könnte zu Problemen führen \verb|cd ./anforderungenundtesten| um in den richtigen Ordner zu kommen, der die \verb|manage.py|  Datei enthält. Durch diesen Schritt wurde in dem ausgewählten Ordner ein Django Projekt erstellt und dazu notwendiger Code autogeneriert. In der Tabelle ~\ref{tab:AutoCode} können die bis jetzt generierten Dateien und Ordner gesehen werden.
 
+Die Anforderungen an die Software sind in drei Funktionsblöcke aufgeteilt, welche in den Tabellen \ref{t:funkadmin}, \ref{t:funkstat} und \ref{t:funkanfundtest} betrachtet werden können. Der Klärungsbedarf, der bei den Inhalten des \textit{Dashboards} vorhanden war, konnte durch den \textit{UI-Prototypen}, der in Kapitel \ref{s:ui} vorgestellt wird, gelöst werden. Zusätzlich wurde die Terminologie vereinbart, dazu wurden die englischen Begriffe ausgewählt. Die Anforderungen werden in der Software \textit{Requirements}, die Testfälle \textit{Testcases} und die Testfalldurchführungen \textit{Testruns} genannt. Alle drei Begriffe werden unter der Bezeichnung \textit{Element} zusammengefasst. Bei der Kategorie der \textit{Requirements}, aus der Anforderung A60, wurde der Klärungsbedarf dadurch gelöst, dass die Kategorien erstmal nur eine Auswahl aus den Werten eins, zwei oder drei darstellen soll. Zuletzt hat es sich angeboten die beiden Nutzerrollen Admin und Professor in der Implementierung zusammen zu führen, da sie beide administrative Aufgabe erfüllen.
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{usecase.pdf}
+  \caption{Die Use cases des Studenten, eigene Darstellung}
+  \label{f:usecase1}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{usecase2.pdf}
+  \caption{Die Use cases des Professors, eigene Darstellung}
+  \label{f:usecase2}
+\end{figure}
+
+Basierend auf den Anforderungen wurden sowohl \textit{UML Use case Diagramme} als auch \textit{UML Aktivitätsdiagramme} erstellt. Zuerst wurden die \textit{Use cases} des Studenten in der Abbildung \ref{f:usecase1} gesammelt und die \textit{Use cases} des Professors in Abbildung \ref{f:usecase2} zusammengetragen. Alle \textit{Use cases} inkludieren dabei den \textit{Use case} "`persönlichen Startbildschirm einsehen"', welcher wiederum den \textit{Use case} "`login"' inkludiert.
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity.pdf}
+  \caption{Login und persönlicher Startbildschirm, eigene Darstellung}
+  \label{f:login}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity2.pdf}
+  \caption{neue Projekte erstellen, eigene Darstellung}
+  \label{f:projekt}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity3.pdf}
+  \caption{Studenten zu Projekten hinzufügen, eigene Darstellung}
+  \label{f:projektstud}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity4.pdf}
+  \caption{Statistiken zu Projekten einsehen als Professor, eigene Darstellung}
+  \label{f:projektstat}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity45.pdf}
+  \caption{Statistiken zu Projekten einsehen als Student, eigene Darstellung}
+  \label{f:projektstatstud}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity6.pdf}
+  \caption{Ein Element erstellen oder ändern, eigene Darstellung}
+  \label{f:element}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{activity7.pdf}
+  \caption{Einen Testrun durchführen, eigene Darstellung}
+  \label{f:testrunact}
+\end{figure}
+
+Im nächsten Schritt wurden die \textit{Aktivitätsdiagramme} erstellt, welche verdeutlichen sollen, wie sich die Software zu verhalten hat. Angefangen beim Login aus der Abbildung \ref{f:login}, soll dieser solange nach einem Benutzername und Passwort fragen, bis das Einloggen schließlich erfolgreich ist. Die Anforderung A30, in der nach der Möglichkeit neue Projekte hinzuzufügen gefordert wird, ist in der Abbildung \ref{f:projekt} dargestellt. Hierbei kann ausgewählt werden, ob eine eigene, präferierte ID eingegeben werden soll. Die darauffolgende Anforderung A40, durch die es ermöglicht werden soll Studenten zu Projekten hinzuzufügen, ist in Abbildung \ref{f:projektstud} dargestellt. Es kann entweder das Projekt ausgewählt werden, um einen Studenten hinzuzufügen oder es kann ein Student ausgewählt werden, um ihn einem Projekt hinzuzufügen.
+
+Die Statistiken sollen für Studenten bereits nach dem Login sichtbar sein, wie in Abbildung \ref{f:projektstatstud} zu sehen ist. Anders sieht es da beim Professor aus, dieser muss vorher noch eine Gruppe auswählen, um dann die Statistik zu sehen. Dieser Vorgang ist in der Abbildung \ref{f:projektstat} dargestellt.
+
+
+Die Anforderungen aus dem Funktionsblock Anforderungs- und Testmanagement wurden in der Abbildung \ref{f:element} zusammengetragen. Hier soll gezeigt werden, dass die verschiedenen Attribute eines \textit{Elements}, wie zum Beispiel der Name oder gegebenenfalls ein Kommentar eingetragen werden können. Hierbei sind nur die Attribute dargestellt, die jedes \textit{Element} besitzt. Besondere Attribute, wie die Kategorie des \textit{Requirement} wurden für diese Abbildung ausgelassen. Das letzte \textit{Aktivitätsdiagramm}, die Abbildung \ref{f:testrunact}, zeigt den Ablauf bei der Durchführung eines \textit{Testruns}. Nach dem Login, dem Auswählen und Starten des \textit{Testruns} werden solange \textit{Testschritte} durchgeführt, bis es entweder keine \textit{Schritte} mehr gibt oder bis ein \textit{Schritt} nicht erfolgreich war. Wenn auch nur ein \textit{Schritt} nicht erfolgreich ist, so gilt der ganze \textit{Testrun} als durchgefallen.
+
+
+
+
+
+
+
+\section{Entity-Relationship-Modell} \label{s:erm}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1.2\textwidth]{er.pdf}
+  \caption{Das Entity-Relationship-Modell, eigene Darstellung}
+  \label{f:erd}
+\end{figure}
+
+
+In der Graphik \ref{f:erd} kann das \textit{Entity-Relationship-Modell} gesehen werden, das zur Grundlage des Datenbankdesigns dient. Im folgenden wird dieses Modell erklärt. Die \textit{Primary-Keys} sind mit unterstrichenen Attributen dargestellt, während \textit{Foreign-Keys} gestrichelte Unterstriche besitzen.
+
+
+Damit sich ein Professor anmelden kann, braucht er eine Identifikation, wie eine Professorennummer, die ähnlich sein soll zu einer Matrikelnummer, sowie ein Passwort. Bei erfolgreicher Anmeldung wird sein Name angezeigt. Das Projekt wird von einem Professor erstellt, wobei ein Professor mehrere Projekte erstellen kann. Projekte haben eine ID und einen Namen, zum Beispiel "`Packstation"'. 
+
+Ein Projekt kann mehrere \textit{Elemente} haben, aber ein \textit{Element} kann immer nur zu einem Projekt gehören. Die \textit{Elemente} haben eine ID, einen Namen, einen Kommentar, ein Datum der Erstellung und ein Datum der letzten Änderung. Ein \textit{Requirement} ist ein \textit{Element} und kann einer Kategorie zugeordnet werden. Ein \textit{Testcase} besitzt weitergehend die notwendigen Vorbedingungen für die durchzuführenden Schritte, das erwartete Ergebnis und das tatsächliche Ergebnis. Mehrere \textit{Testcases} können mehrere \textit{Requirements} abdecken. Ein \textit{Testrun} hat einen Status, der aussagt, ob der \textit{Testrun} erfolgreich ist oder nicht. Das ist realisierbar durch eine Auswahl zwischen den Möglichkeiten "`pass"' und "`fail"'. Daneben gibt ein \textit{Testrun} die Dauer an, die für ihn gebraucht wurde und das Datum an dem er durchgeführt wurde. Ein \textit{Testrun} testet immer nur einen \textit{Testcase}, aber ein \textit{Testcase} kann von mehreren \textit{Testruns} getestet werden. Ein Beispiel dazu ist, wenn der erste \textit{Testrun} nicht erfolgreich war und ein zweiter Versuch nötig ist. Der \textit{Testruns} kann nach der Durchführung nicht mehr geändert werden.
+
+Ein Student braucht zur Anmeldung eine Matrikelnummer und ein Passwort, bei erfolgreicher Anmeldung wird sein Name angezeigt. Durch die Gruppennummer können Studenten in Gruppen auf die Projekte aufgeteilt werden. Die Gruppennummer soll dabei ein \textit{Foreign-Key} auf die Projekt-ID sein. Ein Student kann kein, ein oder mehrere \textit{Elemente} erstellen, aber ein \textit{Element} wird immer nur einem Student zugeordnet.
+
+
+
+
+
+
+
+
+
+
+\section{User-Interface-Prototyp} 
+\label{s:ui}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{pdash.png}
+  \caption{Das Dashboard, eigene Darstellung}
+  \label{f:pdash}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{pstat.png}
+  \caption{Die Statistik Seite, eigene Darstellung}
+  \label{f:pstat}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{ptestc.png}
+  \caption{Die Erstellung eines Testcases, eigene Darstellung}
+  \label{f:ptestc}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{ptestr.png}
+  \caption{Die Durchführung eines Testruns, eigene Darstellung}
+  \label{f:ptestr}
+\end{figure}
+
+
+Der Prototyp, um das \textit{User Interface} zu testen, wurde mit der kostenlosen Testversion der Software \textit{Axure RP 9} erstellt \cite{axure}. Mit dem entwickelten Prototypen konnte durch eine Demo ein erster Test zur \textit{Usability} gemacht werden. Der Prototyp basiert auf UI Skizzen, die auf der einen Seite selbst erstellt wurden und auf den UI Skizzen, die Herr Prof. Dr. Hastenteufel für das Projekt erstellt hat.
+
+Auf den Abbildungen des Prototyps können bereits die grundlegenden Ideen zum Aufbau der Seite gesehen werden. Es soll eine Menüleiste am oberen Bildschirmrand geben, dabei soll die aktuelle Seite markiert sein. Für die \textit{Requirements}, \textit{Testcases} und die \textit{Testruns} soll es auf dem \textit{Dashboard} je eine Tabelle geben, wie in Abbildung \ref{f:pdash} gezeigt. Die angezeigten Daten sollen der Anforderung A40 entsprechen, beispielsweise wird die Anzahl der Anforderung pro Projekt visualisiert.
+
+In der Anforderung A40 wurde auch eine Darstellung der verknüpften \textit{Elemente} gefordert, also die \textit{Testfallabdeckung} und die \textit{Testabdeckung} der \textit{Requirements}. Nach den UI-Skizzen, die von Herrn Prof. Dr. Hastenteufel angefertigt wurden, sollte diese Anforderung durch eine \textit{Traceability-Matrix} realisiert werden.
+
+Eine \textit{Traceability-Matrix} bietet die Möglichkeit die Verknüpfung zwischen den \textit{Requirements} und den \textit{Testcases} zu verfolgen. Sie wird darüber hinaus noch ergänzt durch die Information, welchen Status der \textit{Testrun} aufweist \cite{guru}.
+
+In der Abbildung \ref{f:pstat} kann die \textit{Traceability-Matrix} gesehen werden. Sie ist aufgeteilt in zwei Ansichten. Die erste Ansicht zeigt nur die \textit{Requirements} und die \textit{Testcases}. Falls diese zusammengehören, gibt es in dem entsprechenden Feld ein X als Markierung dafür. In der zweiten Ansicht wird das X, das die Verknüpfung anzeigt mit den entsprechenden Farben markiert. Rot markierte Verknüpfungen zeigen an, dass der letzte \textit{Testrun} nicht erfolgreich war. Eine grüne Markierung signalisiert, dass der letzte \textit{Testrun} erfolgreich war. Daneben gibt es noch eine blaue Markierung, falls zu dem \textit{Testcase} noch keine \textit{Testruns} durchgeführt wurden.
+
+
+
+
+In der nächsten Graphik \ref{f:ptestc} kann die Bearbeitung eines \textit{Elements} gesehen werden, hier wird beispielsweise die Bearbeitung eines \textit{Testcases} gezeigt. Die Bearbeitungsseite für die \textit{Requirements}, \textit{Testcases} und \textit{Testruns} sollte für alle \textit{Elemente} gleich aussehen. Es gibt aber pro Seite andere Attribute zum Eintragen, zum Beispiel kann beim \textit{Testcase} eine Vorbedingung eingetragen werden.
+
+
+Zuletzt sei hier noch die Durchführung eines \textit{Testruns} in der Abbildung \ref{f:ptestr} gezeigt. Nachdem ein \textit{Testrun} aus der Liste an der linken Seite ausgewählt wurde, kann dieser ausgeführt werden. Dabei sind die Schritte in einer Tabelle angeordnet und zu jedem Schritt kann das tatsächliche Ergebnis und der Status eingetragen werden. Nur wenn alle Schritte erfolgreich durchgeführt werden konnten, wird der \textit{Testrun} insgesamt als erfolgreich angesehen. Wenn auch nur ein Schritt durchgefallen ist, dann ist auch der komplette \textit{Testrun} durchgefallen.
+
+
+Es gab bei der Software \textit{Axure RP 9} die Option aus dem erstellten Prototypen die entsprechenden \textit{HTML-Seiten} zu generieren. Die auf diesem Weg generierten Seiten bestanden aber zu großen Teilen aus durchnummerierten \textit{div-Elementen}. Um eigene Anpassungen, beispielsweise durch \textit{CSS} zu machen, waren diese Seiten leider nicht brauchbar. Ein Beispiel dazu ist in dem Listing \ref{code:badhtml} dargestellt. In Zeile 26 kann das Wort "`Statistiken"' gesehen werden, das in der Statistik Seite oben links neben der Menüleiste angezeigt wird.
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u256" class="ax_default box_1">
+        <div id="u256_div" class=""></div>
+        <div id="u256_text" class="text " 
+        style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u257" class="ax_default box_1">
+        <div id="u257_div" class=""></div>
+        <div id="u257_text" class="text " 
+        style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u258" class="ax_default heading_1">
+        <div id="u258_div" class=""></div>
+        <div id="u258_text" class="text ">
+          <p><span>Statistiken</span></p>
+        </div>
+      </div>
+\end{lstlisting}
+\caption{generierter HTML-Code der Statistik-Seite}
+\label{code:badhtml}
+\end{listing}
+
+
+
+
+
+
+\chapter{Implementierung} 
+\label{c:imp}
+
+\textit{Django} wurde von einem Team, dass sich mit der Verwaltung von Zeitungsartikeln auf einer Webseite beschäftigt, dazu entwickelt, häufig auftretende Webentwicklungsaufgaben schnell und einfach realisieren zu können.  Auf die Idee kam das Team, als sich bei einer Vielzahl an Webseiten ein gleiches Design mit gleich aufgebautem Code sichtbar machte \cite{mozillatuto1}. Als \textit{Web-Framework} unterstützt \textit{Django} die Entwicklung von Webseiten, indem Dienste, wie die Datenbankanbindung, zur Verfügung gestellt werden \cite{webframe}. Ausgewählte Aspekte der Softwareentwicklung mit \textit{Django} sowie Ausschnitte des Codes sind an dieser Stelle erklärt.
+
+
+\section{Einrichtung}
 
 \begin{table}
 \centering
 \begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
 \hline
-\multicolumn{1}{|c|}{\textbf{Datei}} & 
-\multicolumn{1}{|c|}{\textbf{Inhalt}} \\\hline
-/anforderungenundtesten & Der äußere Ordner ist ein Container für das Projekt, der Name ist nicht wichtig und kann beliebig unbenannt werden\\\hline
-manage.py     & In dieser Datei sind die Command Line Befehle enthalten, wie zum Beispiel runserver \\\hline
-anforderungenundtesten/    & der innere Ordner ist der eigentliche Python Package mit diesem Namen werden alle Dateien importiert, wie zum Beispiel anforderungenundtesten.urls \\\hline   
+\multicolumn{1}{|c|}{\textbf{Element}} & 
+\multicolumn{1}{|c|}{\textbf{Version}} \\\hline
+integrierte Entwicklungsumgebung/IDE & PyCharm Community 2020.2 \\\hline
+Datenbank & PostgreSQL mit pgadmin 4.20 \\\hline
+Programmiersprache & Python 3.7 \\\hline   
+Web-Framework & Django 3.1.2 \\\hline   
 \end{tabular}
-\caption{Die erstellten Dateien und Ordner nach dem django-admin startproject anforderungenundtesten Befehl}
+\caption{Die benutzten Materialien für die Entwicklung der Software}
+\label{t:tools}
+\end{table}
+
+In der Tabelle \ref{t:tools} sind die Materialien aufgelistet, die zur Erstellung des Tools verwendet wurden. Da \textit{Django} in \textit{Python} geschrieben ist, ist diese Programmiersprache die Grundvoraussetzung zum Arbeiten mit dem \textit{Web-Framework} \cite{djangotuto2}.
+
+
+Zuerst muss in \textit{PyCharm} ein neues Projekt angelegt werden. Der Vorteil bei der Nutzung von \textit{PyCharm} als Entwicklungsumgebung ist, dass dabei auch direkt ein neues \textit{virtual environment} erstellt wird. Dadurch werden die Erweiterungen, die mit \textit{pip} installiert werden, nur für das aktuelle \textit{virtual environment} installiert und nicht global \cite{mozillatuto2}. Mit dem Befehl \verb|pip install django| kann \textit{Django} installiert werden \cite{djangotuto3}.
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{files.png}
+  \caption{Die komplette Struktur der Anwendung, eigene Darstellung}
+  \label{f:files}
+\end{figure}
+
+
+
+\begin{table}
+\centering
+\begin{tabular}{|p{0.4\textwidth}|p{0.6\textwidth}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Datei/Ordner}} & 
+\multicolumn{1}{|c|}{\textbf{Inhalt}} \\\hline
+/anforderungen\_und\_testen & Der äußere Ordner ist ein Container für das Projekt, der Name ist nicht wichtig und kann beliebig umbenannt werden\\\hline
+manage.py     & In dieser Datei sind die Kommandozeilenbefehle enthalten, wie zum Beispiel \verb|runserver| \\\hline
+anforderungenundtesten/    & der innere Ordner ist das eigentliche Python Package \\\hline   
+
+settings.py & Einstellungen die für das komplette Django Projekt gelten sind hier enthalten  \\\hline
+
+urls.py & Die URLs für das gesamte Projekt sind in dieser Datei enthalten \\\hline
+asgi.py & Für ASGI kompatible Webserver  \\\hline
+wsgi.py & Für WSGI kompatible Webserver \\\hline
+
+\end{tabular}
+\caption{Die erstellten Inhalte nachdem ein neues Projekt erstellt wurde}
 \label{tab:AutoCode}
 \end{table}
 
 
+Der Befehl ~\verb|django-admin startproject anforderungen_und_testen| erstellt ein neues \textit{Django-Projekt} und der dazu notwendige Code wird generiert. Dieser kann in der Tabelle \ref{tab:AutoCode} gesehen werden \cite{djangotuto3}. Ergänzend dazu ist in der Abbildung \ref{f:files} die komplette Projektstruktur abgebildet. 
 
 
-über python manage.py runserver kann der Developerserver aufgerufen werden und man sieht, dass die Installation geklappt hat. Man kann hierbei auch die IP Adresse so ändern, dass alle Geräte im gleichen Netzwerk Zugriff haben. Weitergehend kann unter PyCharm die Run Configuration so angepasst werden, dass bei einem Run der runserver Befehl aufgerufen wird. Über STR C kann der Server wieder beendet werden.
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{rocket.png}
+  \caption{Die Installation war erfolgreich, Abbildung aus \cite{mozillatuto2}}
+  \label{f:rocket}
+\end{figure}
 
 
-Es gibt dabei einen Unterschied zwischen einem Projekt und einer App in Django, so kann ein Projekt mehrere Apps enthalten und eine App kann in verschiedenen Projekten enthalten sein. Man sollte auf die Wiederverwendbarkeit achten. Eine App ist auch etwas, dass etwas macht, wie ein Blog oder eine Datenbank auslesen und Daten darstellen. Ein Projekt ist dann eine Sammlung von Apps und Einstellungen für eine explizite Webseite.
-
-Über den Befehl \verb|python manage.py startapp aut| wird eine neue App angelegt und auch hier wird zuerst wieder Code autogeneriert. Dieser ist in der Tabelle ~\ref{tab:AutoCode2} dargestellt mit seinen Komponenten und den verschiedenen Funktionen.
+Als nächstes wird der Befehl \verb|cd ./anforderungenundtesten| benutzt, um in den richtigen Ordner zu wechseln, welcher die \verb|manage.py| Datei enthält. Über den Befehl \verb|python manage.py runserver| kann der integrierte \textit{Development Server} von \textit{Django} gestartet werden. Falls die Abbildung \ref{f:rocket} zu sehen ist, ist die Installation erfolgreich \cite{djangotuto3}.
 
 
 \begin{table}
 \centering
 \begin{tabular}{|p{0.3\textwidth}|p{0.7\textwidth}|}
 \hline
-\multicolumn{1}{|c|}{\textbf{Datei}} & 
+\multicolumn{1}{|c|}{\textbf{Datei/Ordner}} & 
 \multicolumn{1}{|c|}{\textbf{Inhalt}} \\\hline
-/aut & Der Ordner beinhaltet die App und die nachfolgenden Dateien\\\hline
-manage.py     & In dieser Datei sind die Command Line Befehle enthalten, wie zum Beispiel runserver \\\hline
-anforderungenundtesten/    & der innere Ordner ist der eigentliche Python Package mit diesem Namen werden alle Dateien importiert, wie zum Beispiel anforderungenundtesten.urls \\\hline   
+
+/aut & Der Ordner beinhaltet die App\\\hline
+
+\_\_init\_\_.py & Durch diese leere Datei wird der Ordner als Python Package registriert \\\hline
+
+admin.py & In dieser Datei können die erstellten Modelle für den Admin registriert werden zum Bearbeiten\\\hline
+
+apps.py & Die Datei enthält den Namen der App\\\hline
+
+migrations/ & Der Ordner beinhaltet die Datenbankmigrationen\\\hline
+
+
+models.py & Hier werden die Modelle definiert, die die Daten der Anwendung realisieren sollen\\\hline
+views.py & die hier erstellten Funktionen werden über die URLs aufgerufen und befüllen die Templates mit Daten\\\hline
 \end{tabular}
-\caption{Die erstellten Dateien und Ordner nach dem django-admin startproject anforderungenundtesten Befehl}
+\caption{Die erstellten Dateien und Ordner nachdem eine App erstellt wurde}
 \label{tab:AutoCode2}
 \end{table}
 
 
-Hierbei kam der Begriff Boiler Code auf, der Codeabschnitte beschreibt, die wenige Änderungen haben und an vielen Stellen auftauchen können. Beispiele sind in den Listings 1 und 2 dargestellt. Man sieht in dem 1. Lisitng ein Shebang für die Programmiersprache Python, damit wird dem Compiler klar das es sich hier um Python Code handelt. Im 2. Lisiting sieht man die Basis von einem HTML Dokument. Mit diesem Template können viele verschiedene Websites generiert werden, aber diese Tags sind notwendig. %Quelle Wikipedia --> Verbesserungswürdig
-
-Die App muss unter den installierten Apps angemeldet werden
-
-Danach sollten die URLs definiert werden und zusammengeführt werden. Es gibt eine url Datei für das Projekt und eine für die App. Von dem Projekt kann man auch die Grundseite umleiten lassen auf die Seite der App. Die verschiedenen Routen der Seiten sind in der Abbildung dargestellt. 
-In dieser Datei kann man über den Path angeben welche View für welchen HTTP Request ausgeführt werden soll. Das soll also eine Verlinkung sein.
-
-Die andere url Datei vom Hauptprogramm, also anforderungenundtesten, ist dafür zuständig den Hauptpfad zu deklarieren. In dieser Arbeit ist der Hauptpfad "`aut"'. Danach wird das url File von der App inkludiert mit \verb|include()| Daneben wird auch die admin Seite angegeben.
-
-In den Settings kann auch noch die TIMEZONE angepasst werden. 
-
-mo: die 2 anderen Einstellungen, die man beachten sollte sind der Secret Key und DEBUG. Mit dem Secret Key kann Django die Security Sachen machen, darum sollte man ihn geheim halten und schützen während der Produktionsphase. Mit dem DEBUG Keyowrd kann man mehr Informationen bei einem Fehler bekommen, wenn die App dann fertig ist, sollte er False sein.
-
-Es müssen auch die Befehle \verb|makemigrations| und\verb|migrate| angewandt werden, da sie sämtliche Änderungen an den Datenbanken und den Modellen ausführen.  Mit \verb|migrate| werden alle notwendigen Datenbank Tabellen erstellt für die unter InstalledApps angegebenen Apps. In der Postgres Umgebung können diese Tabellen auch gesehen werden. 
-
-Zuletzt wird mit runserver der Development Server erstellt und zum Laufen gebracht unter der Adresse kann man dann lokal die App testen oder man kann auch für alle Geräte im gleichen Netz die App verfügbar machen. Das ist nützlich, um die Webseiten auf mobilen Geräten oder generell Geräten mit verschiedenen Displaygrößen zu testen.
-
-Die Datenbank, in diesem Fall Postgres muss auch eingerichtet werden, dazu gibt es in settings.py die Einstellungen zu Databases. Diese müssen verändert werden, damit das Django-Projekt mit einer Postgres Datenbank funktioniert. Es müssen der Name und das Passwort des Benutzers zum Anmelden benutzt werden, nicht das Masterpassword.  
+Über den Befehl \verb|python manage.py startapp aut| wird eine neue \textit{App} angelegt wodurch weitere Dateien generiert werden. Diese sind in der Tabelle \ref{tab:AutoCode2} dargestellt und erklärt \cite{djangotuto3}. Es gibt einen Unterschied zwischen einem Projekt und einer \textit{App} in \textit{Django}. Eine \textit{App} ist eine \textit{Webanwendung}, die etwas machen kann. Während ein Projekt eine Ansammlung von Einstellungen und \textit{Apps} ist. Ein Projekt kann mehrere \textit{Apps} enthalten und eine \textit{App} kann in verschiedenen Projekten enthalten sein \cite{djangotuto3}.
 
 
-Danach können die Modelle definiert werden. ORM von Python ist hierbei wichtig. Die Modelle werden aus den Tabellen, die wiederrum aus den ER-Modellen hergeleitet werden, erstellt. Bei Modellen hat Django das Dont Repeat Yourself Prinzip, welches besagt dass...
-
-Die ER-Modelle sind in der Abbildung 1 dargestellt....weiter erklären. Die Modelle sind in Abbildung 1 dargestellt... auch weiter erklären. Zuerst werden einfache Modelle angelegt in Django mit Foreign Keys und Char Feldern. Der Primary Key ist definiert so wie er als Standard definiert wäre, aber das wurde überschrieben, um den einzelnen Schlüsseln die richtigen Namen zu geben. Ansonsten ist der Primary Key einfach ein AutoField und hat Integer Werte die bei 1 anfangen. Die Foreign KEys sind auch damit OK, dass sie keinen Wert am Anfang haben. 
-
-Durch diese Beschreibung der Modelle kann Django die entsprechenden Datenbanken erstellen und für den Entwickler die API bereitstellen.
-
-Nachdem man die Modelle geschrieben hat muss man das Modul noch für den Admin zur Bearbeitung freischalten bzw. registrieren. Der Admin oder Superuser muss auch erstellt werden. Unter installed Apps muss man dann aut noch eintragen.
+Neben den automatisch erstellen Dateien und Ordnern mussten noch weitere Elemente erstellt werden, zum Beispiel die \verb|urls.py| Datei in der \textit{App}. Dadurch kann das Projekt auf die \textit{URLs} der \textit{App} zugreifen. Im Ordner \verb|static| befinden sich die auf der Webseite verwendeten Bilder, während sich die \textit{HTML-Dateien} in dem Ordner \verb|templates| befinden. Die Datei \verb|choices.py| beinhaltet die für die in \verb|forms.py| definierten \textit{Forms} benötigten Auswahlentscheidungen für die Nutzer. Zuletzt ist in dem Ordner \verb|templatetags| eine Datei enthalten in der sich die selbst geschriebenen \textit{Filter} befinden, welche in Kapitel \ref{s:itemp} erklärt sind. Wichtige Einstellungen in der \verb|settings.py| Datei beinhalten das Registrieren der \textit{App}, die Auswahl der Datenbank und das Einstellen der Sprache sowie der Zeitzone \cite{mozillatuto4}.
 
 
-Nachdem die Modelle erstellt/geschrieben wurden, kann man mit makemigrations und migrate die Tabellen/Relationen in die Datenbank einspielen. Mit makemigrations werden die migrations erstellt als Datei um noch mal drüber zu gucken mit den SQL Befehlen. Dabei konnte ich auch den Fehler mit dem Default DateTimeField ausbessern. Da die Migrationen nacheinander gemacht werden. Jetzt kann man bereits über den Admin die Daten einpflegen. Dazu ist zu sagen, dass das bis jetzt nur der Admin kann und die Admin Seite zwar Funktional ist, aber im Sinne von UI/Aussehen noch verbessert werden kann. Mit dem Befehl \verb|python manage.py sqlmigrate 0001| kann man die SQL Anweisungen zu dem entsprechenden Migrate sehen in der Konsole, z.b. zu 0001 initial. Der Befehl zeigt nur die Befehle an, die gemacht werden ohne diese tatsächlich zu machen.
-Mit dem Befehl \verb|check| kann auch vorher gecheckt werden, ob es Probleme gibt mit den Migrationen ohne das diese schon gemacht werden.
+
+\section{Admin-Seite}
 
 
-Die Schritte beim Arbeiten mit der Datenbank und den Modellen ist wie folgt:
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{admin.png}
+  \caption{Die Admin-Seite, eigene Darstellung}
+  \label{f:admin}
+\end{figure}
+
+Die Administrationsseite kann bei Bedarf automatisch von \textit{Django} erstellt werden. Mit dieser Seite können für die registrierten Modelle aus der \verb|admin.py| Datei Elemente hinzugefügt, gelöscht und geändert werden. Eine andere wichtige Funktion ist die Verwaltung der User der Webseite. Die Admin-Seite ist in der Abbildung \ref{f:admin} zu sehen. Für die Modelle können Berechtigungen hinzugefügt oder entfernt werden. Standardmäßig können alle angelegten Nutzer alle Modelle bearbeiten. Die Seite erfüllt den Zweck, dass kein eigenes \textit{Backend-Interface} erstellt werden muss, um Daten und Inhalte verwalten zu können. Außerdem ist es gedacht, diese Seite auch vom Kunden oder den Mitarbeitern im realen Umfeld benutzen zu lassen \cite{djangotuto4}. Der Befehl \verb|createsuperuser| erstellt einen Admin. Dazu muss noch ein Namen und ein Passwort eingegeben werden. Eine E-Mail ist optional einzugeben \cite{mozillatuto6}. Diese Seite wird auch in der Anwendung \textit{"`Anforderungen und Testen"'} verwendet, da so die Nutzerverwaltung bereits realisiert werden konnte. Die Anwendungsfälle für die Admin-Seite sind:
 \begin{itemize}
-\item Die Modelle anpassen in models.py
-\item mit makemigrations die migrations für die Änderungen erstellen
-\item mit migrate die migrations anwenden
-\item optional: check um Fehler zu finden
-\item optional: sqlmigrations um die SQL Befehle zu sehen
+\item Ein Nutzer hat sein Passwort vergessen und er braucht ein Neues.
+\item Der Admin möchte eine neue Gruppe hinzufügen, wie in der Anforderung A20 gefordert.
+
+\item Ein Nutzer möchte in eine andere Gruppe eingeteilt werden. Dieser Anwendungsfall basiert auf der Anforderung A30.
+
 \end{itemize}
 
 
-Der Admin muss zuerst angelegt werden über create superuser.
-Und die Modelle müssen noch angemeldet werden, damit der Admin diese bearbeiten kann. Dann kann man über die Admin Seite bereits Daten einfügen, ändern und löschen. Im nächsten Schritt wird die Admin Seite aber angepasst, damit sie besser aussieht und auch neue Funktionalitäten hat. 
 
-Mit dem runserver Befehl kann dann der Development Server aufgerufen werden, der die Seiten, die unter den Urls und den Views definiert sind anzeigt. Dazu kommt dann auch noch die admin Seite unter der die Modelle mit ersten Daten versorgt werden können und auch angezeigt werden können
 
-mo: Mit der RedirectView kann man die GrundURL auf eine App lenken. Das macht hier Sinn, da es nur eine App geben wird aut.
-mo: Damit die Seite auch noch static Files unterstützt, wie JS und CSS kann man auch noch eine Zeile hinzufügen.
-mo: makemigration und migrate sind die wichtigen Befehle für die Datenbank 
 
-mo: Django übernimmt die Kommunikation mit der Datenbank, darum muss man bei der Definition der Models nicht darauf achten.
-
-mo: Bei den Modellen können eine Menge Attribute definiert werden. Zum Beispiel ein Hilfetext für den Nutzer in den HTML-Seiten. Wichtig ist auch die str Methode, damit die einzelnen Elemente etwas sinnvolles zurückgeben an dem man sie unterscheiden kann. Mit dem getabsolute url kann man den einzelnen Elementen sofort eine verlinkte Seite geben.
-
-mo: f Strings könnten auch verwendet werden
-
-mo: Jedes Model muss einzeln eingetragen werden in die Admin Seite. Wichtig hierbei ist, dass die Admin Seite ist automatisch erstellt worden. Nicht als eigenes verkaufen. Es können aber verschiedene Veränderungen gemacht werden zu den Admin Seiten. Damit kann doch ein eigenes Look and Feel hergestellt werden. 
-
-mo: Die Templates sind dafür da dynamisch die HTML Seiten zu generieren und mit Daten zu füllen. In den Templates können dann Variablen angezeigt werden, die vorher aus der Datenbank generiert oder berechnet wurden. Man braucht hierzu die View und das template
-
-mo: Wichtig ist hierbei die Render Funktion, die 3 Elemente weitergibt. Zum einen das request Objekt, ein HTML Template und eine context Variable, was ein Python Dictionary ist. 
-
-mo: Es wird mal das Kapitel mit generic und detailed View ausprobiert an den Requirements. Es wurden einfache Seiten gemacht die die Elemente anzeigen und Details auch.
-
-mo: Sessions wurden auch gemacht, es gibt einen Counter wie oft man die Webseite besucht hat
-
-mo: Es gibt jetzt eigene Login und Logout Seiten, die noch erweitert werden sollten. Daneben kommen auch noch die Seiten für Passwörter, also zum resetten. Diese Sachen sind auch wieder von django vorgegeben. Die Funktion das Passwort zurückzusetzen musste simuliert werden, da Emails senden so noch nicht funktioniert. Dazu wird die gesendete Email mit dem Link in der Konsole geloggt. Es können auch Seiten so geschrieben werden, dass sie einen Login brauchen bevor man auf sie zugreifen kann.
-
-mo: jetzt kommt die Hauptsache, die noch am wichtigsten ist: die Forms mit denen die Nutzer Daten eingeben können.
-
-WICHTIG: Danach wird das Projekt einmal aufgeräumt, damit es übersichtlicher ist. Es wird dazu einen neuen Branch geben
-
-Darunter fällt auch das JOIN von verschiedenen Tabellen, wie die einzelnen Tabellen miteinander verbunden wurde, kann man in den Abbildungen 1 sehen.
-Mit so Pfeilen zwischen den Schlüsseln und so
-
-Das UI wird aber später kommen, da man erstmal einen Prototyp haben möchte der die Grundlegenden Funktionen einer  Datenbank hat: Daten eintragen, löschen, ändern und anzeigen.
-
-Das erste UI was man auch klicken kann wurde in Axure erstellt. Diese Dateien konnte man als HTML exportieren und auch CSS und Javascript war dabei. Der nächste große Schritt ist jetzt diese Dateien in das Django Projekt einzubinden. 
-
-Bei der Admin Seite werden nur die Modelle angezeigt, die unter admin.py registriert sind. Darum müssen alle Modelle zuerst registriert werden
-
-
-Im nächsten Schritt werden die Views kreiert, die man braucht. Django vergleicht welche View angezeigt werden soll durch die URL, darum mussten die Views auch erst verknüpft werden um jetzt benutzt werden zu können.
-Bei diesen Views kann  man auch aus der Anfrage Variablen abfangen. Das heißt man kann zusätzliche Variablen angeben oder zum Beispiel ein Requirement im Detail angucken, wenn die entsprechende ID angegeben wurde in der URL. So kann man mit \verb|<int:>| etwas abfangen
-Nachdem auf diesem Weg erste einfache Views geschrieben wurden, kann man jetzt das auf dem Weg machen, wie es auch in Django vorgesehen ist. Man erstellt templates, also html Dateien und tut sie in den entsprechenden Ordner. Der Pfad ist so gewählt, dass die templates wieder den Apps zugeordnet werden können. In den Templates wird dann auch Django Code verwendet mit den Klammern und den Befehlen wie if und so.
-
-Zum einen muss man die richtigen Befehle benutzen um in den Views die richtigen Werte der Models zu bekommen. Das ist eine Qual. Danach sollte man die Views Sachen übergeben an das HTML und in die entsprechenden Felder die Sachen ausgeben. Dabei wird bei mir bis jetzt eine Liste mit Dictionarys übergeben. Das muss dann entsprechend mit 2 For Schleifen ausgegeben werden. Dann kann man so die Daten die bis jetzt in der Datenbank sind ausgeben in der HTML Datei, das war echt ein langer Weg. 
-
-Um die richtigen Werte zu bekommen hat man zuerst die Elemente gefiltert nach dem richtigen Projekt. Das Projekt sollte später von irgendwo herkommen, wie zum Beispiel automatisch und unsichtbar für den Nutzer. Die Nutzer sind ja sowieso eingeteilt in die Gruppen und gehören nur zu einem Projekt. Danach werden alle Elemente dazu geholt, damit man auch auf die Attribute zugreifen kann wie Name oder so. Hier im Beispiel wird einfach alles ausgegeben. Mit den Forms die später kommen sollen kann man so vielleicht dann noch Sachen Filtern oder so. Damit sollte man dann auch endlich den anderen Weg beschreiten könne, dass man die Daten in die Datenbank schreibt ohne die Admin Seite benutzen zu müssen. Es ist bei alldem sehr wichtig auch die richtige view in den URLS verknüpft zu haben. 
-
-Mit der render Funktion kann man eine Abkürzung machen. Man muss dann nicht mehr zuerst das Template laden, sondern kann es sofort in der render Funktion angeben.
-
-Man kann den Apps in den url EInstellungen auch einen Namen geben, das ist vor allem nützlich, wenn man mehrere Apps hat und man aber in den Templates auf eine bestimmte zugreifen möchte. In diesem Beispiel ist der appname dann aut und man kann so auf die views zugreifen mit aut:requirement. Auf diese Weise können jetzt alle Links zu den verschiedenen Django Templates, also HTML Dateien geschreiben werden und man kann die Seite bereits navigieren.
-
-Das Dashboard und die entsprechenden Seiten sind in der Abbildung abb angezeigt.
-
-Die HTML Siten wurden mit einer Testversion von Axure erstellt. Mit der Seite kann man HTML Seiten erstellen und bereits ausprobieren. Bei der Integration muss daraug geachtet werden, dass die ganzen Dateien, also auch die CSS Dateien in den richtigen Ordnern sind. Die Links in den Dateien müssen noch angepasst werden an die static Variable. Die ganzen ressourcen, die mit src anfangen und die href müssen jetzt noch /static/ davor stehen haben, da die Sachen in diesem Ordner zu finden sind.
-
-Beim Aufräumen musste erstmal das Model aufgeräumt werden die Realisierung durch ein Element mit einer is a Beziehung und die Realisierung mit foreign keys war zu viel Arbeit, da man dadurch kompliziertere Joins schreiben musste. Stattdessen haben die Elemente wie Requirement und so jetzt die Attribute von Element erhalten.
-
-Als nächstes sind nun die HTML seiten dran
-
-Kleiner Rückschlag die HTML Seiten konnten nicht benutzt werden da alles als DIV realisiert wurde. Und die Namen waren auch nur div\_999 also nicht sehr einleuchtend. 
-
-Als nächstes musste das Problem beseitigt werden erst nach dem Submit auf andere Seiten zu verweisen, aber das wurde gelöst durch JavaScript.
-
-Jetzt kommt der TestCase mit der Tabelle und den verschiedenen Zeilen
-Dazu braucht der TestCase noch ein weiteres Modell, da es mehrere Schritte geben wird pro TestCase. Die Schritte haben dann einen Foreign Key auf den passenden TestCase.
-Vielleicht ein MultiForm, da die Schritte auch noch ein Ergebnis haben und so
-Tech With Tim Video hat hier geholfen 
-
-Der TestRun wurde auch erstmal simpel integriert
-
-
-Als nächstes kommt dann die Statistik Seite. Dazu kommt hier die Skizze in der man sehen kann wie die HTML Tabelle generiert wird.
-Das hat geklappt
-
-Die nächste Sache war die Requirements und so den einzelnen Gruppen zuzuordnen. Dazu wurde der normale User erweitert um die Elemente Gruppe und Rolle. Über die Gruppe werden nur die Elemente angezeigt von allen Nutzern mit der gleichen Gruppennummer. Dazu wird basierend auf der eigenen Nummer die Elemente gefiltert. 
-
-Die Rolle wird benutzt um dem Prof und dem Student verschiedene Views zu geben. So kann der Prof seine Gruppe aussuchen in dem Dashboard um die verschiedenen Gruppen anzugucken.
-
-Es sollte noch Permissions geben damit der Prof keine Sachen verändert, sondern nur ansieht und bewertet. Vielleicht sollte dazu die normale Groups verwendet werden.
-
-
-Es steht wieder aufräumen auf dem Programm. Die Funktionen wurden nur für jeweils ein Element getestet und implementiert. Jetzt müssen sie für alle gemacht werden.
-Zuerst die Views für das Dashboard mit den jeweiligen Requriements und anderen Elementen. Das muss auch gemacht werden für die einzelnen Seiten, damit man alle Elemente der Gruppe sieht.
-
-Um bei den TestCases die Einteilung zu bekommen zu den TestRuns muss man sich das letzte Element angucken, darum wird es sortiert nach dem Änderungsdatum, da abgeschlossene TestRuns dann ganz oben stehen. Mit der Funktion latest bekommt man nur das letzte Element. Dann filtert man nach dem Status ob der TestRun geklappt hat oder nicht. 
-In einer ersten Version wurde mit einer For Schleife alle TestRuns von einem TestCase betrachtet, dabei würde dann aber herauskommen, dass man zwar 10 TestCases hat, aber 20 mit fehlerhaften TestRuns. Darum darf immer nur der letzte gezählt werden.
-Das macht auch aus der Anwendung her Sinn, da der letzte TestRun zum Beispiel neue Features testet oder einfach anders geschrieben ist.
-
-Die Farben bei der Statistik Seite sind mit Custom Filtern gemacht worden. Diese gucken nach ob zum Beispiel ein TestCase ein Requirement abdeckt oder nicht und passt dann die Farbe an. Marksafe damit das HTML CSS übertragen werden kann an das Template
-
-Auf dem Dashboard kann man auch ein Kuchendiagramm angucken mit den Daten
-
-
-Die Referenzen auf die anderen Elemente mussten in den Forms auf required=False gesetzt werden, da man sonst die Sachen nicht unabhängig voneinander speichern konnten
-
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-Code Cleanup und Bugfixes
-
-Wenn man in den edit views der Elemente sofort nach dem Erstellen der Element den User aus dem Request hinzufügt, dann wird das Element auch sofort in der Liste angezeigt. Das funktioniert auch deshalb, da man eine Methode benutzt die entweder das Objekt findet oder erstellt.
-
-Das die Ids immer weiter hochgezählt werden auch wenn man die schon gelöscht hat ist wohl so richtig, dazu sollte man nochmal eine Quelle herbeiziehen
-
-Mit CSS wird das aktuelle Tab angezeigt
-
-Die Farben die mit den Elementen assoziiert werden müssen noch überdacht werden.  
-
-Bei disabled Inputs gab es das Problem das diese Inputs nicht submitted werden bzw das Form dachte es wäre leer, dann wurde das Form überschrieben mit dem Value None und alles war weg
-
-es gibt noch 2 Stellen an denen man mit submit buttons arbeiten muss, was etwas nervt
-
-Jetzt wird die App etwas schöner gemacht.
-Gradient mit den richtigen Colors aus der Statistik wenn es ein TestCase gibt oder der TestRun erfolgreich ist.
-Mit dem Skew Tool kann man die ganzen Sachen auch noch was stylen.
-
-
-
-
-Eine Funktion, die noch implementiert werden musste ist die Funktion die TestRuns zu timen. Der Timer soll starten, wenn die Seite aufgerufen wurde und soll beendet werden, wenn der Nutzer den Button abschließen drückt.
-In javascript kann man den Timer bauen. Der Wert beim Drücken des Buttons muss dann nur noch an das passende Feld der testrun instance geschickt werden. wie das geht weiß ich noch nicht.
-Die Template Filter Customs kann man leider nicht benutzen, da diese beim Rendern der Seite aufgerufen werden. 
-
-Für den Timer wurde ein Beispiel aus Stackovertflow geniommen und noch erweitert um Stunden, falls der Test mal länger dauert. Es gibt einfach einen Zähler der in Sekunden hochzählt und die Darstellung geht über ein dreiteilliges Label, dass sich die Sachen entsprechend raussucht. 
-Um die JS Variable übergeben zu können wird auch hier ein Form benutzt. Damit kann beim Button Clicken noch ein Value Übergeben werden, was dann die JS Variable ist. Wichtig ist auch save aufzurufen
-Aus dem Request wird dann noch der hidden Wert geholt für den Unput und dann in der View Funktion gescpeichert
-Ein Problem was hier noch auftauchte ist das man nur Sekunden hatte und diese noch umwandeln musste in ein datetiem.time Format, damit Python das dem Attribut dauer zuordnen kann.
-Beziehungsweise aus Darstellungszwekcen wird die Zeit gespeichert in einem Charfield. Die umwandlung zu einem datetime.time Format wird trotzdem gemacht.
-
-
-Als Beispieldaten werden meine Unterlagen aus SOE zu der Packstation benutzt zum eintragen bei den Tests.
-Die Software-Anforderungen von HTM können schon eingetragen werden vor der Vorstellung nächste Woche. 
-Die TestRuns müssen noch ReadOnly werden nach abschluss des TestRuns.
-TestCase und TestRun noch auf das neue Design anpassen
-
-
-Um farbige Markierungen zu machen wurden einfach custom Filter in Django geschrieben. In den Django Templates, also den HTML Seiten wird diesen Templates eine Variable übergeben und darauf basierend verschiedene Aktionen ausgeführt. Zum Beispiel im Dashboard wird basierend auf der Zahl der Requirements ohne TestCase diese Zeile rot markiert, wenn es mehr als 0 sind. Wenn es null sind, dann wird diese Zeile in der Tabelle nicht markiert.
-
-Eins der letzten Features war die Generation eines Word Dokumentes mit allen wichtigen Daten über das Dokument.  Wurde geändert zu PDF damit man nichts verändern kann. Ein Logo wurde auch hinzugefügt. 
-
-Nach Vergleich mit der ersten Forderung von Herrn HTM wurde noch auf der Statistik Seite der Radiobutton Projektstatistik hinzugefügt. Hier kann man sehen wer wie viele Elemente erstellt hat.
-
-
-Beim Ansehen eines Elements aus der Sicht eines anderen Studenten gab es das Problem, dass ein neues Element erstellt werden soll, da diese Zeile auch nach dem Ersteller filtert und da dieser jetzt anders ist will er ein Element mit dem selben Private Key erstellen, was nicht funktioniert. Zum Glück gibt es in der gleichen Zeile die Variable created. Wenn man die abfragt kann man erst bei der Abfrage den User angeben als Ersteller. Bei der Suche nach dem Element kann man also nur noch den Private Key angeben und der Fehler sollte behoben sein.
-Wichtig hierbei ist auch das man save ausruft, da ansonsten der ersteller nicht gespeichert.
-
-
-Bei der Statistik Seite und an mindestens einer anderen Stelle im Dashboard sieht es nicht gut aus, wenn der Professor selber als Teil der Gruppe aufgelistet wird. Darum musste man ihn noch herausfiltern, so dass man nur die Studenten angezeigt bekommt.
-
-Es wurde an alle Stellen, die nach Usern filtern noch der Ausdruck in listing 1 hinzugefügt, da sonst auch vom Prof erstellte Sachen hinzukommen könnten. Man könnte noch extremer werden und für den Prof alle Sachen deaktivieren. Andererseits ist die große Übersicht in dem PDF enthalten.
+\section{URLs}
+\label{s:iurl}
 
 \begin{listing}[htbp]
 \begin{lstlisting}
-.filter(user_erweitern__rolle='s')
+urlpatterns = [
+    path('aut/', include('aut.urls')),
+    path('', RedirectView.as_view(url='/aut/')),
+]
 \end{lstlisting}
-\caption{Filter um nur Studenten zu erhalten}
-\label{code:ggt}
+\caption{URLs des Projekts}
+\label{code:url1}
+\end{listing}
+
+Es gibt eine \verb|urls.py| Datei für das Projekt und eine pro \textit{App}. Von dem Projekt kann die Grundseite auf die Seite der App umgeleitet werden. Im Listing \ref{code:url1} wird zum einen die \verb|urls.py| Datei der \textit{App} inkludiert und zum Anderen der Hauptpfad des Projekts auf die \textit{App} umgelenkt. In dieser Arbeit ist der Hauptpfad "`aut"' \cite{mozillatuto5} .
+
+
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{8}{8}\selectfont\ttfamily
+]
+urlpatterns = [
+    #Basis Views
+    path('', views.view_dashboard, name='view_dashboard'),
+    path('requirement', views.view_requirement, name='view_requirement'),
+    path('testcase', views.view_testcase, name='view_testcase'),
+    path('testrun', views.view_testrun, name='view_testrun'),
+    path('statistik', views.view_statistik, name='view_statistik'),
+
+    path('requirement/<int:pk>/', views.edit_requirement, name='requirement_change'),
+    path('requirement/create/', views.edit_requirement, name='requirement_create'),
+    path('requirement/create/<int:pk>/', views.edit_requirement, name='requirement_create'),
+...
+\end{lstlisting}
+\caption{URLs der App}
+\label{code:url2}
 \end{listing}
 
 
-Vortrag: Best Of Bugs: Endlosschleife, Forms einfach weg
+In der \verb|urls.py| Datei der \textit{App}, von der ein Ausschnitt im Listing \ref{code:url2} zu sehen ist, wird jeweils eine \textit{URL} oder ein \textit{URL-Schema} mit einer Funktion aus der \verb|views.py| Datei verknüpft. Hierbei können noch Parameter angegeben werden, die an die \textit{View-Funktionen} übergeben werden sollen. Sobald eine URL übereinstimmt, wird die damit verknüpfte \textit{View} aufgerufen \cite{djangotuto1}.
+
+
+\section{Modelle}
+
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{8}{8}\selectfont\ttfamily
+]
+class requirement(models.Model):
+    #Private Keys, Foreign Keys and andere Beziehungen:
+    req_pk_requirementid = models.AutoField(primary_key=True, null=False, unique=True)
+    req_fk_ersteller = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+    #Atrribute:
+    req_name = models.CharField(max_length=100, null=True, blank=True)
+    req_kommentar = models.CharField(max_length=300, null=True, blank=True)
+    req_datum_erstellung = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    req_datum_aenderung = models.DateTimeField(auto_now=True, null=True, blank=True)
+    req_beschreibung = models.CharField(max_length=300, null=True, blank=True)
+
+    #Funktionen:
+    def __str__(self):
+        return "r_" + str(self.req_pk_requirementid) + ": " + str(self.req_name)
+
+    def get_id(self):
+        return "r_" + str(self.req_pk_requirementid)
+
+    def get_absolute_url(self):
+        return reverse('aut:requirement_change', args=[str(self.req_pk_requirementid)])
+
+    #Metaoptionen
+    class Meta:
+        ordering = ["req_pk_requirementid"]
+
+
+\end{lstlisting}
+\caption{Das Modell der Requirements}
+\label{code:req}
+\end{listing}
+
+Die Modelle der \textit{App} werden basierend auf dem zuvor definierten \textit{ER-Modell} aus Kapitel \ref{s:erm} erstellt mit leichten Abwandlungen. Im Listing \ref{code:req} ist das Modell der \textit{Requirements} angegeben. An diesem Beispiel soll das Beschreiben der Modelle durch \textit{Django} erklärt werden. Der \textit{Primary-Key} wird normalerweise automatisch generiert, aber damit ein verständlicherer Name benutzt werden kann, wurde dieser überschrieben. Die \textit{Foreign-Keys} benötigen als besonderes Merkmal nur den Namen des anderen Modells das sie referenzieren. Die weiteren Attribute wurden mit den Standard Feldern, wie zum Beispiel \verb|Charfield|, definiert. Jedem Feld können außerdem Attribute zugewiesen werden. Die wichtigsten Attribute sind \verb|blank=True| und \verb|null=True|. Durch diese beiden Attribute dürfen die Felder sowohl leer sein, als auch in den \textit{Forms} leer angezeigt werden \cite{mozillatuto5}. Es kann gesehen werden, dass die "`is-a"'-Beziehung dadurch realisiert wurde, dass die \textit{Requirements}, \textit{Testcases} und \textit{Testruns} alle die allgemeinen Attribute der Relation \textit{Element} aus dem \textit{ER-Diagramm} erhalten haben. Diese Realisierungsart war einfacher, da so keine \textit{JOIN-Operationen} ausgeführt werden müssen, wenn beispielsweise die allgemeinen Attribute wie der Name eines \textit{Testruns} gebraucht werden.
+
+
+Neben den normalen Feldern, können in den Modellen auch noch Methoden und Metadaten definiert, beziehungsweise angegeben, werden. Eine generelle wichtige Funktion, die implementiert werden sollte, ist das Überschreiben der \verb|__str__| Funktion, da sie angibt, wodurch die \textit{Elemente} repräsentiert werden sollen \cite{mozillatuto5}. Die andere Funktion \verb|get_absolute_url| kann dazu genutzt werden zu jedem \textit{Requirement} die entsprechende \textit{URL} anzugeben, die zu der Bearbeitungsseite führt und den \textit{Primary-Key} als Parameter übergibt. Durch diese Beschreibung der Modelle kann \textit{Django} die entsprechenden Tabellen erstellen und übernimmt die Kommunikation mit der Datenbank \cite{djangotuto4}.
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{8}{8}\selectfont\ttfamily
+]
+class user_erweitern(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    gruppennummer = models.ForeignKey('projekt', on_delete=models.SET_NULL, null=True, blank=True)
+    rolle = models.CharField(max_length=1, choices=ROLLEN, null=True, blank=True)
+\end{lstlisting}
+\caption{Die Erweiterungen des Users}
+\label{code:user}
+\end{listing}
+
+
+Um den Nutzer zu implementieren wurde das vorgegebene \textit{User-Modell} von \textit{Django} erweitert. Die Erweiterungen sind in dem Listing \ref{code:user} zu sehen. Um die \textit{Elemente} den einzelnen Gruppen zuzuordnen, brauchte der Nutzer das Attribute \verb|gruppennummer|. Das Attribut ist dabei ein \textit{Foreign-Key} auf die erstellten Projekte. Eine Abweichung vom \textit{ER-Modell} stellt die Realisierung der Studenten und des Professors dar. Da beide Nutzergruppen im \textit{ER-Modell} als eigene Relationen definiert sind, sollten sie in der Implementierung eigene Modelle erhalten. Stattdessen hat es sich angeboten das \textit{User-Modell} um das Attribut \verb|rolle| zu erweitern.
+
+
+
+Nachdem die Modelle erstellt wurden, müssen die Befehle \verb|makemigrations| und \verb|migrate| angewandt werden, da so sämtliche Änderungen an den Modellen ausgeführt werden. Mit \verb|makemigrations| werden die \verb|migration|-Dateien erstellt, um gegebenenfalls die Befehle zu kontrollieren, die von \textit{Django} erstellt wurden. Das Ausführen der Migration geschieht durch den Befehl \verb|migrate|. Damit werden alle notwendigen Tabellen erstellt und Änderungen durchgeführt \cite{djangotuto4}.
+
+
+
+\section{Views}
+\label{iviews}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{django_basic.png}
+  \caption{Der generelle Ablauf eines HTTP Requests, aus \cite{mozillatuto1}}
+  \label{f:django_basic}
+\end{figure}
+
+Der generelle Ablauf bei einem \textit{HTTP Request} ist in der Darstellung \ref{f:django_basic} abgebildet. In \textit{Django Applikationen} werden die verschiedenen Aufgaben auf verschiedene Dateien aufgeteilt. Die \textit{URLs} werden mit den entsprechenden \textit{Views} verlinkt. Darüber hinaus können bestimmte Parameter aus der \textit{URL} an die \textit{Views} zum weiteren Verarbeiten übergeben werden. In den \textit{Views} können die benötigten Daten, die als Modelle in der \verb|models.py| Datei definiert sind, angegeben werden. Die \textit{HTML-Templates} werden dann im nächsten Schritt mit diesen Daten basierend auf der Logik in den \textit{Views} befüllt, dafür haben sie an den entsprechenden Stellen befüllbare Platzhalter. Abschließend generiert die \textit{View} die \textit{HTTP Response}. Diese Aufteilung wird "`Model View Template"' Architektur genannt \cite{mozillatuto1} und kann mit der "`Model View Controller"' Architektur verglichen werden \cite{mvc}.
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{7}{7}\selectfont\ttfamily
+]
+def view_requirement(request):
+    users = User.objects.filter(user_erweitern__gruppennummer=request.user.user_erweitern.gruppennummer)
+    req_for_usergroup = requirement.objects.filter(req_fk_ersteller__in=users).order_by('-req_pk_requirementid')
+
+    context = {
+        'requirements': req_for_usergroup,
+    }
+    return render(request, 'aut/010_requirement.html', context=context)
+\end{lstlisting}
+\caption{View-Funktion der Requirements Seite}
+\label{code:allrequirements}
+\end{listing}
+
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{softreqs.png}
+  \caption{Requirements-Liste auf der Requirements Seite, eigene Darstellung}
+  \label{f:softreqs}
+\end{figure}
+
+
+
+Beispielsweise ist in Listing \ref{code:allrequirements} die \textit{View} dargestellt, um alle \textit{Requirements} einer Usergruppe herauszufiltern. Die einzelnen \textit{Views} sind als Funktionen in \textit{Python} definiert \cite{mozillatuto1}. Zuerst werden in Zeile zwei alle Nutzer mit der gleichen Gruppennummer herausgefiltert, bevor die \textit{Requirements} aller Nutzer aus der Datenbank geholt werden. Die \textit{Requirements} werden dann noch in Zeile drei nach absteigender Folge der IDs sortiert, damit die neuesten \textit{Requirements} in der Liste oben stehen. Wenn diese Variable an das \textit{Template} übergeben werden soll, dann muss sie im \textit{Context} angegeben werden. Es wird ein Name in Anführungsstrichen angegeben, der dann im \textit{Template} benutzt werden kann. Der Einfachheit halber wurde immer derselbe Name, wie der, der Variablen verwendet. Zusammen mit dem \textit{Template} muss dieser \textit{Context} dann zum rendern in der Zeile acht aufgerufen werden. In der Abbildung \ref{f:softreqs} kann die auf diesem Weg erstellt Liste am linken Bildschirmrand gesehen werden. Der nähere Aufbau der \textit{Templates} ist im Kapitel \ref{s:itemp} beschrieben.
+
+
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{7}{7}\selectfont\ttfamily
+]
+def edit_requirement(request, pk=None):
+    requ_instance, created = requirement.objects.get_or_create(req_pk_requirementid=pk)
+    if created == True:
+        requ_instance.req_fk_ersteller = request.user
+        requ_instance.save()
+        ...
+\end{lstlisting}
+\caption{View-Funktion der Requirements Seite}
+\label{code:editreq}
+\end{listing}
+
+
+Eine weitere \textit{View}, die eine andere Möglichkeit von \textit{Django} präsentiert, ist in dem Listing \ref{code:editreq} dargestellt. Hierbei wurde aus der \textit{URL} noch ein Parameter übergeben und kann in der Funktion als Variable benutzt werden. Gebraucht wurde diese Funktionalität, damit sowohl neu erstellte \textit{Elemente}, die zum Beispiel durch den Button "`Neues Requirement"' aus der Abbildung \ref{f:softreqs} erstellt werden, als auch bereits vorhandene \textit{Elemente}, bearbeitet werden können. Neu erstellte \textit{Elemente} besitzen noch keinen \textit{Primary-Key}, da sie noch nicht abgespeichert wurden. Dafür bekommen sie den default Wert \textit{None} aus Zeile eins als \textit{Primary-Key}. Ein bereits vorhandenes \textit{Element} würde an dieser Stelle seinen \textit{Primary-Key} angeben, zum Beispiel kann das \textit{Element} "`r\_2: Test 1"' über seinen \textit{Primary-Key} zwei erhalten werden. Die Funktion \verb|get_or_create| aus der Zeile zwei prüft, ob es zu dem angegebenen \textit{Primary-Key} ein \textit{Element} gibt, ansonsten erstellt es ein neues \textit{Element}, zum Beispiel, wenn der \textit{Primary-Key} \textit{None} als Wert hat. Daneben gibt die Funktion auch noch Auskunft darüber, ob das \textit{Element} erstellt wurde oder nicht. Diese Information wird als \textit{Boolean} an die Variable \verb|created| übergeben. Diese kann dann abgefragt werden und falls sie \textit{True} ist, wird der Variable der aktuell eingeloggte Nutzer als Ersteller übergeben. Danach wird das \textit{Element} abgespeichert, damit es auch einen \textit{Primary-Key} erhält.
+
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}
+SELECT * FROM Requirements WHERE req_pk_requirementid = pk;
+\end{lstlisting}
+\caption{Die entsprechenden SQL-Anweisungen zu Listing \ref{code:editreq}}
+\label{code:sql}
+\end{listing}
+
+\textit{Django} übernimmt die Kommunikation mit der Datenbank. Darum müssen keine \textit{SQL-Anweisungen} per Hand geschrieben werden. Beispielsweise ist im Listing \ref{code:sql} die \textit{SQL-Anweisung} angegeben, die aus dem Listing \ref{code:editreq} generiert wird.
+
+
+
+
+
+
+
+
+
+
+\section{Templates und Filter}
+\label{s:itemp}
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{9}{9}\selectfont\ttfamily
+]
+{% extends "aut/000_base_bar.html" %}
+
+{% block titel %}
+<title>Dashboard</title>
+{% endblock %}
+
+{% load aut_extras %}
+...
+<tr>
+	<td>Requirements ohne TestCase</td>
+    <td {{ num_no_testcase|rote_markierung }}>{{num_no_testcase}}</td>
+</tr>
+\end{lstlisting}
+\caption{Das Template des Dashboards}
+\label{code:template}
+\end{listing}
+
+
+Innerhalb der \textit{Tempaltes} gibt es ein paar Besonderheiten, die im Listing \ref{code:template} gezeigt werden sollen. Beispielsweise unterstützen die \textit{Templates} Vererbung. So kann ein \textit{Template}, wie in dieser Arbeit, die Menüleiste realisieren und an die anderen \textit{Templates} vererben. Das Schlüsselwort \verb|extend| ist dazu in Zeile eins angegeben. Auf diesem Weg konnte verhindert werden, den gleichen Code an verschiedenen Stellen zu wiederholen. Ein weiterer Vorteil dadurch ist, dass Änderungen an nur einer Stelle zentral durchgeführt werden müssen. Funktionen werden in geschweiften Klammern mit Prozentzeichen geschrieben. Daneben können Blöcke definiert werden, die dann von den erbenden \textit{Templates} ausgefüllt werden können. In Zeile drei wird beispielsweise der Block "`titel"' vom erbenden \textit{Template} überschrieben. Auf diese Weise kann eine einheitliche Struktur erzeugt werden \cite{djangotuto1}.
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{9}{9}\selectfont\ttfamily
+]
+{% for user in users %}
+	<tr>
+    	<th> {{ user.username }} </th>
+            <td> {{ user.requirement_set.count }}</td>
+            <td> {{ user.testcase_set.count }}</td>
+            <td> {{ user.testrun_set.count }}</td>
+	</tr>
+{% endfor %}
+       
+\end{lstlisting}
+\caption{Das Template des Dashboards}
+\label{code:punkt}
+\end{listing}
+
+In \textit{Templates} können auch Flusskontrollstrukturen, wie zum Beispiel eine \verb|For| Schleife, verwendet werden. Das ist im Listing \ref{code:punkt} dargestellt. Auf Variablen wird mit doppelt geschweiften Klammern zugegriffen. Es können aber auch auf die Attribute der Variablen zugegriffen werden, wie in der Zeile drei verdeutlicht werden soll. Eine weitere besondere Syntax sind die \textit{Filter}, die in \textit{Templates} benutzt werden können. Diese \textit{Filter} nehmen den Wert links von der \textit{Pipe} und wenden darauf definierte Funktionen an, beispielsweise die \verb|count| Funktion in der Zeile vier. Dabei können auch eigene Funktionen verwendet werden. Dazu muss die Datei "`aut\_extra"' mit diesen Funktionen erst über den Befehl \verb|load aut_extra| geladen werden, wie in der Zeile sieben vom Listing \ref{code:template} zu sehen ist \cite{djangotuto1}.
+
+
+
+
+
+\chapter{Features}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testcase.png}
+  \caption{Das Bearbeiten eines Testcase, eigene Darstellung}
+  \label{f:testcase}
+\end{figure}
+
+
+
+
+Die Software \textit{"`Anforderungen und Testen"'} bietet verschiedene Features an, um das \textit{Anforderungs- und Testmanagement} zu unterstützen. Es können \textit{Requirements}, \textit{Testcases} und \textit{Testruns} erstellt werden. Dazu können die gewünschten Felder aus den Anforderungen A60, A70 und A80 mit Werten befüllt werden. In der Abbildung \ref{f:testcase} ist beispielsweise die Bearbeitungsseite der \textit{Testcases} dargestellt.
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testrun.png}
+  \caption{Die Durchführung eines Testruns, eigene Darstellung}
+  \label{f:testrun}
+\end{figure}
+
+
+\begin{listing}[htbp]
+\begin{lstlisting}[
+   basicstyle=\fontsize{9}{9}\selectfont\ttfamily
+]
+if all(item == list_mit_Ergebnissen[0] == 'p' for item in list_mit_Ergebnissen):
+	testr_instance.testr_status = 'p'
+else:
+	testr_instance.testr_status = 'f'   
+\end{lstlisting}
+\caption{Der Generator Ausdruck}
+\label{code:allsam}
+\end{listing}
+
+
+
+Daneben bietet die Software auch die wichtige Funktion, \textit{Testruns} nicht nur zu definieren, sondern diese auch durchzuführen. Die Durchführung ist in der Abbildung \ref{f:testrun} zu sehen. Dabei wird die Zeit, die gebraucht wird um ihn durchzuführen, gestoppt \cite{sotimer}. Erst wenn bei allen Testschritten der Status "`pass"' ausgewählt wurde, gilt dieser \textit{Testrun} als erfolgreich durchgeführt. Die Logik, die das prüft, ist im Listing \ref{code:allsam} dargestellt und wird als \textit{Generator-Ausdruck} realisiert. Die Variable \verb|list_mit_Ergebnissen| enthält dabei den Status aller \textit{Testschritte} als Liste \cite{soallsame}. Bevor der Nutzer die Seite verlässt, zum Beispiel um den \textit{Testrun} abzuschließen, wird er um eine Bestätigung der Aktion gebeten. Dadurch soll verhindert werden, dass der Nutzer aus Versehen den \textit{Testrun} frühzeitig beendet \cite{confirm}.
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=1\textwidth]{testrunab.png}
+  \caption{Die Anzeige bei einem abgeschlossenen Testrun, eigene Darstellung}
+  \label{f:testrunab}
+\end{figure}
+
+
+Nachdem ein \textit{Testrun} durchgeführt wurde, ist er nicht mehr editierbar. Stattdessen zeigt er, wie in Abbildung \ref{f:testrunab} gezeigt, den getesteten \textit{Testcase} mit seinen Schritten und Ergebnissen an. Eine farbige Markierung an der linken Seite in der Listenübersicht zeigt ebenfalls an, ob der \textit{Testrun} erfolgreich war oder nicht.
+
+
+
+
+Während der \textit{Login} und \textit{Logout} auf der von \textit{Django} vorgegebenen Authentifizierung basiert \cite{mozillatuto10}, musste der \textit{Signup} Prozess extra eingebracht werden \cite{signup}. Der Nutzen davon soll sein, dass sich die Studenten eigene Accounts anlegen können mit einem Benutzernamen, Passwort und einer Gruppennummer. Dadurch muss der Admin, beziehungsweise der Professor, nicht für jeden Student einen eigenen Account anlegen.
+
+ 
+ 
+
 
 
 \chapter{Usability Test} \label{chap:use}
+Damit ein \textit{Usabilitytest} durchgeführt werden konnte, wurde das Tool \textit{"`Anforderungen und Testen"'} auf der Webseite \textit{Heroku} hochgeladen und steht unter dem Link \url{https://anforderungen-und-testen.herokuapp.com/aut/} zum Testen bereit \cite{heroku}.
 
-Ein Usability Test wurde durchgeführt. Dazu wurde die Software auf Heroku angemeldet und kann dort ausgeführt werden. Das Feedback der Usergruppen war wie folgt:
+Der Inhalt des \textit{Usabilitytests} bestand darin, jeweils ein \textit{Requirement}, \textit{Testcase} und \textit{Testrun} zu erstellen. Dazu wurden Beispieldaten in einer Anleitung angegeben. Darüber hinaus sollte ein \textit{Testrun} durchgeführt werden, bevor zuletzt die Statistik Seite überprüft werden sollte.
 
-
-
-\chapter{Fazit - Wurde alles umgesetzt?} \label{chap:fazit}
-
+Daraus folgten verschiedene Rückmeldungen, die zu einer Verbesserung der Software führen sollten. Der Notizen-Button sollte größer gemacht werden, damit er auffälliger wird. Die Seite auf die der \textit{Testrun} durchgeführt wird, sollte auch überarbeitet werden und die einzutragenden Felder ersichtlicher machen. Eine Tabelle sollte hier verwendet werden, um das zu erreichen.
 
 
+Nachdem ein \textit{Element} abgespeichert wurde, war nur sofort ersichtlich, dass etwas gespeichert wurde, wenn sich der Name verändert hat. Basierend auf diesem Feedback wurde in \textit{HTML} eine \textit{Snackbar} beziehungsweise ein \textit{Toast} realisiert. Dadurch bekommen die Nutzer ein Feedback, wenn der "`Speichern"'-Button gedrückt wird \cite{snack}.
 
-\chapter{\LaTeX-Sachen} \label{chap:latex}
-\section{Latex Sachen als Section}
+Die Begrenzung der erlaubten Zeichen in den Eingabefeldern wurde ebenfalls überdacht, da die Nutzer nicht genug Platz hatten, um die Texte einzugeben. Die Länge der Felder wurde somit vergrößert.
 
-%So geht eine Aufzählung mit Punkten
-Die Ziele des Templates sind wie folgt:
-\begin{itemize}
-\item Beispiele der typischen Verwendung von \LaTeX\ und dessen Erweiterungen 
-  geben, die viele im Rahmen von Abschlussarbeiten üblichen Anforderungen 
-  abdeckt.
-\item Nahe am \LaTeX-Standard halten mit wenigen weit verbreiteten 
-  Erweiterungen, um problemlosen Einsatz und Erweiterbarkeit sicher zu stellen.
-\item Die Einhaltung der Formalien an der Hochschule~Mannheim in der
-  Fakultät Informationstechnik vereinfachen.
-\end{itemize}
+Auf dem \textit{Dashboard} sollte es eine bessere Unterscheidung geben zwischen anklickbaren Buttons und der Tabelle. Durch ein neues Design der Buttons stechen diese nun besser hervor.
 
-%so kann man Sachen durchstreichen
-\falsch{durchgestrichen} angezeigt. 
-
-
-%so geht referenzieren, also mit der Tilde vorne ist wiochtig sonst gibt es komische Seitenumbrüche
-Nehmen Sie Kapitel 1 nicht mit dazu. Schreiben Sie Inhalte und keine
-Leerphrasen. Verwenden Sie nicht das "`nächste"' oder "`folgende"' Kapitel
-sondern immer als Zahl das wievielte Kapitel. 
-Verlassen Sie sich auf \LaTeX\ und nummerieren Sie nie selbst sondern
-referenzieren Sie. Jedes Kapitel außer das Erste muss vorkommen. 
-In Kapitel~\ref{chap:latex} führen wir in die \LaTeX-Umgebung kurz ein und 
-geben eine Übersicht über die Tools, die notwendig sind ein Dokument zu 
-erstellen.
-In Kapitel~\ref{chap:layout} stellen wir das Layout sowie einige Idiome 
-zum Textsatz mit \LaTeX\ vor. 
-In Kapitel~\ref{chap:bilder} besprechen wir das Einbinden und Erstellen 
-von Fließobjekten wie Bilder, Tabellen und Listings.
-Hinweise zum Schreibstil, mathematischem Formelsatz und zur Literatur sind 
-in Kapitel~\ref{chap:stil} gesammelt.
-Abschließend fassen wir in Kapitel~\ref{chap:fazit} die Vorteile und Features,
-hervorzuheben sind die gute Qualität und Satz,
-von \LaTeX\ für Ihre Abschlussarbeit noch einmal zusammen.
-
-
-%So geht eine Tabelle
-in Tabelle~\ref{tab:disteditplattform}.
-\begin{table}
-\centering
-\begin{tabular}{|l||l|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Plattform}} & 
-\multicolumn{1}{|c|}{\textbf{\LaTeX-Distribution}} & 
-\multicolumn{1}{|c|}{\textbf{Editor}} \\\hline\hline
-Linux/Unix & TeX Live         & Texmaker, Emacs \\\hline
-MacOSX     & TeX Live, MacTex & Texmaker, TeXShop \\\hline
-Windows    & TeX Live, MiKTeX & Texmaker, TeXstudio \\\hline   
-\end{tabular}
-\caption{\LaTeX-Distributionen und Editor je Plattform}
-\label{tab:disteditplattform}
-\end{table}
-
-%Damit das so anders aussieht, zum Beispiel für Befehle wie makemigrations
-(zum Beispiel \verb|thesis.tex|)
+Eine weitere Rückmeldung war, das die Gebrauchsanleitung in irgendeiner Form der Software beiliegen sollte, um vor allem die Farben zu erklären. Dazu wurden auf den Seiten der \textit{Requirements}, \textit{Testcases} und \textit{Testruns} Erklärungen geschrieben, die angezeigt werden, falls kein \textit{Element} ausgewählt ist.
 
 
 
-%So kann man andere Schriften machen
-\noindent\parbox[t]{\textwidth}{
-\fontfamily{ptm}\fontsize{11}{13pt}\selectfont \ 
-(Times New Roman) When Apollo Mission Astronaut Neil Armstrong first 
-walked on the moon, he not only gave his famous ``one small step 
-for man, one giant leap for mankind'' statement but followed it by 
-several remarks, usual communication traffic between him, the other
-astronauts and Mission Control. 
-Just before he re-entered the lander, however, he made this 
-remark \textit{Good luck Mr. Gorsky}.
-}
 
-\noindent\parbox[t]{\textwidth}{
-\fontfamily{phv}\fontsize{11}{13pt}\selectfont \ 
-(Helvetica) Many people at NASA thought it was a casual remark concerning 
-some rival Soviet Cosmonaut. 
-However, upon checking, there was no Gorsky in either the
-Russian or American space programs. 
-Over the years many people questioned Armstrong as to what 
-the \textit{Good luck Mr. Gorsky} statement meant, but Armstrong
-always just smiled.
-On July 5, 1995 in Tampa Bay FL, while answering questions following 
-a speech, a reporter brought up the 26 year old question to Armstrong. 
-This time he finally responded. Mr. Gorsky had finally died and so 
-Neil Armstrong felt he could answer the question.
-}
+\chapter{Fazit} \label{chap:fazit}
 
-\noindent\parbox[t]{\textwidth}{
-\fontfamily{pplx}\fontsize{11}{13pt}\selectfont \ 
-(Palatino) When he was a kid, he was playing baseball with a friend 
-in the backyard. His friend hit a fly ball, which landed in the front 
-of his neighbor's bedroom windows. 
-His neighbors were Mr. \& Mrs. Gorsky.
-As he leaned down to pick up the ball, young Armstrong heard 
-Mrs. Gorsky shouting at Mr. Gorsky. 
-\textit{Oral sex! You want oral sex?! You'll get oral sex when the 
-  kid next door walks on the moon!}
-}
-
-%So gehen Fußnoten
-Machen Sie Fußnoten\footnote{Das ist eine Fußnote.} immer
-ohne einleitendes Leerzeichen und innerhalb des Satzes,
-also nie nach einem Punkt. 
-Fußnoten sind ganze Sätze mit Satzzeichen.
-Fußnoten sind Inhalte, die nicht für das Verständnis 
-notwendig sind\footnote{Fußnoten haben übrigens 
-nichts mit Noten oder Musik zu tun.}. 
-Juristen verwenden Fußnoten zur Quellenangabe. Wir
-sind keine Juristen und distanzieren uns 
-(nicht nur) von dieser Praxis deutlich.
-Setzen Sie Fußnoten sehr sehr sparsam ein.
-
-%so geht das Referenzieren auch auf Seiten
-Referenzieren Sie innerhalb des Dokuments, zum Beispiel
-auf das Kapitel~\ref{chap:bilder} in dem es unter anderem
-um Bilder geht und das auf Seite~\pageref{chap:bilder}
-los geht, mit \verb|\ref| (meistens) oder 
-\verb|pageref| (sehr selten). 
-Verwenden Sie vor dem Befehl zum Referenzieren immer
-ein \verb|~|. Das ist ein nicht umbrechbares Leerzeichen
-und \falsch{Kapitel \\ 1}, also der 
-Zeilenumbruch vor der Nummerierung, wird vermieden.
-
-\falsch{Es macht keinen Sinn aus irgendwelchen Gr"unden}\newline
-\falsch{erscheinen sie noch so sinnvoll}\\ 
-\falsch{Zeilenbr"uche im Flie"stext einzuf"uhren.}\\
-\falsch{Sie}\\
-\falsch{wollen eigentlich etwas anderes.}
-
-%so kann man Sachen kursiv machen
-%Abkürzungsverzeichnis vielleicht wieder nehmen
-Sie sollten Abkürzungen (AKÜ) bei ersten Vorkommen definieren.
-Schreiben Sie das Wort zuerst aus und dann die Abkürzung in 
-Klammern. 
-Danach können Sie die AKÜ verwenden. 
-Meistens sollten Sie jedoch auf Abkürzungen verzichten.
-Schreiben Sie lieber
-\textit{beispielsweise, zum Beispiel, und so weiter, beziehungsweise}
-statt \textit{bspw., z.B., usw., bzw.}.
-
-%So gehen Bindestriche
-Setzen Sie die drei verschiedenen Bindestriche -, -- und --- richtig
-ein. 
-Der einfache Bindestrich - wird bei Worttrennungen, 
-wie AKÜ-Fimmel, eingesetzt (im Quelltext mit \verb|-|).
-Der etwas längere Streckenstrich -- wird bei Streckenangaben, wie
-die Strecke Mannheim--Karlsruhe oder von 10:00--11:45 eingesetzt
-(im Quelltext mit \verb|--|).
-Der Gedankenstrich --- ist bei Einschüben --- wie zum Beispiel
-hier --- einzusetzen (im Quelltext mit \verb|---|).
-\falsch{Es ist auf keinen Fall ein Leerzeichen um einen Binde - strich 
-oder einen Strecken -- strich und immer ein Leerzeichen
-um einen Gedanken---strich}.
+Die Kategorie, die als Attribut bei den \textit{Requirements} gefordert wurde, wurde in dieser Version nicht implementiert. In einer zweiten Version könnten die Kategorien ausgebaut werden, um so die verschiedenen Arten von Anforderungen, wie in Kapitel \ref{s:anfundtest} aufgelistet, zu unterscheiden. Der Nutzer könnte ebenfalls in der Lage sein, eigene Kategorien zu definieren. Dann würde sich anbieten eine Suche oder einen Filter zu implementieren. Da diese Features eher ablenken würden, war es vorzuziehen, sich diese für eine zweite Version zu merken.
 
 
-%noch eine Tabelle
-
-\begin{table}[htbp] % htbp ~ here, top, bottom, page
-\centering
-\begin{tabular}{|r|c|l|l|}
-\hline
-\textbf{Name} & \textbf{Adresse} & \textbf{Wohnort} & \textbf{Telefon} \\ 
-\hline\hline
-Susi Sinnlos & Eichenstrasse 5 & 12345 Unterstadt & 24927749242 \\
-Horst Kurz & Schnellweg 17 & 42420 Rapid & 999 \\\hline
-Jochanaan Leuchtentrager & Hochstraße zu & 666 Hell & 1-800-33845\\\hline
-\end{tabular}
-\caption{Adressliste}
-\label{tab:meinetab}
-\end{table}
-
-Die entsprechenden vordefinierten Umgebungen heißen 
-\verb|table| für Tabellen und \verb|figure| für Abbildungen. 
-Mit den optionalen Argumenten \verb|htbp|, das steht für
-\textit{here, top, bottom, page}, geben Sie \LaTeX\ den 
-Tipp, dass Sie am liebsten das Fließobjekt \textit{hier}
-an dieser Stelle haben möchten. Wenn das nicht geht, dann
-eben am \textit{Anfang} der Seite, und wenn das nicht geht (weil es
-zum Beispiel ein Kapitelanfang ist) ans \textit{Ende} der Seite. 
-Wenn das alles nicht klappt, dann halt auf eine Extra-\textit{Seite}.
-Beherzigen Sie folgende Tipps zu Fließobjekten:
-\begin{itemize}
-\item Jede Tabelle, jedes Bild und jedes Listing ist ein Fließobjekt.
-\item Zentrieren Sie Bilder und Tabellen.
-\item Jedes Fließobjekt hat eine Bildunterschrift (Caption) mit
-  einem Label und wird im Text passend referenziert.
-\end{itemize}
-Schreiben Sie nie, \falsch{wie man unten in der Tabelle sehen kann},
-da Sie nie wissen und auch nicht wissen sollen, ob die Tabelle 
-wirklich \glqq weiter unten\grqq\ ist. 
-Verwenden Sie statt relativer Positionsangaben Referenzen mit Zahlen,
-die Sie durch das Label erhalten, wie zum Beispiel 
-"`wie sie in Tabelle~\ref{tab:meinetab} sehen können"'.
-Verwenden Sie kurze und prägnante Bildunterschriften, die 
-nicht länger als eine Zeile lang sind. 
-Alles was mehr als eine Zeile hat gehört in den Fließtext.
-Sie sollten für die Fließobjekt Caption keinen Satz bilden und 
-daher auch keinen Punkt am Ende haben.
-Die Caption ist eine Unterschrift und gehört unter das Fließobjekt.
+Eine Überarbeitung des \textit{Dashboards} in Form einer Verschönerung könnte ebenfalls sinnvoll sein, um die Informationen schneller vermitteln zu können. Es könnten Diagramme und andere Darstellungsformen, wie die vorgestellten Tools in Kapitel \ref{chap:Tools} sie benutzen, verwendet werden.
+ 
+ 
+Abschließend kann zusammengefasst werden, dass die gestellten Anforderungen durch die Software \textit{"`Anforderungen und Testen"'} erfüllt werden und die Erstellung eines leichtgewichtigen \textit{Softwaretools} für das \textit{Anforderungs- und Testmanagement} im \textit{Softwareentwicklungsumfeld} somit erfolgreich abschlossen werden konnte.
 
 
-%So kann man Bilder in den Text bauen mit wrapfigure
-\begin{wrapfigure}{r}{6cm}
-  \centering
-  \includegraphics[width=4cm]{gnu}
-  \caption{GNU-Logo~\cite{gnulogo,fal}}
-  \label{fig:gnu}
-\end{wrapfigure}
-Es ist möglich, wenn auch nicht empfohlen, 
-Bilder an den 
-Rand einer Seite zu klatschen, wie wir das mit dem 
-GNU-Logo in Abbildung~\ref{fig:gnu} gemacht haben. 
-Das ganze ist ein netter Effekt für Graphiken, wie zum Beispiel ein
-Logo, die nicht zum Verständnis des Texts gebraucht werden und wenig
-Details aufweisen. 
-Der Effekt sollte aber nicht überstrapaziert werden, 1--2 Mal 
-je Abschlussarbeit sollte, wenn überhaupt, rei\-chen.
-Außerdem funktioniert \verb|wrapfigure| nicht immer sehr stabil.
-
-
-
-%So kann man Sachen fett machen
-Bitte nehmen Sie \textbf{nie} JPG oder PNG für Vektorgrafiken, 
-also Zeichnungen mit Linien oder anderen geometrischen Objekten,
-sondern ausschließlich PDF.
-Binden Sie also \textbf{nie} Vektorgraphiken verpixelt ein.
-
-
-%einfach so mit pdf Endung dran machen
-\begin{figure}[htb]
-\centering
-\includegraphics[width=.9\textwidth]{automata.pdf}
-\caption{Automaten mit tikz~\cite{tikzautomata}}
-\label{fig:tikz}
-\end{figure}
-
-%So kann man Code einbinden in 2 verschiedenen Zeichensätzen und auch aus einer Datei einlesen wie unten mit dem CPP Beispiel
-
-Neben langen Listings sind natürlich kurze prägnante
-Listings in Pseudocode (oder Python ;-) viel 
-angenehmener, wie in Listing~\ref{code:ggt} der
-effiziente GGT.
-
-\begin{listing}[htbp]
-\begin{lstlisting}
-def ggt(x, y):
-    while x != 0:
-        x,y = y%x, x
-    return y
-\end{lstlisting}
-\caption{ggT --- kurz und gut}
-\label{code:ggt}
-\end{listing}
-
-Die Parameter für Listings sollte man für das ganze Dokument gleich 
-lassen. 
-Wenn man mal unbedingt wechseln will, dann ist das auch möglich,
-wie zum Beispiel bei Listing~\ref{code:ggtjava}, das den ggT
-in Java mit einem anderen Zeichensatz zeigt.
-
-\begin{listing}[htbp]
-\lstset{basicstyle=\sffamily, columns=[l]flexible, mathescape=true, showstringspaces=true, numbers=none, language=java}
-\begin{lstlisting}
-public static int ggt(int x, int y) {
-    while (x != 0) {
-        int h = x;
-        x = y%x;
-        y = h;
-    }
-    return y;
-}
-\end{lstlisting}
-\caption{ggT --- Java}
-\label{code:ggtjava}
-\end{listing}
-
-Der verwendete serifenlose Zeichensatz sieht vielleicht schöner 
-aus, aber der variable Zeichenabstand kann bei Listing störend 
-sein. Der in den Beispielen Listing~\ref{code:ggtaua} und 
-Listing~\ref{code:ggt} verwendete Zeichensatz mit festem
-Zeichenabstand ist für Quellcode meist zu bevorzugen.
-Wir können natürlich auch C++-Quellcode setzen, bei Listings
-\LaTeX\ in den Kommentaren verwenden und Listings aus
-Dateien einlesen wie in~\ref{code:gcdcpp}.
-
-\begin{listing}[htbp]
-  \lstset{basicstyle=\ttfamily, columns=[l]flexible, mathescape=true, numbers=left, language=c++}
-  \lstinputlisting{gcd.cpp}
-\caption{gcd --- C/C++}
-\label{code:gcdcpp}
-\end{listing}
-
-
-%So macht man Gänsefüßchen
-Idealerweise verwenden Sie spätestens jede zweite Seite ein Bild. 
-Ein Bild lockert auf und "`sagt mehr als tausend Worte"'.
-Vermeiden Sie Aufzählungen.
-
-%So macht man Mathe (falls ich das überhaupt brauche)
-
-
-Eine Formel kann im Fließtext integriert sein, wie zum Beispiel 
-$\sum_{i=1}^n i = \frac{n \cdot (n+1)}{2}$ oder separat
-und referenzierbar gesetzt werden wie die Folgende:
-\begin{equation} \label{eq:gauss}
-  \sum_{i=1}^n i = \frac{n \cdot (n+1)}{2}
-\end{equation}
-Im \LaTeX-Quelltext werden beide Arten von Formeln gleich geschrieben 
-aber anders gesetzt. 
-Achten Sie zum Beispiel auf das Summenzeichen und die Positionen 
-des Index. 
-Die Gleichung~\ref{eq:gauss} ist natürlich vom Fließtext aus referenzierbar.
-Man kann auch schreiben: 
-(\ref{eq:gauss}) ist natürlich vom Fließtext aus referenzierbar.
-Im Fließtext kann man auch gerne auf den Bruch verzichten und 
-$\sum_{i=1}^n i = (n \cdot (n+1))/2$
-schreiben, was meist etwas lesbarer ist.
-Alternativ geht auch 
-$\sum_{i=1}^n i = \mbox{\textonehalf} \cdot n \cdot (n+1)$.
-Achten Sie bei Formeln darauf als Multiplikationszeichen 
-$\cdot$ zu verwenden und nicht $*$. 
-Ich kenne einen Kollegen, der ansonsten dadurch sehr erregt wird. 
-
-Sie können viele Symbole, wie die griechischen Buchstaben 
-$\alpha, \beta, \gamma, \ldots$;
-logische Symbole wie $\forall, \exists, \not\exists, \wedge, \vee, \neg,
-\Rightarrow, \Leftrightarrow$;
-Mengensymbole wie $\in, \cup, \cap, \subseteq, \not\supset, 
-\biguplus, \ldots$;
-andere Symbole $\rightarrow, \sqsubseteq, \sim, 
-\models, \vdash, \infty, \emptyset, \mathbb{N}, \mathbb{R}, \ldots$;
-oder zusammengesetzte Gleichungen 
-wie die Definition der 91er-Funktion~\cite{manna70}
-verwenden.
-\[
-  f(x) = \left\{ \begin{array}{lll}
-      x-10 & \mbox{gdw} & x>100 \\
-      f(f(x+11)) & \multicolumn{2}{l}{\mbox{sonst}} 
-    \end{array} \right.
-\]
-
-%So gehen dann Definitionen für Formeln
-
-\begin{definition}
-Sei $\varepsilon = 0$.
-\end{definition}
-
-\begin{satz}
-Für alle positiven ganzen Zahlen $n$ gilt 
-$\sum_{i=1}^n i = \frac{n \cdot (n+1)}{2}$ \enspace.
-\end{satz}
-\begin{beweis}
-Vollständige Induktion:
-\begin{itemize}
-\item \emph{Induktionsanfang ($n=1$):} Es gilt  
-\[
-  \sum_{i=1}^1 i \, = \, 1 \, = \, \frac{1 \cdot (1+1)}{2}.
-\]
-\item \emph{Induktionsschritt ($n \rightarrow n+1)$:}
-Es gelte die Induktionsvoraussetzung (IV):
-\[
-\sum_{i=1}^n i = \frac{n \cdot (n+1)}{2}
-\]
-Wir zeigen, dass dann auch 
-\[
-\sum_{i=1}^{n+1} i = \frac{(n+1) \cdot (n+2)}{2}
-\]
-gilt wie folgt:
-\begin{eqnarray*}
-  \sum_{i=1}^{n+1} i 
-  & = & (\sum_{i=1}^{n} i) + (n+1)  \\
-  & =_{\mbox{IV}} & \frac{n \cdot (n+1)}{2} + (n+1) \\
-  & = & \frac{n \cdot (n+1)}{2} + \frac{2 \cdot (n+1)}{2} \\
-  & = & \frac{n \cdot (n+1) + 2 \cdot (n+1)}{2} \\
-  & = & \frac{(n+2) \cdot (n+1)}{2} 
-\end{eqnarray*}
-\end{itemize}
-\qed
-\end{beweis}
-Sie müssen den Dreisatz 
-\emph{Definition}, \emph{Satz} und \emph{Beweis} nicht verwenden, 
-wenn Sie kein sehr formales Thema haben. 
-Eine sehr formale Aufarbeitung von bekanntem Inhalt gefolgt 
-von einem nicht so formalen eigenen Anteil sollte man 
-meist vermeiden.
-
-%So geht eine Website in den Text zu setzen
-\url{http://www.csie.ntu.edu.tw/~cjlin/libsvm/}, 
-sondern einen passenden publizierten Artikel zitieren.
-
-%So kann man Befehle anzeigen
-%eigene Zeile
-\begin{verbatim}
-$ bibtex thesis1
-$ bibtex thesis2
-\end{verbatim}
-%in einer Zeile
-\verb|bibtex|
-
-
-\chapter{Zusammenfassung und Ausblick} \label{chap:fazit}
-
-Abschließend kann man sagen, dass...
 
 \newpage
 
@@ -854,7 +1157,8 @@ Abschließend kann man sagen, dass...
 \section*{Online-Quellen}
 \btPrintCited
 \end{btSect}
-% dann mit "bibtex thesis1" und "bibtex thesis2" arbeiten
+% dann mit "
+% thesis1" und "bibtex thesis2" arbeiten
 
 \end{document}
 ;;; Local Variables:

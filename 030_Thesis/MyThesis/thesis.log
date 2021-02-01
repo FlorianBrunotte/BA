@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.29)  12 JAN 2021 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.14)  1 FEB 2021 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
+**thesis
 (./thesis.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18>
@@ -28,10 +28,10 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \openout2 = `preamble.aux'.
 
 (./preamble.tex (c:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/06/10 3.45 The Babel package
+Package: babel 2020/07/07 3.46 The Babel package
 
 (c:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/06/10 3.45 Babel common definitions
+File: babel.def 2020/07/07 3.46 Babel common definitions
 \babel@savecnt=\count176
 \U@D=\dimen135
 \l@babelnohyphens=\language86
@@ -319,19 +319,30 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen162
 \SOUL@ulht=\dimen163
 ))
+(c:/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip69
+\LTright=\skip70
+\LTpre=\skip71
+\LTpost=\skip72
+\LTchunksize=\count284
+\LTcapwidth=\dimen164
+\LT@head=\box51
+\LT@firsthead=\box52
+\LT@foot=\box53
+\LT@lastfoot=\box54
+\LT@cols=\count285
+\LT@rows=\count286
+\c@LT@tables=\count287
+\c@LT@chunks=\count288
+\LT@p@ftn=\toks31
+)
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-06-23 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count284
-\l__pdf_internal_box=\box51
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count289
+\l__pdf_internal_box=\box55
 )
-(./thesis.aux (./vorspann.aux)
-
-LaTeX Warning: Label `code:ggt' multiply defined.
-
-
-LaTeX Warning: Label `chap:fazit' multiply defined.
-
-)
+(./thesis.aux (./vorspann.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -350,10 +361,11 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 23
 .
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
+
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-\big@size=\dimen164
+\big@size=\dimen165
 LaTeX Info: Redefining \microtypecontext on input line 23.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -371,17 +383,17 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen165
-\scratchbox=\box52
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen166
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count290
+\scratchdimen=\dimen166
+\scratchbox=\box56
+\nofMPsegments=\count291
+\nofMParguments=\count292
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count293
+\MPscratchDim=\dimen167
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
+\everyMPtoPDFconversion=\toks33
 ) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -395,9 +407,14 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(c:/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count291
+\c@lstlisting=\count296
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -514,31 +531,196 @@ f>] [1
 
 ]
 Kapitel 1.
+
+Overfull \hbox (4.30624pt too wide) in paragraph at lines 56--57
+[]\T1/ppl/m/n/10.95 (-20) Dabei wer-den ba-sie-rend auf den An-for-de-run-gen d
+er \T1/ppl/m/it/10.95 (-20) Sta-ke-hol-der Software-Anforderungen
+ []
+
 [2
 
 ]
-Kapitel 2.
-[3
-
-]
-Kapitel 3.
-[4
-
-]
+<./images/testcollab_dash1.png, id=26, 889.82437pt x 333.245pt>
+File: ./images/testcollab_dash1.png Graphic file (type png)
+<use ./images/testcollab_dash1.png>
+Package pdftex.def Info: ./images/testcollab_dash1.png  used on input line 79.
+(pdftex.def)             Requested size: 404.02904pt x 151.31143pt.
+<./images/testcollab_run.png, id=28, 419.06563pt x 399.99437pt>
+File: ./images/testcollab_run.png Graphic file (type png)
+<use ./images/testcollab_run.png>
+Package pdftex.def Info: ./images/testcollab_run.png  used on input line 86.
+(pdftex.def)             Requested size: 404.02904pt x 385.63815pt.
+<./images/testcollab_steps.png, id=29, 520.44438pt x 120.45pt>
+File: ./images/testcollab_steps.png Graphic file (type png)
+<use ./images/testcollab_steps.png>
+Package pdftex.def Info: ./images/testcollab_steps.png  used on input line 93.
+(pdftex.def)             Requested size: 404.02904pt x 93.50766pt.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 10
-1.
+2.
  (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 101.
+(Font)              scaled to size 8.54997pt on input line 102.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [5]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
-0.
+ [3 <./images/testcollab_dash1.PNG>] [4 <./images/testcollab_run.PNG> <./images
+/testcollab_steps.PNG>]
+<./images/jira_dash.png, id=41, 889.82437pt x 334.75063pt>
+File: ./images/jira_dash.png Graphic file (type png)
+<use ./images/jira_dash.png>
+Package pdftex.def Info: ./images/jira_dash.png  used on input line 136.
+(pdftex.def)             Requested size: 404.02904pt x 151.99507pt.
+<./images/jira_dash2.png, id=42, 358.33875pt x 378.41376pt>
+File: ./images/jira_dash2.png Graphic file (type png)
+<use ./images/jira_dash2.png>
+Package pdftex.def Info: ./images/jira_dash2.png  used on input line 144.
+(pdftex.def)             Requested size: 404.02904pt x 426.69025pt.
+<./images/lodgedash.png, id=43, 879.285pt x 446.16687pt>
+File: ./images/lodgedash.png Graphic file (type png)
+<use ./images/lodgedash.png>
+Package pdftex.def Info: ./images/lodgedash.png  used on input line 164.
+(pdftex.def)             Requested size: 404.02904pt x 205.00778pt.
+ [5 <./images/jira_dash.PNG>] [6 <./images/jira_dash2.PNG>]
+<./images/testcaselabdash.png, id=52, 894.84312pt x 484.81125pt>
+File: ./images/testcaselabdash.png Graphic file (type png)
+<use ./images/testcaselabdash.png>
+Package pdftex.def Info: ./images/testcaselabdash.png  used on input line 199.
+(pdftex.def)             Requested size: 404.02904pt x 218.9028pt.
+<./images/qatouch.png, id=53, 893.83937pt x 476.78125pt>
+File: ./images/qatouch.png Graphic file (type png)
+<use ./images/qatouch.png>
+Package pdftex.def Info: ./images/qatouch.png  used on input line 216.
+(pdftex.def)             Requested size: 404.02904pt x 215.51715pt.
+
+Overfull \hbox (35.99382pt too wide) in paragraph at lines 237--255
+ [] 
+ []
+
+[7 <./images/lodgedash.PNG>] [8 <./images/testcaselabdash.PNG> <./images/qatouc
+h.PNG>]
+Underfull \hbox (badness 3078) in paragraph at lines 277--277
+[]\T1/ppl/m/n/10.95 (+20) 1. Sicht-bar-keit des Sy-
+ []
+
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 272--299
+ [] 
+ []
+
+[9] [10]
+Kapitel 2.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 3
+16.
+(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 330--343
+ [] 
+ []
+
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 351--379
+ [] 
+ []
+
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 388--452
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 140.32596pt on input line 454.
+
+[11
+
+] [12] [13]
+<./images/usecase.pdf, id=79, 388.33081pt x 277.035pt>
+File: ./images/usecase.pdf Graphic file (type pdf)
+<use ./images/usecase.pdf>
+Package pdftex.def Info: ./images/usecase.pdf  used on input line 463.
+(pdftex.def)             Requested size: 404.02904pt x 288.24487pt.
+<./images/usecase2.pdf, id=80, 391.4625pt x 160.6803pt>
+File: ./images/usecase2.pdf Graphic file (type pdf)
+<use ./images/usecase2.pdf>
+Package pdftex.def Info: ./images/usecase2.pdf  used on input line 471.
+(pdftex.def)             Requested size: 404.02904pt x 165.84825pt.
+<./images/activity.pdf, id=81, 355.3275pt x 51.0708pt>
+File: ./images/activity.pdf Graphic file (type pdf)
+<use ./images/activity.pdf>
+Package pdftex.def Info: ./images/activity.pdf  used on input line 480.
+(pdftex.def)             Requested size: 404.02904pt x 58.07245pt.
+<./images/activity2.pdf, id=82, 406.3983pt x 100.45529pt>
+File: ./images/activity2.pdf Graphic file (type pdf)
+<use ./images/activity2.pdf>
+Package pdftex.def Info: ./images/activity2.pdf  used on input line 488.
+(pdftex.def)             Requested size: 404.02904pt x 99.87408pt.
+<./images/activity3.pdf, id=83, 377.49028pt x 125.5089pt>
+File: ./images/activity3.pdf Graphic file (type pdf)
+<use ./images/activity3.pdf>
+Package pdftex.def Info: ./images/activity3.pdf  used on input line 495.
+(pdftex.def)             Requested size: 404.02904pt x 134.33914pt.
+<./images/activity4.pdf, id=84, 319.1925pt x 30.1125pt>
+File: ./images/activity4.pdf Graphic file (type pdf)
+<use ./images/activity4.pdf>
+Package pdftex.def Info: ./images/activity4.pdf  used on input line 502.
+(pdftex.def)             Requested size: 404.02904pt x 38.11607pt.
+<./images/activity45.pdf, id=85, 218.7372pt x 30.1125pt>
+File: ./images/activity45.pdf Graphic file (type pdf)
+<use ./images/activity45.pdf>
+Package pdftex.def Info: ./images/activity45.pdf  used on input line 509.
+(pdftex.def)             Requested size: 404.02904pt x 55.62497pt.
+<./images/activity6.pdf, id=86, 427.5975pt x 338.22359pt>
+File: ./images/activity6.pdf Graphic file (type pdf)
+<use ./images/activity6.pdf>
+Package pdftex.def Info: ./images/activity6.pdf  used on input line 516.
+(pdftex.def)             Requested size: 404.02904pt x 319.5817pt.
+<./images/activity7.pdf, id=87, 593.3367pt x 146.4672pt>
+File: ./images/activity7.pdf Graphic file (type pdf)
+<use ./images/activity7.pdf>
+Package pdftex.def Info: ./images/activity7.pdf  used on input line 523.
+(pdftex.def)             Requested size: 404.02904pt x 99.7394pt.
+ [14 <./images/usecase.pdf>] [15 <./images/usecase2.pdf> <./images/activity.pdf
+> <./images/activity2.pdf> <./images/activity3.pdf>] [16 <./images/activity4.pd
+f> <./images/activity45.pdf> <./images/activity6.pdf>]
+<./images/er.pdf, id=187, 709.69138pt x 373.395pt>
+File: ./images/er.pdf Graphic file (type pdf)
+<use ./images/er.pdf>
+Package pdftex.def Info: ./images/er.pdf  used on input line 545.
+(pdftex.def)             Requested size: 484.8336pt x 255.08463pt.
+
+Overfull \hbox (80.80457pt too wide) in paragraph at lines 545--546
+ [][] 
+ []
+
+[17 <./images/activity7.pdf>]
+<./images/pdash.png, id=202, 1903.86281pt x 968.11688pt>
+File: ./images/pdash.png Graphic file (type png)
+<use ./images/pdash.png>
+Package pdftex.def Info: ./images/pdash.png  used on input line 574.
+(pdftex.def)             Requested size: 404.02904pt x 205.43774pt.
+ [18 <./images/er.pdf>]
+<./images/pstat.png, id=217, 768.8725pt x 368.37625pt>
+File: ./images/pstat.png Graphic file (type png)
+<use ./images/pstat.png>
+Package pdftex.def Info: ./images/pstat.png  used on input line 582.
+(pdftex.def)             Requested size: 404.02904pt x 193.58029pt.
+<./images/ptestc.png, id=218, 1698.345pt x 806.26219pt>
+File: ./images/ptestc.png Graphic file (type png)
+<use ./images/ptestc.png>
+Package pdftex.def Info: ./images/ptestc.png  used on input line 591.
+(pdftex.def)             Requested size: 404.02904pt x 191.80913pt.
+<./images/ptestr.png, id=219, 1693.82813pt x 814.54312pt>
+File: ./images/ptestr.png Graphic file (type png)
+<use ./images/ptestr.png>
+Package pdftex.def Info: ./images/ptestr.png  used on input line 599.
+(pdftex.def)             Requested size: 404.02904pt x 194.28873pt.
+ [19 <./images/pdash.PNG> <./images/pstat.PNG>] [20 <./images/ptestc.PNG> <./im
+ages/ptestr.PNG>]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 62
+8.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -547,191 +729,138 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [21] [22]
+Kapitel 3.
 
-Overfull \hbox (4.31047pt too wide) in paragraph at lines 110--111
-[]$\T1/pcr/m/n/10.95 https : / / www . osseno . com / en / requirements -[] man
-agement -[] tool / ?r = rmt &
- []
-
-[6]
-Kapitel 4.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-23.
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [7
-
-] [8]
-Kapitel 5.
-[9
-
-]
-Kapitel 6.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 163.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 163.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 163.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 163.
-[10
-
-]
-Overfull \hbox (102.14447pt too wide) in paragraph at lines 172--175
-[]\T1/ppl/m/n/10.95 (-20) Man star-tet ein neu-es Djan-go Pro-ject mit [][]\T1/
-pcr/m/n/10.95 django-admin startproject anforderungenundtesten
- []
-
-
-Overfull \hbox (2.31311pt too wide) in paragraph at lines 183--183
-[]\T1/ppl/m/n/10.95 (-20) /anforderungenundtesten| 
- []
-
-
-Overfull \hbox (3.63806pt too wide) in paragraph at lines 185--185
-[]\T1/ppl/m/n/10.95 (-20) anforderungenundtesten/| 
- []
-
-
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 179--187
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 677--686
  [][] 
  []
 
-[11]
-Overfull \hbox (3.63806pt too wide) in paragraph at lines 210--210
-[]\T1/ppl/m/n/10.95 (-20) anforderungenundtesten/| 
- []
-
-
-Overfull \hbox (23.99998pt too wide) in paragraph at lines 204--212
- [][] 
- []
-
-[12] [13]
-Overfull \hbox (22.35384pt too wide) in paragraph at lines 246--248
-\T1/ppl/m/n/10.95 (-20) noch ver-bes-sert wer-den kann. Mit dem Be-fehl [][]\T1
-/pcr/m/n/10.95 python manage.py sqlmigrate 0001
- []
-
-[14] [15] [16] [17] [18] [19] [20] [21]
-Kapitel 7.
-[22
-
-]
-Kapitel 8.
 [23
 
 ]
-Kapitel 9.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 435.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 435.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 435.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 435.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 435.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 435.
-
-LaTeX Warning: Reference `chap:layout' on page 24 undefined on input line 463.
+<./images/files.png, id=242, 272.01625pt x 479.29062pt>
+File: ./images/files.png Graphic file (type png)
+<use ./images/files.png>
+Package pdftex.def Info: ./images/files.png  used on input line 698.
+(pdftex.def)             Requested size: 404.02904pt x 711.93526pt.
 
 
-LaTeX Warning: Reference `chap:bilder' on page 24 undefined on input line 465.
+LaTeX Warning: Float too large for page by 109.57463pt on input line 701.
 
 
-LaTeX Warning: Reference `chap:stil' on page 24 undefined on input line 468.
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 707--722
+ [][] 
+ []
 
-[24
+<./images/rocket.png, id=243, 765.6103pt x 521.69907pt>
+File: ./images/rocket.png Graphic file (type png)
+<use ./images/rocket.png>
+Package pdftex.def Info: ./images/rocket.png  used on input line 733.
+(pdftex.def)             Requested size: 404.02904pt x 275.31306pt.
 
-]
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 50
-6.
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)
-(c:/texlive/2020/texmf-dist/tex/latex/microtype/mt-ptm.cfg
-File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 521.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 521.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.44997pt on input line 521.
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 5
-33.
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 744--763
+ [][] 
+ []
 
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1pplx.fd
-File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
-)
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 536.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 536.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 536.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 536.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 536.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 536.
+[24] [25 <./images/files.PNG>] [26 <./images/rocket.png>]
+<./images/admin.png, id=255, 903.375pt x 406.51875pt>
+File: ./images/admin.png Graphic file (type png)
+<use ./images/admin.png>
+Package pdftex.def Info: ./images/admin.png  used on input line 780.
+(pdftex.def)             Requested size: 404.02904pt x 181.8152pt.
+ [27 <./images/admin.PNG>]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 822.
+
+Overfull \hbox (30.37114pt too wide) in paragraph at lines 831--832
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Reference `chap:bilder' on page 25 undefined on input line 550.
+Overfull \hbox (3.01111pt too wide) in paragraph at lines 852--853
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Reference `chap:bilder' on page 25 undefined on input line 551.
-
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 564.
-[25] [26]
-<gnu.png, id=108, 702.625pt x 686.565pt>
-File: gnu.png Graphic file (type png)
-<use gnu.png>
-Package pdftex.def Info: gnu.png  used on input line 640.
-(pdftex.def)             Requested size: 113.81102pt x 111.20406pt.
-<automata.pdf, id=109, 453.79137pt x 89.83162pt>
-File: automata.pdf Graphic file (type pdf)
-<use automata.pdf>
-Package pdftex.def Info: automata.pdf  used on input line 667.
-(pdftex.def)             Requested size: 363.62366pt x 71.98326pt.
- (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 698.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 699.
+Overfull \hbox (51.01114pt too wide) in paragraph at lines 853--855
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Reference `code:ggtaua' on page 27 undefined on input line 714.
+Overfull \hbox (17.41112pt too wide) in paragraph at lines 858--859
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
-[27 <./gnu.png> <./automata.pdf>]
-(c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(c:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) (./gcd.cpp
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1.
-)
+
+Overfull \hbox (3.011pt too wide) in paragraph at lines 870--872
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
 [28]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-766.
- (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [29] [30]
-Kapitel 10.
-[31
+Overfull \hbox (3.01111pt too wide) in paragraph at lines 893--894
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.61115pt too wide) in paragraph at lines 894--895
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[29]
+<./images/django_basic.png, id=268, 322.05319pt x 227.1988pt>
+File: ./images/django_basic.png Graphic file (type png)
+<use ./images/django_basic.png>
+Package pdftex.def Info: ./images/django_basic.png  used on input line 915.
+(pdftex.def)             Requested size: 404.02904pt x 285.04823pt.
+
+Overfull \hbox (27.73058pt too wide) in paragraph at lines 928--929
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (61.33055pt too wide) in paragraph at lines 929--931
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<./images/softreqs.png, id=269, 903.375pt x 492.84125pt>
+File: ./images/softreqs.png Graphic file (type png)
+<use ./images/softreqs.png>
+Package pdftex.def Info: ./images/softreqs.png  used on input line 945.
+(pdftex.def)             Requested size: 404.02904pt x 220.42288pt.
+[30] [31 <./images/django_basic.png>] [32 <./images/softreqs.PNG>] [33]
+[34]
+Kapitel 4.
+<./images/testcase.png, id=287, 903.375pt x 491.33563pt>
+File: ./images/testcase.png Graphic file (type png)
+<use ./images/testcase.png>
+Package pdftex.def Info: ./images/testcase.png  used on input line 1053.
+(pdftex.def)             Requested size: 404.02904pt x 219.7495pt.
+<./images/testrun.png, id=288, 903.375pt x 242.9075pt>
+File: ./images/testrun.png Graphic file (type png)
+<use ./images/testrun.png>
+Package pdftex.def Info: ./images/testrun.png  used on input line 1067.
+(pdftex.def)             Requested size: 404.02904pt x 108.64018pt.
+
+Overfull \hbox (25.27048pt too wide) in paragraph at lines 1077--1078
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35
+
+ <./images/testcase.PNG>]
+<./images/testrunab.png, id=293, 903.375pt x 287.0725pt>
+File: ./images/testrunab.png Graphic file (type png)
+<use ./images/testrunab.png>
+Package pdftex.def Info: ./images/testrunab.png  used on input line 1094.
+(pdftex.def)             Requested size: 404.02904pt x 128.39296pt.
+ [36 <./images/testrun.PNG> <./images/testrunab.PNG>] [37]
+Kapitel 5.
+[38
+
+] [39]
+Kapitel 6.
+[40
 
 ]
 \openout3 = `btaux.aux'.
@@ -743,43 +872,98 @@ Kapitel 10.
 
 \openout3 = `thesis2.aux'.
 
- (./thesis2.bbl) [32] (./thesis.aux (./vorspann.aux))
+ (./thesis2.bbl
+Underfull \hbox (badness 6428) in paragraph at lines 4--8
+[]\T1/ppl/m/n/10.95 (+20) Django in-tro-duc-ti-on - Learn web de-ve-lop-ment | 
+MDN.  $\T1/pcr/m/n/10.95 https :
+ []
 
-LaTeX Warning: There were undefined references.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\T1/pcr/m/n/10.95 / / developer . mozilla . org / en -[] US / docs / Learn / Se
+rver -[] side /
+ []
 
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+\T1/pcr/m/n/10.95 https : / / www . itwissen . info / MVC -[] model -[] view -[
+] controller -[]
+ []
 
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
+\T1/pcr/m/n/10.95 https : / / developer . mozilla . org / en -[] US / docs / Le
+arn / Server -[]
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 48--52
+[]\T1/ppl/m/n/10.95 (+20) Django Tu-to-ri-al Part 4: Djan-go ad-min si-te - Lea
+rn web de-ve-lop-ment
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 48--52
+\T1/ppl/m/n/10.95 (+20) | MDN.  $\T1/pcr/m/n/10.95 https : / / developer . mozi
+lla . org / en -[] US / docs / Learn /
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 92--96
+[]\T1/ppl/m/n/10.95 (+20) Setting up a Djan-go de-ve-lop-ment en-vi-ron-ment - 
+Learn web de-ve-lop-
+ []
+
+[41]
+Underfull \hbox (badness 2096) in paragraph at lines 149--151
+[]\T1/ppl/m/n/10.95 (+20) Cloud Ap-p-li-ca-ti-on Plat-form | He-ro-ku.  $\T1/pc
+r/m/n/10.95 https : / / www . heroku . com/$\T1/ppl/m/n/10.95 (+20) ,
+ []
+
+[42]
+Underfull \hbox (badness 6725) in paragraph at lines 212--217
+[]\T1/ppl/m/n/10.95 (+20) Khan.  Warn user be-fo-re lea-ving web pa-ge with un-
+sa-ved chan-
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 226--230
+[]\T1/ppl/m/n/10.95 (+20) Nielsen Nor-man Group.  10 Usa-bi-li-ty Heu-ri-stics 
+for User In-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
+\T1/ppl/m/n/10.95 (+20) De-sign.  $\T1/pcr/m/n/10.95 https : / / www . nngroup 
+. com / articles / ten -[] usability -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--244
+\T1/pcr/m/n/10.95 python -[] determine -[] if -[] all -[] items -[] of -[] a -[
+] list -[] are -[] the -[] same -[]
+ []
+
+) [43] (./thesis.aux (./vorspann.aux)) ) 
 Here is how much of TeX's memory you used:
- 9927 strings out of 480471
- 146240 string characters out of 5903300
- 623374 words of memory out of 5000000
- 25489 multiletter control sequences out of 15000+600000
- 630742 words of font info for 320 fonts, out of 8000000 for 9000
+ 10045 strings out of 480471
+ 148122 string characters out of 5903300
+ 598846 words of memory out of 5000000
+ 25579 multiletter control sequences out of 15000+600000
+ 582915 words of font info for 265 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 52i,19n,60p,1045b,1358s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fp
-lmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb><c:/
-texlive/2020/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/tex
-mf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2020/texmf-dist/fonts/ty
-pe1/urw/courier/ucrr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/
-ucrro8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2020/t
-exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2020/texmf-dist/font
-s/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/pal
-atino/uplr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
-fb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/202
-0/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (35 pages, 350051 bytes).
+ 52i,10n,53p,1672b,1359s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/d
+vips/base/8r.enc}<c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
+><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/p
+alatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplr8a.
+pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (46 pages, 1719795 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 349 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 60944 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 33948 words of extra memory for PDF output out of 35830 (max. 10000000)
 
